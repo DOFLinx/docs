@@ -1,0 +1,6 @@
+markdown
+mkdocs-material
+mkdocs-glightbox
+mdx_truly_sane_lists
+mkdocs-awesome-pages-plugin
+mkdocs-git-committers-plugin-2
