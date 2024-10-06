@@ -1,0 +1,1425 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="DDH69">
+      
+      
+      
+        <link rel="prev" href="11_The_Parameters.html">
+      
+      
+        <link rel="next" href="../systems/16_Future_Pinball_Link.html">
+      
+      
+      <link rel="icon" href="../assets/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.39">
+    
+    
+      
+        <title>Real Time Parameters and Commands - DOFLinx</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.8c3ca2c6.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+   <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#real-time-parameters-and-commands" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../index.html" title="DOFLinx" class="md-header__button md-logo" aria-label="DOFLinx" data-md-component="logo">
+      
+  <img src="../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            DOFLinx
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Real Time Parameters and Commands
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/DOFLinx/docs/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    DOFLinx/docs
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../index.html" title="DOFLinx" class="md-nav__button md-logo" aria-label="DOFLinx" data-md-component="logo">
+      
+  <img src="../assets/logo.png" alt="logo">
+
+    </a>
+    DOFLinx
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/DOFLinx/docs/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    DOFLinx/docs
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    What Can DOFLinx Do?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Getting started
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Getting started
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting-started/02_What_is_DOFLinx.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    What is DOFLinx
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting-started/03_Requirements.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Requirements
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting-started/04_Installation.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Installation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting-started/05_32_or_64_Bit.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    32 or 64 Bit
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting-started/06_Upgrading.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Upgrading
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting-started/08_Starting_it_up.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Starting it up
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Parameters
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Parameters
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="09_Command_Line_Options.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Command Line Options
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="10_The_Parameter_Files.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    The Parameter Files
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="11_The_Parameters.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    The Parameters
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Real Time Parameters and Commands
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="12_Real_Time_Parameters_and_Commands.html" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Real Time Parameters and Commands
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#real-time-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      Real-Time Commands
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Real-Time Commands">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#game_flag_fileppppffff" class="md-nav__link">
+    <span class="md-ellipsis">
+      GAME_FLAG_FILE=PPPP\FFFF
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#light_buttons_now" class="md-nav__link">
+    <span class="md-ellipsis">
+      LIGHT_BUTTONS_NOW
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#killxxxxx" class="md-nav__link">
+    <span class="md-ellipsis">
+      KILL=XXXXX
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#output_now_colourdooommmmccccdooommmmcccc-etc" class="md-nav__link">
+    <span class="md-ellipsis">
+      OUTPUT_NOW_COLOUR=DOOO,MMMM,CCCC,DOOO,MMMM,CCCC, etc
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#outputs_off" class="md-nav__link">
+    <span class="md-ellipsis">
+      OUTPUTS_OFF
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quit" class="md-nav__link">
+    <span class="md-ellipsis">
+      QUIT
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stop_dof2dmd" class="md-nav__link">
+    <span class="md-ellipsis">
+      STOP_DOF2DMD
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sup_ini" class="md-nav__link">
+    <span class="md-ellipsis">
+      SUP_INI=
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#show_in_taskbar01" class="md-nav__link">
+    <span class="md-ellipsis">
+      SHOW_IN_TASKBAR=[0|1]
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#show_variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      SHOW_VARIABLES
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parameters-that-can-be-changed-any-time" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parameters That Can Be Changed Any Time
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parameters-that-can-be-changed-only-when-doflinx-is-sleeping" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parameters That Can Be Changed Only When DOFLinx is Sleeping
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#these-parameters-can-only-occur-in-the-doflinxini-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      These parameters can only occur in the DOFLinx.INI file
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sending-commands-to-doflinx" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sending Commands To DOFLinx
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Systems
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Systems
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../systems/16_Future_Pinball_Link.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Future Pinball Link
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../systems/17_Pinball_FX2_Memory_Triggers_--_Full_Force_Feedback.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Pinball FX2 Memory Triggers -- Full Force Feedback
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../systems/18_Pinball_FX3_Memory_Triggers_--_Full_Force_Feedback.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Pinball FX3 Memory Triggers -- Full Force Feedback
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../systems/19_MAME_Commands__Triggers_and_Actions_--_Full_Force_Feedback.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MAME Commands, Triggers and Actions -- Full Force Feedback
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Misc
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Misc
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Misc/13_Testing_Your_Setup.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Testing Your Setup
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Misc/14_Other_Use__less__ful_Info.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Other Use~~less~~ful Info
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Misc/15_Examples___Screen_Shots.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Examples &amp; Screen Shots
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Misc/20_Settings_Pop_Up_Menu.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Settings Pop Up Menu
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07_Help.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Help
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#real-time-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      Real-Time Commands
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Real-Time Commands">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#game_flag_fileppppffff" class="md-nav__link">
+    <span class="md-ellipsis">
+      GAME_FLAG_FILE=PPPP\FFFF
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#light_buttons_now" class="md-nav__link">
+    <span class="md-ellipsis">
+      LIGHT_BUTTONS_NOW
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#killxxxxx" class="md-nav__link">
+    <span class="md-ellipsis">
+      KILL=XXXXX
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#output_now_colourdooommmmccccdooommmmcccc-etc" class="md-nav__link">
+    <span class="md-ellipsis">
+      OUTPUT_NOW_COLOUR=DOOO,MMMM,CCCC,DOOO,MMMM,CCCC, etc
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#outputs_off" class="md-nav__link">
+    <span class="md-ellipsis">
+      OUTPUTS_OFF
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quit" class="md-nav__link">
+    <span class="md-ellipsis">
+      QUIT
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stop_dof2dmd" class="md-nav__link">
+    <span class="md-ellipsis">
+      STOP_DOF2DMD
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sup_ini" class="md-nav__link">
+    <span class="md-ellipsis">
+      SUP_INI=
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#show_in_taskbar01" class="md-nav__link">
+    <span class="md-ellipsis">
+      SHOW_IN_TASKBAR=[0|1]
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#show_variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      SHOW_VARIABLES
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parameters-that-can-be-changed-any-time" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parameters That Can Be Changed Any Time
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parameters-that-can-be-changed-only-when-doflinx-is-sleeping" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parameters That Can Be Changed Only When DOFLinx is Sleeping
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#these-parameters-can-only-occur-in-the-doflinxini-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      These parameters can only occur in the DOFLinx.INI file
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sending-commands-to-doflinx" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sending Commands To DOFLinx
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="real-time-parameters-and-commands">Real Time Parameters and Commands<a class="headerlink" href="#real-time-parameters-and-commands" title="Permanent link">&para;</a></h1>
+<p>A number of commands and many parameters can be changed while DOFLinx is
+running. This is made possible by sending commands via Windows
+inter-process communication. A small utility DOFLinxMsg.exe is included
+as one way to do this. Another way is a simple VBS script, again an
+example is included.</p>
+<h2 id="real-time-commands">Real-Time Commands<a class="headerlink" href="#real-time-commands" title="Permanent link">&para;</a></h2>
+<p>These commands allow you to control DOFLinx or perform some action
+outside of those setup per game to occur. Commands are sent from the
+messaging utility like:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>DOFLinxMsg QUIT
+</code></pre></div>
+<p>Multiple commands can be placed on one line. They need to be separated
+by a #. So for some colour and a shaker:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>DOFLinxMsg
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>OUTPUT_NOW_TIMER=115,1500#OUTPUT_COLOUR_NOW=109,5000,Yellow
+</code></pre></div>
+<p>The commands are:</p>
+<h3 id="game_flag_fileppppffff">GAME_FLAG_FILE=PPPP\FFFF<a class="headerlink" href="#game_flag_fileppppffff" title="Permanent link">&para;</a></h3>
+<p><code>PPPP</code> is the path and FFFF is the file.<br />
+When an emulator process is in the PROCESSES list and a GAME_FLAG_FILE
+is provided, DOFLinx will only wake up if the file name provided, with
+the extension ".DOFLINX" exists.<br />
+This allows for emulators that have some tables correctly DOF'ed to be
+added to the PROCESSES list. Then in the 'Launch Before' section you run
+something like:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>DOFLinxMsg GAME_NAME_FILE=[TABLEPATH]\[TABLENAME]
+</code></pre></div>
+<p>If you then create a file in your tables folder with the same name as
+the table you want DOFLinx to wake up for with the extension of
+".DOFLINX" then it will provide rudimentary DOF with no additional
+effort. Of course I do encourage people to continue to add DOF to VP and
+FP tables, that's proper DOF. It is quite handy for custom tables, just
+to give them a little more 'feeling'.<br />
+This is designed for use when DOFLinx is running in Set and Forget mode.</p>
+<h3 id="light_buttons_now">LIGHT_BUTTONS_NOW<a class="headerlink" href="#light_buttons_now" title="Permanent link">&para;</a></h3>
+<p>Used to immediately turn on all of the buttons that have been defined by
+BUTTONS_LIT= . This is handy when you define some RGB buttons that you
+want to turn on when your front end is running but DOFLinx is not fully
+active because no emulator is running. Just issue the command via
+DOFLInxMsg or similar.</p>
+<h3 id="killxxxxx">KILL=XXXXX<a class="headerlink" href="#killxxxxx" title="Permanent link">&para;</a></h3>
+<p>This sends a Windows kill message to all instances of the process name
+provided. It does not wait for the process to exit, it just sends the
+message and continues.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>DOFLinxMsg &quot;KILL=Pinball FX2&quot;
+</code></pre></div>
+<p>The double quotes are used on the above since the process has a space in
+its name. This sample command will send a kill message to all instances
+of Pinball FX2 running at the time. You would use this as Launch After
+command when exiting Pinball FX2 back to the menu if you want to ensure
+that all instances are closed. I use it for those occasions when
+PinballX doesn't manage to close things on exit.</p>
+<p><strong>OUTPUT_NOW_TIMER=DOOO,MMMM,DOOO,MMMM, etc<br />
+</strong>DOOO is the device / port combination, and MMMM is how long that
+output will be left on in milliseconds. So, "DOFLinxMsg
+OUTPUT_NOW_TIMER=1015,2000" will turn on device 1, output 15 for 2
+seconds. This w ill occur regardless of DOFLinx being awake for a game
+or not, so you can have a DOF device triggered by anything you can think
+of and create a batch file for.</p>
+<h3 id="output_now_colourdooommmmccccdooommmmcccc-etc">OUTPUT_NOW_COLOUR=DOOO,MMMM,CCCC,DOOO,MMMM,CCCC, etc<a class="headerlink" href="#output_now_colourdooommmmccccdooommmmcccc-etc" title="Permanent link">&para;</a></h3>
+<p>DOOO is the Red device / port combination for the RGB device, MMMM is
+how long the RGB displays colour CCCC. This will occur regardless of
+DOFLinx being awake for a game or not.</p>
+<h3 id="outputs_off">OUTPUTS_OFF<a class="headerlink" href="#outputs_off" title="Permanent link">&para;</a></h3>
+<p>Turn off all outputs now. Handy if you have LED buttons that you turn on
+at different points and want them all off when you do something like
+exit your front end. This command can easily be issues vis DOFLinxMsg.</p>
+<h3 id="quit">QUIT<a class="headerlink" href="#quit" title="Permanent link">&para;</a></h3>
+<p>Shutdown DOFLinx immediately. This is much nicer than killing the
+process from the operating system. It allows DOFLinx to neatly close
+devices, pipes and return other resources to the operating system.</p>
+<h3 id="stop_dof2dmd">STOP_DOF2DMD<a class="headerlink" href="#stop_dof2dmd" title="Permanent link">&para;</a></h3>
+<p>Sends the shutdown command to DOF2DMD. This is far preferable to trying
+to kill the process. Likely used if you have a mixed arcade and pinball
+cabinet and want to stop DOF2DMD after you've played a MAME game.</p>
+<h3 id="sup_ini">SUP_INI=<a class="headerlink" href="#sup_ini" title="Permanent link">&para;</a></h3>
+<p>This is the same as the command line argument, but parsed in real-time.
+It allows a SUP_INI file to be processed without the need to stop and
+restart DOFLinx. The parameters processed in real-time must abide by the
+same rules as messages, ie BUTTONS_ON can only be changed while DOFLinx
+is asleep. If DOFLinx is awake when parsed this parameter, it will be
+ignored.</p>
+<h3 id="show_in_taskbar01">SHOW_IN_TASKBAR=[0|1]<a class="headerlink" href="#show_in_taskbar01" title="Permanent link">&para;</a></h3>
+<p>DOFLinx starts up with this set to 0 (Off)</p>
+<p>Setting this parameter to 1 (On) will display DOFLinx in the Windows
+Taskbar rather than hide it completely. Very handy when you are playing
+around to get things working, etc.</p>
+<h3 id="show_variables">SHOW_VARIABLES<a class="headerlink" href="#show_variables" title="Permanent link">&para;</a></h3>
+<p>Displays all the key variables in the log file to assist with debugging.
+This command takes a moment to process, so may cause a slight pause in
+operation.</p>
+<h2 id="parameters-that-can-be-changed-any-time">Parameters That Can Be Changed Any Time<a class="headerlink" href="#parameters-that-can-be-changed-any-time" title="Permanent link">&para;</a></h2>
+<p>DEBUG<br />
+PROCESS_TO_ACTIVE_TIME</p>
+<h2 id="parameters-that-can-be-changed-only-when-doflinx-is-sleeping">Parameters That Can Be Changed Only When DOFLinx is Sleeping<a class="headerlink" href="#parameters-that-can-be-changed-only-when-doflinx-is-sleeping" title="Permanent link">&para;</a></h2>
+<p>Setting these parameters via the messenger will replace the setting from
+the INI until you change it again or restart DOFLinx.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>BUTTONS_ON
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>FORCE_ACTIVE
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>KEY_TO_COLOUR
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>KEY_TO_COLOUR_TIMER
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>KEY_TO_COLOUR_TOGGLE
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>KEY_TO_OUTPUT
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>KEY_TO_OUTPUT_TIMER
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>L_FLIPPER_KEY
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>L_FLIPPER_OUT
+<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>MAX_FLIPPER_ON
+<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>OUTPUT_GAME_NAME
+<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>R_FLIPPER_KEY
+<a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a>R_FLIPPER_OUT
+<a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a>RGB_MIN_TIME
+<a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a>RGB_OUTPUT
+<a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a>RGB_STYLE
+<a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a>RGB_TRIGGER
+<a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a>QUIT_AFTER_PROCESS
+</code></pre></div>
+<h2 id="these-parameters-can-only-occur-in-the-doflinxini-file">These parameters can only occur in the <code>DOFLinx.INI</code> file<a class="headerlink" href="#these-parameters-can-only-occur-in-the-doflinxini-file" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>DIRECTOUTPUTCONFIG
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>GAME_COLOUR
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>PROCESSES
+</code></pre></div>
+<h2 id="sending-commands-to-doflinx">Sending Commands To DOFLinx<a class="headerlink" href="#sending-commands-to-doflinx" title="Permanent link">&para;</a></h2>
+<p>Commands are sent to DOFLinx via a named pipe "DOFLINX". This means you
+can use the utility provided (DOFLinxMsg), or anything else that will
+write to the named pipe. A file Sample.vbs is included that shows how to
+use VB Script to write directly to the named pipe. This allows a lot of
+flexibility in how you send commands to DOFLinx.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["content.code.annotate", "navigation.sections", "navigation.expand", "navigation.top"], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.525ec568.min.js"></script>
+      
+    
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
+</html>
