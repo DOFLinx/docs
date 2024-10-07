@@ -29,6 +29,7 @@ theme:
     - navigation.sections
     - navigation.expand
     - navigation.top
+    - content.action.edit
 plugins:
   - awesome-pages:
       collapse_single_pages: true
