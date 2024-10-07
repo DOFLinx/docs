@@ -12,10 +12,4 @@ Notes
 2. At installation or upgrade, you may need to "unblock" the EXE file
   if you are using Windows 10. Just right click, properties, and
   unblock.
-3. Under Windows 8 and 10 you may need to "run as administrator".
-4. For the FP table link to work you will need DOFLinx to run with
-  administrator rights.
 
-!!! note
-
-    From version 7.0 there is no need to run with administrator rights unless you run any of your pinball emulators with administrator rights.
