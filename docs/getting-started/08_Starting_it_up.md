@@ -28,9 +28,10 @@ things on your cabinet. Here are a few comparisons.
 
 Set and Forget | Launch Before
 ---|---
-One setup | The process is not running when you use other programs
-No need to start and stop processes | 
+One setup, as designed and tested | The process is not running when you use other programs
+No need to start and stop processes | Invites timing issues as DOFLinx may not be ready
 Can use different colour sets for Pinball FX2 / 3 | 
+Ability to use attract mode | 
 
 Regardless of the mode, you may want to consider the mix of programs you
 have running that are trying to control your devices. Too many things
