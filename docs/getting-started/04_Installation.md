@@ -17,7 +17,8 @@
 ![](../img/media/DOFLinxConfig.PNG)
 
 7.	Reboot
-8.	Start Pinball FX or MAME and enjoy
+8.	Setup any emulators to work with DOFLinx, ie PinballFX or MAME
+9.	Start Pinball FX or MAME and enjoy
 
 Once installed you should have an installation looking something like that below.  Note the image below includes the Direct Output Framework (DOF) installed for running of output boards and toys (flashers, solenoids, etc)
 
