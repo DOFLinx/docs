@@ -11,10 +11,10 @@
       
       
       
-        <link rel="prev" href="05_AfterInstallation.html">
+        <link rel="prev" href="04_Installation.html">
       
       
-        <link rel="next" href="07_Upgrading.html">
+        <link rel="next" href="06_32_or_64_Bit.html">
       
       
       <link rel="icon" href="../assets/favicon.ico">
@@ -22,7 +22,7 @@
     
     
       
-        <title>32 or 64 Bit - DOFLinx</title>
+        <title>After its Running - DOFLinx</title>
       
     
     
@@ -83,7 +83,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#32-or-64-bit" class="md-skip">
+        <a href="#after-its-running" class="md-skip">
           Skip to content
         </a>
       
@@ -128,7 +128,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              32 or 64 Bit
+              After its Running
             
           </span>
         </div>
@@ -392,27 +392,6 @@
                 
   
   
-  
-  
-    <li class="md-nav__item">
-      <a href="05_AfterInstallation.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    After its Running
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
     
   
   
@@ -425,7 +404,29 @@
         
       
       
-      <a href="06_32_or_64_Bit.html" class="md-nav__link md-nav__link--active">
+      <a href="05_AfterInstallation.html" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    After its Running
+  </span>
+  
+
+      </a>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="06_32_or_64_Bit.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -434,7 +435,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -941,7 +941,7 @@
                   
 
   
-    <a href="https://github.com/DOFLinx/docs/edit/main/docs/getting-started/06_32_or_64_Bit.md" title="Edit this page" class="md-content__button md-icon">
+    <a href="https://github.com/DOFLinx/docs/edit/main/docs/getting-started/05_AfterInstallation.md" title="Edit this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
     </a>
@@ -949,11 +949,32 @@
   
 
 
-<h1 id="32-or-64-bit">32 or 64 Bit<a class="headerlink" href="#32-or-64-bit" title="Permanent link">&para;</a></h1>
-<p>The default installation of DOFLinx above is 64 bit.  You must change this to 32 bit only if you have a 32 bit operating system.  If you are unsure run DOFLinxConfig and check in the bottom right-hand corner (see image above), it will tell you.</p>
-<p>Others may choose to change to a 32 bit installation, that too is fine.  DOFLinx 32 bit and 64 bit have identical operation, 64 bit just has access to more memory and is arguable marginally faster.</p>
-<p>For those still running some 32 bit pinball tools, please note that your DOFLinx installation does not need to match those.  Provided DOFLinx has access to the correct bit sized DirectOutput.dll then it can operate as 64 bit while you run other pinball utilities, even those using DOF, as 32 bit.</p>
-<p>To change to 32 bit just copy the contents of \DOFLinx\32 bit into \DOFLinx.  To go back to 64 bit do the reverse and copy the contents of \DOFLinx\64 bit to \DOFLinx.  If you are unsure if you have it right then run DOFLinxConfig to check.  A mixture of 32 and 64 bit will cause some issues.</p>
+<h1 id="after-its-running">After its Running<a class="headerlink" href="#after-its-running" title="Permanent link">&para;</a></h1>
+<p>Once you have a working DOFLinx installation then you may want to do some of these things to make it more enjoyable</p>
+<ol>
+<li>
+<p>If you have the Direct Output Framework (DOF) loaded (usually pinball users or MAME cabinet users without output toys), normally located in C:\DirectOutput folder, then delete the DirectOutput.dll file in your C:\DOFLinx folder.  This will ensure that DOFlinx uses your current installation and not a local copy of the dll.  It will help you out later on when you upgrade DOF.</p>
+</li>
+<li>
+<p>If you have an output device (Dude’s Cab, PinOne, Pinscape, LEDWiz, PacLED, etc) with toys (solenoids, flashers, etc) then run DOFLinxConfig and use “Configure” to setup your toys.  Alternatively read the detailed guide and edit your C:\DOFLINX\Config\DOFLinx.INI directly</p>
+</li>
+<li>If you’ve got Pinball FX then follow the “Enabling Pinball FX for DOFLinx” guide to get full integration from Pinball FX.</li>
+<li>If you’ve got MAME then follow the “Guide for Setting up DOFLinx with MAME” guide to get full integration from MAME.</li>
+</ol>
+<h1 id="building-your-software-installation">Building Your Software Installation<a class="headerlink" href="#building-your-software-installation" title="Permanent link">&para;</a></h1>
+<p>Let’s get the software loaded.
+1.  Install your game.</p>
+<div class="highlight"><pre><span></span><code>a.  PinballFX, download the Steam or Epic versions
+
+b.  MAME
+
+   i.   Install MAME from here https://www.mamedev.org/release.html
+
+   ii.  Substitute in the correct MAME_XXX.exe, where XXX is the version number) from the \MAME_EXE folder in the DOFLinx installation zip to be MAME.exe in your MAME folder
+</code></pre></div>
+<ol>
+<li>If you are running PinBall FX then install all of the xxx.directb2s files into the folder you pointed to with the PATH_FX_B2S= parameter (default C:\DOFLINX\B2S) from here https://github.com/DOFLinx/B2S-Back-Glasses/releases</li>
+</ol>
 
 
 
