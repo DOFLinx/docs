@@ -9,3 +9,6 @@ b)	Go over to www.vpforums.org/index.php?showforum=104 and search out your issue
 c)	Visit Discord over here https://discord.com/channels/652274650524418078/652282185889349656 
 
 d)	Try to gain an understanding of how things are working, this will allow you to help yourself more often than you think.
+
+
+Above all else, enjoy and have fun!
