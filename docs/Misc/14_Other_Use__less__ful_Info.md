@@ -22,5 +22,7 @@
 - Some FX3 keyboard simulation ideas by Tom Speirs
 - PinControl1 testing by Charly Harper
 - PacDrive testing by Bjonne
+- Pixelcade assitance by Al
 - Zen and freezy for PinballFx integration
+- Inspiration to move to Github and intial setup of on-line docs by ojacques
 - This is not for commercial use. If you have needs, make contact.
