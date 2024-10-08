@@ -1,7 +1,7 @@
 # Installation
 
 1.	Create a folder for DOFLinx, let’s call it C:\DOFLINX
-2.	Download DOFLinx from here https://github.com/DOFLinx/DOFLinx/releases into C:\DOFLINX
+2.	Download DOFLinx from here [https://github.com/DOFLinx/DOFLinx/releases](https://github.com/DOFLinx/DOFLinx/releases) into C:\DOFLINX
 3.	Unblock the downloaded DOFLinx.Vxx.ZIP file
 4.	Unpack C:\DOFLINX\DOFLinx.Vxx.ZIP into the same folder
 5.	Copy the premade DOFLinx-Shortcut.lnk to startup.
