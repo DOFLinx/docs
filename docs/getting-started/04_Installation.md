@@ -18,3 +18,7 @@
 
 7.	Reboot
 8.	Start Pinball FX or MAME and enjoy
+
+Once installed you should have an installation looking something like that below.  Note the image below includes the Direct Output Framework (DOF) installed for running of output boards and toys (flashers, solenoids, etc)
+
+![](../img/media/InstallFolder.png)
