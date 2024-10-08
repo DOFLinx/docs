@@ -14,12 +14,12 @@ Let’s get the software loaded.
 
 1.	Install your game.
 
-    a.	PinballFX, download the Steam or Epic versions
+    1.	PinballFX, download the Steam or Epic versions
 
-    b.	MAME
+    2.	MAME
 
-    i.	Install MAME from here [https://www.mamedev.org/release.html](https://www.mamedev.org/release.html)
+       1.	Install MAME from here [https://www.mamedev.org/release.html](https://www.mamedev.org/release.html)
 
-    ii.	Substitute in the correct MAME_XXX.exe, where XXX is the version number) from the \MAME_EXE folder in the DOFLinx installation zip to be MAME.exe in your MAME folder
+       2.	Substitute in the correct MAME_XXX.exe, where XXX is the version number) from the \MAME_EXE folder in the DOFLinx installation zip to be MAME.exe in your MAME folder
 
-3.	If you are running PinBall FX then install all of the xxx.directb2s files into the folder you pointed to with the PATH_FX_B2S= parameter (default C:\DOFLINX\B2S\) from here [https://github.com/DOFLinx/B2S-Back-Glasses/releases](https://github.com/DOFLinx/B2S-Back-Glasses/releases)
+2.	If you are running PinBall FX then install all of the xxx.directb2s files into the folder you pointed to with the PATH_FX_B2S= parameter (default C:\DOFLINX\B2S\) from here [https://github.com/DOFLinx/B2S-Back-Glasses/releases](https://github.com/DOFLinx/B2S-Back-Glasses/releases)
