@@ -11,6 +11,7 @@ Once you have a working DOFLinx installation then you may want to do some of the
 #	Building Your Software Installation
 
 Let’s get the software loaded.
+
 1.	Install your game.
 
     a.	PinballFX, download the Steam or Epic versions
