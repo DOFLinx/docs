@@ -1,6 +1,10 @@
 # Upgrading
 
-As per installation, just unpack the new EXE file over the top of the old one.  Of course, you might need to stop the DOFLinx process if you have it running at all times as a set and forget.
+1. Save a copy of your DOFLinx.INI file
+
+2. As per installation, just unpack the new EXE file over the top of the old one.  Of course, you might need to stop the DOFLinx process if you have it running at all times as a set and forget.
+   
+3. Replace your DOFLinx.INI file
 
 Notes
 
