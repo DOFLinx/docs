@@ -4,7 +4,7 @@
 
 Go to your start-up folder
 
-![](../img/media/image1.png)
+![](../img/media/RunShellStartup.png)
 
 Create a shortcut
 
