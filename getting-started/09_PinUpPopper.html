@@ -1061,20 +1061,21 @@
 <p>Here is the game name and high scores being displayed on the built in DOFLinx score screen.  If you have a Pixelcade device or DMD using FlexDMD it will display the marquee and optionally high scores dependant on the parameters you setup in your DOFLinx.ini  If you have a DMD screen using FlexDMD then you will need the DOF2DMD utility available here <a href="https://github.com/DMDTools/DOF2DMD/releases">https://github.com/DMDTools/DOF2DMD/releases</a></p>
 <p>To do this you will need to edit two of your Pinup Popper files.  I have included copies of my files in the “\DOFLinx\PinUp Popper” folder within the installation zip.  They are PUPMenuScriptSysOptions.ini and PuPMenuScript.pup .  Ensure you make a backup of both files before starting to edit just in case the edits don’t go according to plan.</p>
 <p>The change to  PUPMenuScriptSysOptions.ini is to add the highlighted line in approximately the area shown below:</p>
-<div class="highlight"><pre><span></span><code>useDOF = false ;               // set to true if using DOF output with Popper. false = disabled
-useDMD = false ;               // set to true if using hardware dmddevice.DLL, for real DMDs. false = disabled
-useWEB = false ;               // set to true if using WebServer for Remote control of Popper. false = disabled
-useDOFLinx = true;            // Set to true if using DOFLinx to show marquees for MAME
-NoBracketText = 0 ;      // set to 1 to NOT display any text within brackets for the Game&#39;s &quot;Screen Name&quot;
-</code></pre></div>
+<blockquote>
+<p>useDOF = false ;               // set to true if using DOF output with Popper. false = disabled</p>
+<p>useDMD = false ;               // set to true if using hardware dmddevice.DLL, for real DMDs. false = disabled</p>
+<p>useWEB = false ;               // set to true if using WebServer for Remote control of Popper. false = disabled</p>
+<p><strong>useDOFLinx = true;            // Set to true if using DOFLinx to show marquees for MAME</strong></p>
+<p>NoBracketText = 0 ;      // set to 1 to NOT display any text within brackets for the Game's "Screen Name"</p>
+</blockquote>
 <p>The second file requiring editing is PuPMenuScript.pup . You will need to add three small sections that are highlighted.  I recommend using cut and paste from this document as case and spacing is important.  I’ve left sections one either side of the highlighted piece you require below to help with determining where to add the code.</p>
 <p>First addition</p>
 <div class="highlight"><pre><span></span><code>/////////////////////////////////// END WEB Remote STUFFS ////////////////////////////////////////////////
 //////////////////////////////////// DOFLinx STUFF ///////////////////////////////////////
 
-function ProcessDOFLinx(gtype, rom){  
+function ProcessDOFLinx(gtype, rom){
 if (useDOFLinx) {
-  try {
+try {
       msg = &#39;MENU_ROM=&#39;;
       msg = msg.concat(gtype, &#39;,&#39;, rom);
       var DOFLinxObject = new ActiveXObject(&quot;Scripting.FileSystemObject&quot;);
@@ -1103,7 +1104,7 @@ function NavigationDOFLinx(direction){
       }
     } catch(e) {}                 
   }
-//////////////////////////////////// DOFLinx END ////////////////////////////////////////////////
+//////////////////////////////////// DOFLinx END ////////////////////////////////////////////////**
 
 function StartUp() {   //startup menusystem
   Setuplabels(); 
