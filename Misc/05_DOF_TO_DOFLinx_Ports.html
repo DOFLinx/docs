@@ -11,10 +11,10 @@
       
       
       
-        <link rel="prev" href="15_Examples___Screen_Shots.html">
+        <link rel="prev" href="../systems/19_MAME_Commands__Triggers_and_Actions_--_Full_Force_Feedback.html">
       
       
-        <link rel="next" href="../07_Help.html">
+        <link rel="next" href="13_Testing_Your_Setup.html">
       
       
       <link rel="icon" href="../assets/favicon.ico">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Settings Pop Up Menu - DOFLinx</title>
+        <title>DOF to DOFLinx Device and Port Assignments - DOFLinx</title>
       
     
     
@@ -83,7 +83,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#settings-pop-up-menu" class="md-skip">
+        <a href="#dof-to-doflinx-device-and-port-assignments" class="md-skip">
           Skip to content
         </a>
       
@@ -128,7 +128,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Settings Pop Up Menu
+              DOF to DOFLinx Device and Port Assignments
             
           </span>
         </div>
@@ -791,10 +791,19 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="05_DOF_TO_DOFLinx_Ports.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="05_DOF_TO_DOFLinx_Ports.html" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -803,6 +812,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -875,19 +885,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="20_Settings_Pop_Up_Menu.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="20_Settings_Pop_Up_Menu.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -896,7 +897,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -962,7 +962,7 @@
                   
 
   
-    <a href="https://github.com/DOFLinx/docs/edit/main/docs/Misc/20_Settings_Pop_Up_Menu.md" title="Edit this page" class="md-content__button md-icon">
+    <a href="https://github.com/DOFLinx/docs/edit/main/docs/Misc/05_DOF_TO_DOFLinx_Ports.md" title="Edit this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
     </a>
@@ -970,70 +970,36 @@
   
 
 
-<h1 id="settings-pop-up-menu">Settings Pop Up Menu<a class="headerlink" href="#settings-pop-up-menu" title="Permanent link">&para;</a></h1>
-<p>The setting pop up menu is designed to allow you to control items within
-your cabinet. It is not about configuring DOFLinx. There are two types
-of settings, items that turn device ports on / off and hence control
-cabinet items electrically, plus one special setting for NIGHT mode.</p>
-<p>To use settings that control electrical items, you must have those
-electrical items wired up appropriately. In my case I wanted to be able
-to turn on / off some of my lighting effects easily so that different
-people in my house like / don't like. I started off by having a physical
-switch inside the cabinet to switch the positive rail of the under
-cabinet lighting, I got sick of that. So then I installed a relay
-instead of that switch, the control for that relay is wired to another
-LEDWiz output. This means by switching the output to the relay I can
-electrically switch on / off my under cabinet lighting. The reason I
-didn't want to do this via configuration and disable it is because there
-are multiple configurations and they have a habit of going wrong at some
-stage, this is a quick and simple way.</p>
-<p>Below is the standard connection for a toy from your device.</p>
-<p><a class="glightbox" href="../img/media/image21.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/media/image21.png" /></a></p>
-<p>Above is the modified connection to allow control via the Settings
-option. It differs by the addition of a relay on the switch power line
-to the toy. The relay is controlled via another output device output
-port.</p>
-<p>Each time an application opens the DOF framework it resets the outputs
-on each device. DOFLinx opens and closes DOF as required when tables /
-emulators are started and stopped. To avoid the relay resetting for your
-output it is possible (and desirable) to add a latching circuit. That
-means one signal to turn on a relay / MOSFET and another to turn it off.
-Doing this ensures that the device you are controlling remains on / off
-until you specifically change that setting. A logical diagram of this is
-below.</p>
-<p><a class="glightbox" href="../img/media/image22.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/media/image22.png" /></a></p>
-<p>A cheap and easy latching circuit that I have used with a Pinscape is
-shown below.</p>
-<p><a class="glightbox" href="../img/media/image23.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/media/image23.png" /></a></p>
-<p>The Settings pop up menu is a bit reminiscent of a traditional pinball
-configuration on the DMD. As such I've made it so you can drag the pop
-up menu to your DMD (or what ever screen you like) and size it
-appropriately. When you exit the location and size will be saved in the
-registry for next time. (HKEY_LOCAL_USER\Software\DOFLinx\XX. If
-anything goes wrong you can safely delete the entire DOFLinx tree from
-the registry, it will recreate next time.</p>
-<p><a class="glightbox" href="../img/media/image24.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/media/image24.jpg" /></a></p>
-<p>There is one "special", and hence reserved, ID code that can be used,
-that is "NIGHT", so "SETTING_NIGHT= ". This special setting allows the
-internal DOFLinx flag for NIGHT_MODE to be toggled.</p>
-<p>An example of the configuration that would produce the settings pop up
-above and use Left Shift + Right Shift + Left Control + Right Control
-(all flipper and magna save buttons in my case) at the same time, along
-with Left Shift for UP, Right Shift for DOWN, Escape for EXIT and 0 for
-CHANGE is:</p>
-<blockquote>
-<p>SETTING_ACTIVATE=A0,A1,A2,A3</p>
-<p>SETTING_UP=A0</p>
-<p>SETTING_DOWN=A1</p>
-<p>SETTING_CHANGE=31</p>
-<p>SETTING_EXIT=1B</p>
-<p>SETTING_MESSAGE=L Flipper = Up, R Flipper = Down, Start = Change, EB =
-Exit</p>
-<p>SETTING=UnderCab,101,Under cabinet lighting disabled,Off,Y</p>
-<p>SETTING=Flashers,102,Flashers Enabled,On,Y</p>
-<p>SETTING=Addressable,103,Addressable LEDS Enabled,On,N</p>
-<p>SETTING=NIGHT,,Night Mode,Off,Y</p>
-</blockquote>
+<h1 id="dof-to-doflinx-device-and-port-assignments">DOF to DOFLinx Device and Port Assignments<a class="headerlink" href="#dof-to-doflinx-device-and-port-assignments" title="Permanent link">&para;</a></h1>
+<p><em>This guide is designed to help you understand the relationship between DOF settings and DOFLinx configuration.  If you just have DOF installed for the drivers (ie using on a MAME cabinet), then you do not need a DOF setup so this is probably not relevant.</em></p>
+<p>So, you have setup DOF and now want to translate those toys for use in DOFLinx.  It is fairly easy once you get the hang of it.</p>
+<p>Everywhere in DOFLinx the assignment of a toy needs a four digit assignment in the form of DOOO, where D is the device number and OOO is the output.  For example, to setup the Left Flipper the line in the DOFLinx.INI configuration file will be:</p>
+<p>LINK_LF= ……</p>
+<p>For the parameter order and details see the full guide for each different line.  In all cases, the first item will be the device/port.  For my cabinet the line looks like:</p>
+<p>LINK_LF=2017,50,5000,255</p>
+<p>In the DOF Config Tool you setup each output controller you have and assign the toys.  Each type of controller starts numbering from 1.  So, if you have two LEDWiz and a Pinscape you will have LEDWiz #1, LedWiz #2 and Pinscape #1.  You can see this in the screen shots below for my cabinet configuration.</p>
+<p><a class="glightbox" href="../img/media/PortAssignment_01.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/media/PortAssignment_01.png" /></a></p>
+<p><a class="glightbox" href="../img/media/PortAssignment_02.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/media/PortAssignment_02.png" /></a></p>
+<p><a class="glightbox" href="../img/media/PortAssignment_03.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/media/PortAssignment_03.png" /></a></p>
+<p><a class="glightbox" href="../img/media/PortAssignment_04.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/media/PortAssignment_04.png" /></a></p>
+<p>For DOFLinx the controller devices start being numbered at #1 and continue from there.  This is with the exception of a Teensy / wesmos controller used for addressable LEDs, that is not assigned a controller ID # by DOFLinx as you never link directly to the addressable LED toys.</p>
+<p>The numbering for devices in DOFLinx starts with Pinscape Controllers, then LEDWiz, and works through all the other supported controllers.  The easiest way to get the device numbers is to just look at DOFLinx’s log screen / file.</p>
+<p><a class="glightbox" href="../img/media/PortAssignment_05.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/media/PortAssignment_05.png" /></a></p>
+<p>You can see that there is one output device, a Pinscape, with 24 outputs.  This means that your toys can be connected to D =1 and OOO=001 to 024 in the format DOOO.  So if your Right Flipper is connected to the Pinscape port #9 then your would use DOOO = 1009.  The parameter line in your DOFLinx.ini would look something like:</p>
+<p>LINK_RF=1009,50,5000,255</p>
+<p>For my cabinet my DOFLinx log looks like this:</p>
+<p><a class="glightbox" href="../img/media/PortAssignment_06.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/media/PortAssignment_06.png" /></a></p>
+<p>This means that for my pinball cabinet the devices in DOFLinx are:</p>
+<p>Device #1  Pinscape</p>
+<p>Device #2 = LEDWiz #1</p>
+<p>Device #3 = LEDWiz #2</p>
+<p>I can possibly have toys connected to D=1, 2 or 3.  For the LEDWiz with 32 outputs OOO can be 001 to 032 inclusive.  For the Pinscape OO can be 001 to 022.  This gives 101-122, 201-232,301-332 as valid outputs for my toys. </p>
+<p>Do remember of course that RGB toys are specified by their RED port.  So if you have RGB lighting connected to device #2 ports 9, 10, 11 for RED, GREEN and BLUE the RGB_OUTPUT= DOOO will be 2009, the RED port.</p>
+<p>This means the translation from my DOF Configuration Tool setup to DOFLinx is (I only wrote enough numbers on there in lime green to show the pattern, I’m sure the rest is quite obvious):</p>
+<p><a class="glightbox" href="../img/media/PortAssignment_07.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/media/PortAssignment_07.png" /></a></p>
+<p><a class="glightbox" href="../img/media/PortAssignment_08.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/media/PortAssignment_08.png" /></a></p>
+<p>Below is the main toy definition section of my current cabinet file.</p>
+<p><a class="glightbox" href="../img/media/PortAssignment_09.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/media/PortAssignment_09.png" /></a></p>
 
 
 
