@@ -43,6 +43,9 @@ Adding this parameter to the command line allows you to force the Game
 Name for the GAME_COLOUR parameter palette selections. Read about the
 GAME_COLOUR parameter below.
 
+## PATH_DOF=
+If for some reason you need to force the path to where the appropriate DIrectOutput.dll resides.  In normal operation this should not be required.
+
 ## PATH_INI=
 
 The path to locate INI files in. This value can be set as a command line
