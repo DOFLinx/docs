@@ -8,7 +8,7 @@ Go to your start-up folder
 
 Create a shortcut
 
-![](../img/media/image2.png)
+![](../img/media/ShortcutProperties.png)
 
 End up with it in your start-up items
 
