@@ -647,6 +647,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#attract_mode01" class="md-nav__link">
+    <span class="md-ellipsis">
+      ATTRACT_MODE=0/1
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#game_flag_fileppppffff" class="md-nav__link">
     <span class="md-ellipsis">
       GAME_FLAG_FILE=PPPP\FFFF
@@ -738,15 +747,6 @@
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#parameters-that-can-be-changed-any-time" class="md-nav__link">
-    <span class="md-ellipsis">
-      Parameters That Can Be Changed Any Time
-    </span>
-  </a>
   
 </li>
       
@@ -1116,6 +1116,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#attract_mode01" class="md-nav__link">
+    <span class="md-ellipsis">
+      ATTRACT_MODE=0/1
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#game_flag_fileppppffff" class="md-nav__link">
     <span class="md-ellipsis">
       GAME_FLAG_FILE=PPPP\FFFF
@@ -1211,15 +1220,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#parameters-that-can-be-changed-any-time" class="md-nav__link">
-    <span class="md-ellipsis">
-      Parameters That Can Be Changed Any Time
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#parameters-that-can-be-changed-only-when-doflinx-is-sleeping" class="md-nav__link">
     <span class="md-ellipsis">
       Parameters That Can Be Changed Only When DOFLinx is Sleeping
@@ -1287,6 +1287,8 @@ by a #. So for some colour and a shaker:</p>
 <a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>OUTPUT_NOW_TIMER=115,1500#OUTPUT_COLOUR_NOW=109,5000,Yellow
 </code></pre></div>
 <p>The commands are:</p>
+<h3 id="attract_mode01">ATTRACT_MODE=0/1<a class="headerlink" href="#attract_mode01" title="Permanent link">&para;</a></h3>
+<p>Turn attract mode on / off.</p>
 <h3 id="game_flag_fileppppffff">GAME_FLAG_FILE=PPPP\FFFF<a class="headerlink" href="#game_flag_fileppppffff" title="Permanent link">&para;</a></h3>
 <p><code>PPPP</code> is the path and FFFF is the file.<br />
 When an emulator process is in the PROCESSES list and a GAME_FLAG_FILE
@@ -1309,7 +1311,7 @@ This is designed for use when DOFLinx is running in Set and Forget mode.</p>
 BUTTONS_LIT= . This is handy when you define some RGB buttons that you
 want to turn on when your front end is running but DOFLinx is not fully
 active because no emulator is running. Just issue the command via
-DOFLInxMsg or similar.</p>
+DOFLinxMsg or similar.</p>
 <h3 id="killxxxxx">KILL=XXXXX<a class="headerlink" href="#killxxxxx" title="Permanent link">&para;</a></h3>
 <p>This sends a Windows kill message to all instances of the process name
 provided. It does not wait for the process to exit, it just sends the
@@ -1326,7 +1328,7 @@ PinballX doesn't manage to close things on exit.</p>
 </strong>DOOO is the device / port combination, and MMMM is how long that
 output will be left on in milliseconds. So, "DOFLinxMsg
 OUTPUT_NOW_TIMER=1015,2000" will turn on device 1, output 15 for 2
-seconds. This w ill occur regardless of DOFLinx being awake for a game
+seconds. This will occur regardless of DOFLinx being awake for a game
 or not, so you can have a DOF device triggered by anything you can think
 of and create a batch file for.</p>
 <h3 id="output_now_colourdooommmmccccdooommmmcccc-etc">OUTPUT_NOW_COLOUR=DOOO,MMMM,CCCC,DOOO,MMMM,CCCC, etc<a class="headerlink" href="#output_now_colourdooommmmccccdooommmmcccc-etc" title="Permanent link">&para;</a></h3>
@@ -1361,9 +1363,6 @@ around to get things working, etc.</p>
 <p>Displays all the key variables in the log file to assist with debugging.
 This command takes a moment to process, so may cause a slight pause in
 operation.</p>
-<h2 id="parameters-that-can-be-changed-any-time">Parameters That Can Be Changed Any Time<a class="headerlink" href="#parameters-that-can-be-changed-any-time" title="Permanent link">&para;</a></h2>
-<p>DEBUG<br />
-PROCESS_TO_ACTIVE_TIME</p>
 <h2 id="parameters-that-can-be-changed-only-when-doflinx-is-sleeping">Parameters That Can Be Changed Only When DOFLinx is Sleeping<a class="headerlink" href="#parameters-that-can-be-changed-only-when-doflinx-is-sleeping" title="Permanent link">&para;</a></h2>
 <p>Setting these parameters via the messenger will replace the setting from
 the INI until you change it again or restart DOFLinx.</p>
