@@ -3198,7 +3198,7 @@
 <h1 id="the-parameters">The Parameters<a class="headerlink" href="#the-parameters" title="Permanent link">&para;</a></h1>
 <h2 id="device-port">Device / Port<a class="headerlink" href="#device-port" title="Permanent link">&para;</a></h2>
 <p>A device / port setting is used by many of the parameters. It is always
-in the form <code>DOOO</code>, where <code>D=</code> the device number as assigned by DOFLInx (if
+in the form <code>DOOO</code>, where <code>D=</code> the device number as assigned by DOFLinx (if
 in doubt run in debug and read what it is). They start at 1 and go up
 from there. So if you've only got one SainSmart, LedWiz, etc then it is
 almost certainly 1. The <code>OOO=</code> is the output port number. This can be from
@@ -3216,7 +3216,7 @@ change was made to accommodate output ports &gt;=100. Both <code>DOO</code> and 
 <p>A LedWiz or KL25Z device can have an ID number that is
 different to the device number assigned by DOFLinx. For example, ID #8
 may initialise as device #2. So the second device that comes with a
-KL25Z has the ID of 8 and will be normally be addressed as 201 to 232. 
+KL25Z has the ID of 8 and will be normally be addressed as 2001 to 2032. 
 (note this may vary based on how many devices you have and how they are
 setup). If in doubt look at the <code>DOFLinx.LOG</code> file, the device ID's and
 numbers are always in there from start-up regardless of the <code>DEBUG=</code> flag.</p>
@@ -3227,7 +3227,7 @@ keyboard codes or Xbox keys.</p>
 <h3 id="keyboard">Keyboard<a class="headerlink" href="#keyboard" title="Permanent link">&para;</a></h3>
 <p>This is the key scan code to monitor, shown as KK. Codes can be found
 <a href="https://msdn.microsoft.com/en-us/library/windows/desktop/dd375731(v=vs.85).aspx">here</a>.</p>
-<p>So for the left shift key KK is A0 (A zero), and right control key KK is
+<p>So, for the left shift key KK is A0 (A zero), and right control key KK is
 A3.</p>
 <h3 id="xbox-controller">Xbox Controller<a class="headerlink" href="#xbox-controller" title="Permanent link">&para;</a></h3>
 <p>The code to indicate an Xbox key has three parts;</p>
@@ -3275,7 +3275,7 @@ parameter to 0 or just leave it out of your INI file. Do not set this
 parameter to less than 1000 (1 second) as you will flood the device
 trying to display the marquee.</p>
 <h2 id="attract_mode01"><code>ATTRACT_MODE=[0/1]</code><a class="headerlink" href="#attract_mode01" title="Permanent link">&para;</a></h2>
-<p>Turn attract mode on or off. On is 1 and off is 0, so turning attract
+<p>Manually turn attract mode on or off. On is 1 and off is 0, so turning attract
 mode on is ATTRACT_MODE=1</p>
 <h2 id="attract_setupdddndoooccccuxndoooccccux"><code>ATTRACT_SETUP=DDD,N,DOOO,CCCC,U,X[,N,DOOO,CCCC,U,X]</code><a class="headerlink" href="#attract_setupdddndoooccccuxndoooccccux" title="Permanent link">&para;</a></h2>
 <p>Load up an attract mode sequence, <code>DDD</code> is the unit of delay in
@@ -3287,7 +3287,7 @@ one display item numbered 1.</p>
 <p>DOOO is the device / output to act on.</p>
 <p>CCCC is the colour to display. RANDOM is valid for a RGB device, ON /
 OFF is used for mono devices.</p>
-<p>U is the number of units to delay. So if U = 3 and DDD=500 then this
+<p>U is the number of units to delay. So if U = 3, and DDD=500, then this
 item will be displayed for 1500mS or 1.5 seconds. Set this to 0 if the
 action is to happen immediately, ie turning off the last displayed
 colour to create a chain effect.</p>
@@ -3296,7 +3296,7 @@ to start from the beginning again.</p>
 <h2 id="attract_start_delayx"><code>ATTRACT_START_DELAY=X</code><a class="headerlink" href="#attract_start_delayx" title="Permanent link">&para;</a></h2>
 <p>Set this to a value above zero to be the number of milliseconds of
 inactivity until DOFLinx starts your Attract Mode activities. If you are
-not using Attract Mode simply leave this parameter out of your INI file.</p>
+not using Attract Mode simply leave this parameter out of your INI file.  For most something like ATTRACT_START_DELAY=30000 is a good setting, this means after 30 seconds attract mode actions start.  If you have attract mode in your front end menu as well, then make these timeout values align.</p>
 <p>Inactivity is defined as, not having an emulator that DOFLinx monitors,
 time since the last menu system navigation message was received, time
 since the right-click menu was activated.</p>
@@ -3318,8 +3318,7 @@ a button after its been defined using LINK_xx.</p>
 LINK_ST=101,Green then find that in a particular game you want the Start
 button to be blue use BUTTON_CHANGE_COLOUR=BUT_ST,Blue</p>
 <p>While logically not required in DOFLinx.INI, if set in the DOFLinx.INI
-file buttons must be defined before they can be used. So you must set
-LINK_P1= and LINK_CN= before using the above sample command.</p>
+file buttons must be defined before they can be used. So, you must set LINK_P1= and LINK_CN= higher in your DOFLinx.INI file before using a command like above.</p>
 <h2 id="button_light_actionbbbaaaontcbbbaaaontc"><code>BUTTON_LIGHT_ACTION=BBB,AAA,O,N,T,C[,BBB,AAA,O,N,T,C]</code><a class="headerlink" href="#button_light_actionbbbaaaontcbbbaaaontc" title="Permanent link">&para;</a></h2>
 <p>This parameter is most likely used in a game file, ie FX3 file. It links
 a table trigger to a button LED action. The Button LED can be RGB or
@@ -3378,7 +3377,7 @@ and yellows then</p>
 <p><code>"COLOUR_PALETTE=Lime,Green,Yellow,Gold,Lawn_Green,Chart_Reuse,Green_Yellow,Forect_Green,Dark_Green,Yellow_Green,Light_Green"</code></p>
 </blockquote>
 <p>would do it.</p>
-<p>This is intended for use in the STARTUP section of *.MAME files to set
+<p>This is intended for use in the STARTUP section of *.MAME and *.FX files to set
 the colour palette to a restricted set of colours for the MAME game
 being run. It is possible to use the GAME_COLOUR= command and add all
 MAME games to your <code>DOFLinx.INI</code> file and have them selected by game name.
@@ -3425,7 +3424,7 @@ start-up info is sent to the log just in case.</p>
 <p>When the DEBUG parameter is set to anything other than 0 messages are
 added to DOFLinx.LOG. If the DEBUG_TCP_PORT= is set to a valid TCP port,
 for example DEBUG_TCP_PORT=8001 then the messages sent to DOFLinx.LOG
-are mirrored as an output on this TCP port. So once set messages can be
+are mirrored as an output on this TCP port. So once DEBUG_TCP_PORT is set, messages can be
 monitored using a TCP port reading utility such as NC. A utility that
 handles DOFLinx messages, TCPReader, is included with the DOFLinx
 distribution.</p>
@@ -3452,7 +3451,7 @@ this delay.</p>
 <p>No default, required parameter.</p>
 <p>This is the full file name, including path, to you
 directoutputconfig.ini file, ie
-"C:\directoutput\config\DirectOutputConfig.ini" without the quotes.
+"C:\directoutput\config\DirectOutputConfig.ini" , or “c:\DOFLinx\config\colours.ini” without the quotes.
 The only reason a pointer to this file exits is to get the DOF colours,
 so technically it could be any file so long as it has the section from
 your directoutputconfig.ini file that looks like:</p>
@@ -3477,8 +3476,8 @@ the first parameter in the <code>DOFLinx.INI</code> file.</em></strong></p>
 <p>No default, optional parameter.</p>
 <p>Required if you intend to use addressable LEDs.</p>
 <p>This is the full file name, including path, to your DOF R3
-GLobalConfig.xml file, ie
-"C:\directoutput\config\GLobalConfig_b2sServer.xml" without the
+GlobalConfig.xml file, ie
+"C:\directoutput\config\GlobalConfig_b2sServer.xml" without the
 quotes.</p>
 <p>You may not have a global config XML file for DOF, if not, do not panic,
 and do not include this parameter. I ran for years without one. This
@@ -3501,6 +3500,7 @@ for the effect to stay on.</p>
 on, ie setting a flipper effect on for 10000mS (10 seconds) on flipper
 down, but wanting the effect to stop on flipper up.</p>
 <h2 id="ff_pc-aoddddd"><code>FF_PC A,O,DDDDD</code><a class="headerlink" href="#ff_pc-aoddddd" title="Permanent link">&para;</a></h2>
+<p>Mainly used in *.MAME and possibly *.FX files.</p>
 <p>For initiating an action on a Pixelcade device. "A" is the action, "O"
 is the output device, "DDDD" is the detail.</p>
 <p>Valid actions:</p>
@@ -3600,7 +3600,7 @@ Stick" function on the right click menu when in DEBUG mode.</p>
 <p>Enabled is 1, disabled is 0. When enabled DOFLinx shifts focus to FX2
 every 0.5 seconds for 60 seconds after FX2 starts up. This is to assist
 with focus sometimes doing odd things as FX starts and then we start an
-active backglass or other things.</p>
+active back glass or other things.</p>
 <h2 id="fx2_window_wait_time"><code>FX2_WINDOW_WAIT_TIME=</code><a class="headerlink" href="#fx2_window_wait_time" title="Permanent link">&para;</a></h2>
 <p>Not required, defaults to 10000</p>
 <p>This value in milliseconds can be used to manipulate the length of time
@@ -3981,14 +3981,14 @@ sound to be quieter relative to other SSF sounds.</p>
 </tbody>
 </table>
 <p>File1 to FileX are the WAV files to load for this sound. You at a
-minimum one file. When there is more than one sound file loaded they
+minimum one file. When there is more than one sound file loaded, they
 will play sequentially each time this sound is called.</p>
 <h2 id="mame_focus"><code>MAME_FOCUS=</code><a class="headerlink" href="#mame_focus" title="Permanent link">&para;</a></h2>
 <p>Not required, defaults to 1</p>
 <p>Enabled is 1, disabled is 0. When enabled DOFLinx shifts focus to MAME
 every 0.5 seconds for 60 seconds after MAME starts up. This is to assist
 with focus sometimes doing odd things as MAME starts and then we start
-an active backglass or other things.</p>
+an active back glass or other things.</p>
 <h2 id="mame_hiscore_folder"><code>MAME_HISCORE_FOLDER=</code><a class="headerlink" href="#mame_hiscore_folder" title="Permanent link">&para;</a></h2>
 <p>This is the folder where you can find the MAME high score files. Usually
 this parameter is not required unless you use a non-standard folder for
@@ -4088,10 +4088,9 @@ DOFLinx.LOG being created.</p>
 <h2 id="path_b2s_server"><code>PATH_B2S_SERVER=</code><a class="headerlink" href="#path_b2s_server" title="Permanent link">&para;</a></h2>
 <p>The path where your B2SServerEXE.exe is located. The default is C:\VP  </p>
 <p>This value can be set via real-time command or in an INI file.</p>
-<p>This parameter is required if you plan to use B2S backglass files with
+<p>This parameter is required if you plan to use B2S back glass files with
 Pinball FX2 or Pinball FX3. A common place to find this file would be
 C:\VP\Tables\ if you have a nice neat VP setup.</p>
-<p>The value must end with   </p>
 <h2 id="path_fx2"><code>PATH_FX2=</code><a class="headerlink" href="#path_fx2" title="Permanent link">&para;</a></h2>
 <p>The path to locate FX2 files in. This value can be set via a real-time
 command or in an INI file.</p>
@@ -4099,13 +4098,14 @@ command or in an INI file.</p>
 location where the program executes from, ie if the program is in
 C:\DirectOutput and you have a DOFLinx_FX2 folder below that the value
 can be DOFLinx_FX2  </p>
-<p>The value must end with a backslash   </p>
 <p>Not setting a value or setting it to nothing means the FX2 files are to
 be located in the same folder as DOFLinx.exe</p>
 <h2 id="path_fx3"><code>PATH_FX3=</code><a class="headerlink" href="#path_fx3" title="Permanent link">&para;</a></h2>
 <p>Same as above but for FX3 files.</p>
+<p>Usually C:\DOFLinx\FX3\</p>
 <h2 id="path_fx"><code>PATH_FX=</code><a class="headerlink" href="#path_fx" title="Permanent link">&para;</a></h2>
 <p>Same as above but for FX files (Pinball FX).</p>
+<p>Usually C:\DOFLinx\FX\</p>
 <h2 id="path_fx2_b2s"><code>PATH_FX2_B2S=</code><a class="headerlink" href="#path_fx2_b2s" title="Permanent link">&para;</a></h2>
 <p>The path to the directb2s files for FX2 games. This value can be set via
 real-time command or in the INI file.</p>
@@ -4134,7 +4134,6 @@ command line to set this value.</p>
 location where the program executes from, ie if the program is in
 C:\DirectOutput and you have a DOFLinx_INI folder below that the value
 can be DOFLinx_INI  </p>
-<p>The value must end with a backslash   </p>
 <p>Not setting a value or setting it to nothing means the INI files are to
 be located in the same folder as DOFLinx.exe</p>
 <h2 id="path_mame"><code>PATH_MAME=</code><a class="headerlink" href="#path_mame" title="Permanent link">&para;</a></h2>
@@ -4142,17 +4141,16 @@ be located in the same folder as DOFLinx.exe</p>
 command or in an INI file.</p>
 <p>The path can be absolute, ie C:\DOFLinx\MAME\ or relative from the
 location where the program executes from, ie if the program is in
-C:\DirectOutput and you have a DOFLinx_MAME folder below that the value
+C:\DOFLinx and you have a DOFLinx_MAME folder below that the value
 can be DOFLinx_MAME\ . Absolute path names such as
-C:\DirectOutput\DOFLinx_MAME\ are best.</p>
+C:\DOFLinx\MAME\ are best.</p>
 <p>The value must end with a backslash   </p>
 <p>Not setting a value or setting it to nothing means the MAME files are to
 be located in the same folder as DOFLinx.exe</p>
 <h2 id="path_pixelcade"><code>PATH_PIXELCADE=</code><a class="headerlink" href="#path_pixelcade" title="Permanent link">&para;</a></h2>
 <p>The path to where Pixelcade has been installed. Ie
 PATH_PIXELCADE=C:\Pixelacde  </p>
-<p>The value must end with a backslash   </p>
-<p>If you don't have pixelcade then don't add this parameter to your INI
+<p>If you don't have Pixelcade then don't add this parameter to your INI
 file.</p>
 <p>If the path is set and pixelweb is not running, then DOFLinx will
 attempt to run pixelweb in the background for you.</p>
@@ -4203,7 +4201,7 @@ default, it is 'Pinball FX2' only. When the process goes away again
 DOFLinx goes back into its idle state.</p>
 <p>The process names are as they can be seen in Task Manager. For example</p>
 <blockquote>
-<p>PROCESSES=Pinball FX2,Pinball FX3,PinballArcade11,Future Pinball</p>
+<p>PROCESSES=Pinball FX2,Pinball FX3,Future Pinball,PinballFX-Win64-Shipping</p>
 </blockquote>
 <h2 id="process_add"><code>PROCESS_ADD=</code><a class="headerlink" href="#process_add" title="Permanent link">&para;</a></h2>
 <p>No default, can be left out of INI file.</p>
@@ -4260,6 +4258,10 @@ DOFLinx without needing to be killed by batch file, etc.</p>
 up DOFLinx via a Launch Before option, with the parameter set to 1,
 DOFLinx will shutdown when Pinball FX2 stops and you return to your
 menu, ie PinballX.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This mode of opereration is not recommended</p>
+</div>
 <h2 id="r_flipper_keykk"><code>R_FLIPPER_KEY=KK</code><a class="headerlink" href="#r_flipper_keykk" title="Permanent link">&para;</a></h2>
 <p>See L_FLIPPER_KEY and just think right.</p>
 <h2 id="r_flipper_outputdooo"><code>R_FLIPPER_OUTPUT=DOOO</code><a class="headerlink" href="#r_flipper_outputdooo" title="Permanent link">&para;</a></h2>
@@ -4379,9 +4381,7 @@ operate as either a RGB device or flasher device. So don't use it unless
 you really know why.</p>
 <h2 id="ssf_enabled01"><code>SSF_ENABLED=[0|1]</code><a class="headerlink" href="#ssf_enabled01" title="Permanent link">&para;</a></h2>
 <p>The default is 0 and this can be left out of your INI file</p>
-<p>For enabling / disabling SSF, 0 is disabled, 1 is enabled. Once enabled
-you will need a Bass.dll. Bass.dll files are included in the DOFLinx
-distribution for both 64 and 32 bit versions.</p>
+<p>For enabling / disabling SSF, 0 is disabled, 1 is enabled.</p>
 <h2 id="ssf_devicen"><code>SSF_DEVICE=N</code><a class="headerlink" href="#ssf_devicen" title="Permanent link">&para;</a></h2>
 <p>The default is -1 and this can be left out of your INI file. This is the
 number of the output sound device according to Windows. Using -1 gives
