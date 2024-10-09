@@ -37,7 +37,7 @@ In my Arcade Universe cabinet I have:
 
 You don’t need all of this, but much more is unlikely to get used productively.  Having said that, if you find a way or an idea, do let me know!
 
-![](../img/media/MAME_02.jpg)![](../img/media/MAME_03.jpg)
+![](../img/media/MAME_02.jpg) ![](../img/media/MAME_03.jpg)
 
 Buttons all unlit                                                 Buttons lit for Gyrus
 
