@@ -29,9 +29,11 @@ things on your cabinet. Here are a few comparisons.
 Set and Forget | Launch Before
 ---|---
 One setup, as designed and tested | The process is not running when you use other programs
-No need to start and stop processes | Invites timing issues as DOFLinx may not be ready
+No need to start and stop processes | 
 Can use different colour sets for Pinball FX2 / 3 | 
 Ability to use attract mode | 
+No timing hassles that can occur when you stop and start DOFLinx | 
+Needed to show MAME marquees from the menu on Pixelcade or DMD via DOF2DMD | 
 
 Regardless of the mode, you may want to consider the mix of programs you
 have running that are trying to control your devices. Too many things
