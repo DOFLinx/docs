@@ -69,38 +69,3 @@ The logic is:
 ![](../img/media/image6.png)
 
 ![](../img/media/image7.png)
-
-## PinballX Launch Before
-
-The following setting will launch DOFLinx before PinballX starts each
-time. To ensure it runs right, your INI file for this setup should have:
-
-PROCESSES=Pinball FX2,Process2,Process3 (or leave it out altogether as
-Pinball FX2 is the default process)
-
-FORCE_ACTIVE=0 (or leave it out of the INI altogether as this is the
-default)
-
-QUIT_AFTER_PROCESS=1 (This ensures DOFLinx stops when the PinBall FX2
-process disappears)
-
-![](../img/media/image8.png)
-
-![](../img/media/image9.jpg)
-
-If you want to send DOFLinx a set game name (to override the automatic
-pick of the Game Name from the Pinball FX2 window), and a supplementary
-INI file you'd do this:
-
-![](../img/media/image10.png)
-
-## Windows 8 and LUA
-
-It has been reported that on Windows 8 the following change to disable
-LUA may be required.
-
-I made this change in this way:
-
-1. Run RegEdit:
-2. Set the key: `HKEY_LOCAL_MACHINE \ SOFTWARE \ Microsoft \ Windows
-  \ CurrentVersion \ Policies \ System \ EnableLUA` to 0.
