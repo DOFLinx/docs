@@ -26,6 +26,10 @@ OUTPUT_NOW_TIMER=115,1500#OUTPUT_COLOUR_NOW=109,5000,Yellow
 
 The commands are:
 
+### ATTRACT_MODE=0/1
+
+Turn attract mode on / off.
+
 ### GAME_FLAG_FILE=PPPP\FFFF
 
 `PPPP` is the path and FFFF is the file.  
@@ -54,7 +58,7 @@ Used to immediately turn on all of the buttons that have been defined by
 BUTTONS_LIT= . This is handy when you define some RGB buttons that you
 want to turn on when your front end is running but DOFLinx is not fully
 active because no emulator is running. Just issue the command via
-DOFLInxMsg or similar.
+DOFLinxMsg or similar.
 
 ### KILL=XXXXX
 
@@ -77,7 +81,7 @@ PinballX doesn't manage to close things on exit.
 **DOOO is the device / port combination, and MMMM is how long that
 output will be left on in milliseconds. So, "DOFLinxMsg
 OUTPUT_NOW_TIMER=1015,2000" will turn on device 1, output 15 for 2
-seconds. This w ill occur regardless of DOFLinx being awake for a game
+seconds. This will occur regardless of DOFLinx being awake for a game
 or not, so you can have a DOF device triggered by anything you can think
 of and create a batch file for.
 
@@ -127,11 +131,6 @@ around to get things working, etc.
 Displays all the key variables in the log file to assist with debugging.
 This command takes a moment to process, so may cause a slight pause in
 operation.
-
-## Parameters That Can Be Changed Any Time
-
-DEBUG  
-PROCESS_TO_ACTIVE_TIME
 
 ## Parameters That Can Be Changed Only When DOFLinx is Sleeping
 
