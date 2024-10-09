@@ -1,6 +1,6 @@
 # Other Use~~less~~ful Info
 
-- DOFLinx was written by DDH69 because he wanted his force feedback
+- DOFLinx was written by DDH69 in 2016 because he wanted his force feedback
   flippers to work within Pinball FX2
 - All of this made possible by DOF -- thanks Swisslizard
 - The main discussion on this utility happens over at
