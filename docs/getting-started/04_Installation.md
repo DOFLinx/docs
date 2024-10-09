@@ -8,7 +8,7 @@
 
   	To open the startup folder in Windows use Win-R and type in shell:startup
   	
-![](../img/media/image1.png)
+![](../img/media/RunShellStartup.png)
 ![](../img/media/image3.png)
 
 6.	Run DOFLinxConfig
