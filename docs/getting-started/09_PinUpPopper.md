@@ -12,22 +12,26 @@ To do this you will need to edit two of your Pinup Popper files.  I have includ
 
 The change to  PUPMenuScriptSysOptions.ini is to add the highlighted line in approximately the area shown below:
 
-    useDOF = false ;               // set to true if using DOF output with Popper. false = disabled
-    useDMD = false ;               // set to true if using hardware dmddevice.DLL, for real DMDs. false = disabled
-    useWEB = false ;               // set to true if using WebServer for Remote control of Popper. false = disabled
-    useDOFLinx = true;            // Set to true if using DOFLinx to show marquees for MAME
-    NoBracketText = 0 ;      // set to 1 to NOT display any text within brackets for the Game's "Screen Name"
+> useDOF = false ;               // set to true if using DOF output with Popper. false = disabled
+> 
+> useDMD = false ;               // set to true if using hardware dmddevice.DLL, for real DMDs. false = disabled
+> 
+> useWEB = false ;               // set to true if using WebServer for Remote control of Popper. false = disabled
+> 
+> **useDOFLinx = true;            // Set to true if using DOFLinx to show marquees for MAME**
+> 
+> NoBracketText = 0 ;      // set to 1 to NOT display any text within brackets for the Game's "Screen Name"
 
 The second file requiring editing is PuPMenuScript.pup . You will need to add three small sections that are highlighted.  I recommend using cut and paste from this document as case and spacing is important.  I’ve left sections one either side of the highlighted piece you require below to help with determining where to add the code.
 
 First addition
 
     /////////////////////////////////// END WEB Remote STUFFS ////////////////////////////////////////////////
-    //////////////////////////////////// DOFLinx STUFF ///////////////////////////////////////    
+    //////////////////////////////////// DOFLinx STUFF ///////////////////////////////////////
 
-    function ProcessDOFLinx(gtype, rom){  
+    function ProcessDOFLinx(gtype, rom){
     if (useDOFLinx) {
-      try {
+    try {
           msg = 'MENU_ROM=';
           msg = msg.concat(gtype, ',', rom);
           var DOFLinxObject = new ActiveXObject("Scripting.FileSystemObject");
@@ -56,7 +60,7 @@ First addition
           }
         } catch(e) {}                 
       }
-    //////////////////////////////////// DOFLinx END ////////////////////////////////////////////////
+    //////////////////////////////////// DOFLinx END ////////////////////////////////////////////////**
     
     function StartUp() {   //startup menusystem
       Setuplabels(); 
