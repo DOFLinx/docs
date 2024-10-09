@@ -3,7 +3,7 @@
 ## Device / Port
 
 A device / port setting is used by many of the parameters. It is always
-in the form `DOOO`, where `D=` the device number as assigned by DOFLInx (if
+in the form `DOOO`, where `D=` the device number as assigned by DOFLinx (if
 in doubt run in debug and read what it is). They start at 1 and go up
 from there. So if you've only got one SainSmart, LedWiz, etc then it is
 almost certainly 1. The `OOO=` is the output port number. This can be from
@@ -23,7 +23,7 @@ change was made to accommodate output ports >=100. Both `DOO` and `DOOO` formats
     A LedWiz or KL25Z device can have an ID number that is
     different to the device number assigned by DOFLinx. For example, ID #8
     may initialise as device #2. So the second device that comes with a
-    KL25Z has the ID of 8 and will be normally be addressed as 201 to 232. 
+    KL25Z has the ID of 8 and will be normally be addressed as 2001 to 2032. 
     (note this may vary based on how many devices you have and how they are
     setup). If in doubt look at the `DOFLinx.LOG` file, the device ID's and
     numbers are always in there from start-up regardless of the `DEBUG=` flag.
@@ -38,7 +38,7 @@ keyboard codes or Xbox keys.
 This is the key scan code to monitor, shown as KK. Codes can be found
 [here](https://msdn.microsoft.com/en-us/library/windows/desktop/dd375731(v=vs.85).aspx).
 
-So for the left shift key KK is A0 (A zero), and right control key KK is
+So, for the left shift key KK is A0 (A zero), and right control key KK is
 A3.
 
 ### Xbox Controller
@@ -98,7 +98,7 @@ trying to display the marquee.
 
 ## `ATTRACT_MODE=[0/1]`
 
-Turn attract mode on or off. On is 1 and off is 0, so turning attract
+Manually turn attract mode on or off. On is 1 and off is 0, so turning attract
 mode on is ATTRACT_MODE=1
 
 ## `ATTRACT_SETUP=DDD,N,DOOO,CCCC,U,X[,N,DOOO,CCCC,U,X]`
@@ -117,7 +117,7 @@ DOOO is the device / output to act on.
 CCCC is the colour to display. RANDOM is valid for a RGB device, ON /
 OFF is used for mono devices.
 
-U is the number of units to delay. So if U = 3 and DDD=500 then this
+U is the number of units to delay. So if U = 3, and DDD=500, then this
 item will be displayed for 1500mS or 1.5 seconds. Set this to 0 if the
 action is to happen immediately, ie turning off the last displayed
 colour to create a chain effect.
@@ -129,7 +129,7 @@ to start from the beginning again.
 
 Set this to a value above zero to be the number of milliseconds of
 inactivity until DOFLinx starts your Attract Mode activities. If you are
-not using Attract Mode simply leave this parameter out of your INI file.
+not using Attract Mode simply leave this parameter out of your INI file.  For most something like ATTRACT_START_DELAY=30000 is a good setting, this means after 30 seconds attract mode actions start.  If you have attract mode in your front end menu as well, then make these timeout values align.
 
 Inactivity is defined as, not having an emulator that DOFLinx monitors,
 time since the last menu system navigation message was received, time
@@ -160,8 +160,7 @@ LINK_ST=101,Green then find that in a particular game you want the Start
 button to be blue use BUTTON_CHANGE_COLOUR=BUT_ST,Blue
 
 While logically not required in DOFLinx.INI, if set in the DOFLinx.INI
-file buttons must be defined before they can be used. So you must set
-LINK_P1= and LINK_CN= before using the above sample command.
+file buttons must be defined before they can be used. So, you must set LINK_P1= and LINK_CN= higher in your DOFLinx.INI file before using a command like above.
 
 ## `BUTTON_LIGHT_ACTION=BBB,AAA,O,N,T,C[,BBB,AAA,O,N,T,C]`
 
@@ -240,7 +239,7 @@ and yellows then
 
 would do it.
 
-This is intended for use in the STARTUP section of \*.MAME files to set
+This is intended for use in the STARTUP section of \*.MAME and \*.FX files to set
 the colour palette to a restricted set of colours for the MAME game
 being run. It is possible to use the GAME_COLOUR= command and add all
 MAME games to your `DOFLinx.INI` file and have them selected by game name.
@@ -301,7 +300,7 @@ No default, not required
 When the DEBUG parameter is set to anything other than 0 messages are
 added to DOFLinx.LOG. If the DEBUG_TCP_PORT= is set to a valid TCP port,
 for example DEBUG_TCP_PORT=8001 then the messages sent to DOFLinx.LOG
-are mirrored as an output on this TCP port. So once set messages can be
+are mirrored as an output on this TCP port. So once DEBUG_TCP_PORT is set, messages can be
 monitored using a TCP port reading utility such as NC. A utility that
 handles DOFLinx messages, TCPReader, is included with the DOFLinx
 distribution.
@@ -338,7 +337,7 @@ No default, required parameter.
 
 This is the full file name, including path, to you
 directoutputconfig.ini file, ie
-"C:\directoutput\config\DirectOutputConfig.ini" without the quotes.
+"C:\directoutput\config\DirectOutputConfig.ini" , or “c:\DOFLinx\config\colours.ini” without the quotes.
 The only reason a pointer to this file exits is to get the DOF colours,
 so technically it could be any file so long as it has the section from
 your directoutputconfig.ini file that looks like:
@@ -372,8 +371,8 @@ No default, optional parameter.
 Required if you intend to use addressable LEDs.
 
 This is the full file name, including path, to your DOF R3
-GLobalConfig.xml file, ie
-"C:\directoutput\config\GLobalConfig_b2sServer.xml" without the
+GlobalConfig.xml file, ie
+"C:\directoutput\config\GlobalConfig_b2sServer.xml" without the
 quotes.
 
 You may not have a global config XML file for DOF, if not, do not panic,
@@ -405,6 +404,8 @@ on, ie setting a flipper effect on for 10000mS (10 seconds) on flipper
 down, but wanting the effect to stop on flipper up.
 
 ## `FF_PC A,O,DDDDD`
+
+Mainly used in \*.MAME and possibly \*.FX files.
 
 For initiating an action on a Pixelcade device. "A" is the action, "O"
 is the output device, "DDDD" is the detail.
@@ -553,7 +554,7 @@ Not required, defaults to 1
 Enabled is 1, disabled is 0. When enabled DOFLinx shifts focus to FX2
 every 0.5 seconds for 60 seconds after FX2 starts up. This is to assist
 with focus sometimes doing odd things as FX starts and then we start an
-active backglass or other things.
+active back glass or other things.
 
 ## `FX2_WINDOW_WAIT_TIME=`
 
@@ -994,7 +995,7 @@ Speaker(s) specifies where to output the sound. Available options are:
 
 
 File1 to FileX are the WAV files to load for this sound. You at a
-minimum one file. When there is more than one sound file loaded they
+minimum one file. When there is more than one sound file loaded, they
 will play sequentially each time this sound is called.
 
 ## `MAME_FOCUS=`
@@ -1004,7 +1005,7 @@ Not required, defaults to 1
 Enabled is 1, disabled is 0. When enabled DOFLinx shifts focus to MAME
 every 0.5 seconds for 60 seconds after MAME starts up. This is to assist
 with focus sometimes doing odd things as MAME starts and then we start
-an active backglass or other things.
+an active back glass or other things.
 
 ## `MAME_HISCORE_FOLDER=`
 
@@ -1150,11 +1151,9 @@ The path where your B2SServerEXE.exe is located. The default is C:\VP
 
 This value can be set via real-time command or in an INI file.
 
-This parameter is required if you plan to use B2S backglass files with
+This parameter is required if you plan to use B2S back glass files with
 Pinball FX2 or Pinball FX3. A common place to find this file would be
 C:\VP\Tables\ if you have a nice neat VP setup.
-
-The value must end with   
 
 ## `PATH_FX2=`
 
@@ -1166,8 +1165,6 @@ location where the program executes from, ie if the program is in
 C:\DirectOutput and you have a DOFLinx_FX2 folder below that the value
 can be DOFLinx_FX2  
 
-The value must end with a backslash   
-
 Not setting a value or setting it to nothing means the FX2 files are to
 be located in the same folder as DOFLinx.exe
 
@@ -1175,9 +1172,13 @@ be located in the same folder as DOFLinx.exe
 
 Same as above but for FX3 files.
 
+Usually C:\DOFLinx\FX3\
+
 ## `PATH_FX=`
 
 Same as above but for FX files (Pinball FX).
+
+Usually C:\DOFLinx\FX\
 
 ## `PATH_FX2_B2S=`
 
@@ -1221,8 +1222,6 @@ location where the program executes from, ie if the program is in
 C:\DirectOutput and you have a DOFLinx_INI folder below that the value
 can be DOFLinx_INI  
 
-The value must end with a backslash   
-
 Not setting a value or setting it to nothing means the INI files are to
 be located in the same folder as DOFLinx.exe
 
@@ -1233,9 +1232,9 @@ command or in an INI file.
 
 The path can be absolute, ie C:\DOFLinx\MAME\ or relative from the
 location where the program executes from, ie if the program is in
-C:\DirectOutput and you have a DOFLinx_MAME folder below that the value
+C:\DOFLinx and you have a DOFLinx_MAME folder below that the value
 can be DOFLinx_MAME\ . Absolute path names such as
-C:\DirectOutput\DOFLinx_MAME\ are best.
+C:\DOFLinx\MAME\ are best.
 
 The value must end with a backslash   
 
@@ -1247,9 +1246,7 @@ be located in the same folder as DOFLinx.exe
 The path to where Pixelcade has been installed. Ie
 PATH_PIXELCADE=C:\Pixelacde  
 
-The value must end with a backslash   
-
-If you don't have pixelcade then don't add this parameter to your INI
+If you don't have Pixelcade then don't add this parameter to your INI
 file.
 
 If the path is set and pixelweb is not running, then DOFLinx will
@@ -1325,7 +1322,7 @@ DOFLinx goes back into its idle state.
 
 The process names are as they can be seen in Task Manager. For example
 
-> PROCESSES=Pinball FX2,Pinball FX3,PinballArcade11,Future Pinball
+> PROCESSES=Pinball FX2,Pinball FX3,Future Pinball,PinballFX-Win64-Shipping
 
 ## `PROCESS_ADD=`
 
@@ -1411,6 +1408,9 @@ So if you are monitoring the default process of 'Pinball FX2' and start
 up DOFLinx via a Launch Before option, with the parameter set to 1,
 DOFLinx will shutdown when Pinball FX2 stops and you return to your
 menu, ie PinballX.
+
+!!! Note
+    This mode of opereration is not recommended
 
 ## `R_FLIPPER_KEY=KK`
 
@@ -1594,9 +1594,7 @@ you really know why.
 
 The default is 0 and this can be left out of your INI file
 
-For enabling / disabling SSF, 0 is disabled, 1 is enabled. Once enabled
-you will need a Bass.dll. Bass.dll files are included in the DOFLinx
-distribution for both 64 and 32 bit versions.
+For enabling / disabling SSF, 0 is disabled, 1 is enabled.
 
 ## `SSF_DEVICE=N`
 
