@@ -11,10 +11,10 @@
       
       
       
-        <link rel="prev" href="02_What_is_DOFLinx.html">
+        <link rel="prev" href="07_MAME.html">
       
       
-        <link rel="next" href="04_Installation.html">
+        <link rel="next" href="11_32_or_64_Bit.html">
       
       
       <link rel="icon" href="../assets/favicon.ico">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Requirements - DOFLinx</title>
+        <title>Attract Mode - DOFLinx</title>
       
     
     
@@ -83,7 +83,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#requirements" class="md-skip">
+        <a href="#attract-mode" class="md-skip">
           Skip to content
         </a>
       
@@ -128,7 +128,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Requirements
+              Attract Mode
             
           </span>
         </div>
@@ -350,19 +350,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="03_Requirements.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="03_Requirements.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -371,7 +362,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -465,10 +455,19 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="08_AttractMode.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="08_AttractMode.html" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -477,6 +476,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -1025,7 +1025,7 @@
                   
 
   
-    <a href="https://github.com/DOFLinx/docs/edit/main/docs/getting-started/03_Requirements.md" title="Edit this page" class="md-content__button md-icon">
+    <a href="https://github.com/DOFLinx/docs/edit/main/docs/getting-started/08_AttractMode.md" title="Edit this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
     </a>
@@ -1033,19 +1033,308 @@
   
 
 
-<h1 id="requirements">Requirements<a class="headerlink" href="#requirements" title="Permanent link">&para;</a></h1>
-<ul>
-<li>A pinball cabinet -- but then who doesn't have one of these</li>
-<li>If you are running toys (solenoids, flashers, etc)DOF installed and running (Look here
-  <a href="http://mjrnet.org/pinscape/dll-updates.html">http://mjrnet.org/pinscape/dll-updates.html</a>  If you are running an arcade machine with MAME, perhaps DOF2DMD or Pexelcade, then you will not need a full installation of DOF, but it can't hurt if you do.  Of course if, like me, your arcadfe machine has a Pinscape, Dude's Cab, Teensy, then you will need DOF.</li>
-<li>At least one LEDWiz, Pinscape, PacLed64, Ultimate I/O, PinControl1,
-  PinControl2, PacDrive, SainSmart, PinOne or Dude's Cab controller
-  board</li>
-<li>If you want, a Teensy (or similar) setup for addressable LEDs in DOF</li>
-<li>Keyboard input (or emulator) to your favourite pinball emulator</li>
-<li>Possibly some Xbox or DINPUT controllers</li>
-<li>Some patience</li>
-</ul>
+<h1 id="attract-mode">Attract Mode<a class="headerlink" href="#attract-mode" title="Permanent link">&para;</a></h1>
+<p>DOFLinx can be setup to “play” a series of display items in a variety of sequences to create an attract mode display.  In addition, Attract Mode can display marquees on your Pixelcade or DMD device.  This guide will help explain how to setup and use that function.</p>
+<p>There are two parts to attract mode, the setup, then the starting and stopping of “playing” the display.  You can load a single attract mode sequence and use it multiple times.  You can load a new attract mode sequence at any time.</p>
+<p>Loading the attract mode sequence is via the ATTRACT_SETUP= parameter.  This parameter has a single number as the first item that defines the time unit of measure in mS that each display item will use via its multiplier.  The rest of the parameter is a repeating sequence of five items being the display item number, the device/port, the colour (or on/off for mono devices), multiplier of the time unit, then finally the next item number to “play”.</p>
+<p>If you have RGB outputs on output device #1 using port #1 and port #4 they would be defined as 1001 and 1004.  To make an attract mode that plays red – blue repeating at 1 second intervals you would set the delay to 1000mS = 1 second, then two display item groups being display item group 1 on device/port 1001 for Red followed by display item group 2 on device/port 1004 for Blue.  In a simple table it looks like;</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Display Item #1</th>
+<th>Display Item #2</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ID Number</td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>Device</td>
+<td>1001</td>
+<td>1004</td>
+</tr>
+<tr>
+<td>Colour</td>
+<td>Red</td>
+<td>Blue</td>
+</tr>
+<tr>
+<td>Time Multiplier</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Next ID Number</td>
+<td>2</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<p>The parameter would then be</p>
+<p>ATTRACT_SETUP=1000,1,1001,Red,1,2,2,1004,Blue,1,1</p>
+<p>If you wanted the above RGB outputs to go off in between, so flip-flop between red and blue you need a sequence of Red – Off – Blue – Off repeating with the off items running in parallel to the on items.  This would look like;</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Display Item #1</th>
+<th>Display Item #2</th>
+<th>Display Item #3</th>
+<th>Display Item #4</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ID Number</td>
+<td>1</td>
+<td>1</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr>
+<td>Device</td>
+<td>1001</td>
+<td>1004</td>
+<td>1004</td>
+<td>1001</td>
+</tr>
+<tr>
+<td>Colour</td>
+<td>Red</td>
+<td>Black</td>
+<td>Blue</td>
+<td>Black</td>
+</tr>
+<tr>
+<td>Time Multiplier</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+</tr>
+<tr>
+<td>Next ID Number</td>
+<td>2</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<p>The parameter would then be</p>
+<p>ATTRACT_SETUP=1000,1,1001,Red,1,2,1,1004,Black,0,0,2,1004,Blue,1,1,2,1001,Black,0,0</p>
+<p>Once loaded the attract mode sequence is started or stopped by using ATTRACT_MODE=1 or ATTRACT_MODE=0 respectively.</p>
+<p>Attract mode sequences are very flexible.  There are a number of basic sequence types that can be setup.  They can be combined to form more complex sequences.</p>
+<p><strong><em>Sequential</em></strong></p>
+<p>To play at increasing increments and cycle</p>
+<p>A-&gt; B -&gt; C -&gt;D -&gt; E -&gt; A</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>A</th>
+<th>B</th>
+<th>C</th>
+<th>D</th>
+<th>E</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ID Number</td>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+<td>4</td>
+<td>5</td>
+</tr>
+<tr>
+<td>Device</td>
+<td>1001</td>
+<td>1004</td>
+<td>1007</td>
+<td>1010</td>
+<td>1013</td>
+</tr>
+<tr>
+<td>Colour</td>
+<td>Orange</td>
+<td>Pink</td>
+<td>Green</td>
+<td>Yellow</td>
+<td>Blue</td>
+</tr>
+<tr>
+<td>Unit</td>
+<td>1</td>
+<td>2</td>
+<td>4</td>
+<td>8</td>
+<td>16</td>
+</tr>
+<tr>
+<td>Next ID Item</td>
+<td>2</td>
+<td>3</td>
+<td>4</td>
+<td>5</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<p>Note that the last item in the sequence has the ID Number of the first item to play next, hence a loop.</p>
+<p><strong><em>Parallel</em></strong></p>
+<p>To play at equal increments and cycle</p>
+<p>A -&gt; B -&gt; C -&gt; A</p>
+<p>D -&gt; E -&gt; F -&gt; D</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>A</th>
+<th>B</th>
+<th>C</th>
+<th>D</th>
+<th>E</th>
+<th>F</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ID Number</td>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+</tr>
+<tr>
+<td>Device</td>
+<td>1001</td>
+<td>1004</td>
+<td>1007</td>
+<td>1010</td>
+<td>1013</td>
+<td>1016</td>
+</tr>
+<tr>
+<td>Colour</td>
+<td>Blue</td>
+<td>Orange</td>
+<td>Red</td>
+<td>Blue</td>
+<td>Orange</td>
+<td>Red</td>
+</tr>
+<tr>
+<td>Unit</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Next ID Item</td>
+<td>2</td>
+<td>3</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<p>Note the second parallel set does not have Next Id Item’s set as the first set will drive the changes.</p>
+<p><strong><em>Sequential and Parallel</em></strong></p>
+<p>To play at equal intervals and cycle</p>
+<p>C -&gt; D</p>
+<p>A -&gt; B -&gt;               -&gt; A</p>
+<p>E -&gt; F</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>A</th>
+<th>B</th>
+<th>C</th>
+<th>D</th>
+<th>E</th>
+<th>F</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ID Number</td>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+<td>4</td>
+<td>3</td>
+<td>4</td>
+</tr>
+<tr>
+<td>Device</td>
+<td>1001</td>
+<td>1004</td>
+<td>1007</td>
+<td>1010</td>
+<td>1013</td>
+<td>1016</td>
+</tr>
+<tr>
+<td>Colour</td>
+<td>Random</td>
+<td>Random</td>
+<td>Red</td>
+<td>Blue</td>
+<td>Red</td>
+<td>Blue</td>
+</tr>
+<tr>
+<td>Unit</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Next ID Item</td>
+<td>2</td>
+<td>3</td>
+<td>4</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<p>To make it easier to read the INI file you can split the ATTRACT_SETUP= line using a semicolon to indicate that there is more to come on the next line.  For example:</p>
+<p>ATTRACT_SETUP=1000,;</p>
+<p>1,1001,Red,1,2,;</p>
+<p>1,1004,Black,0,0,;</p>
+<p>2,1004,Blue,1,1,;</p>
+<p>2,1001,Black,0,0</p>
+<p>In addition, the ATTACT_SETUP= line can be made even more legible by using device names instead of device / output (DOOO) identification.  For example:</p>
+<p>ATTRACT_SETUP=1000,;</p>
+<p>1,BUT_B1,Red,1,2,;</p>
+<p>1,BUT_B2,Black,0,0,;</p>
+<p>2,BUT_B2,Blue,1,1,;</p>
+<p>2,BUT_B1,Black,0,0</p>
+<p>Attract Mode can be started in one of two ways:</p>
+<p>1.       Set the ATRACT_START_DELAY=X where X is the number of milliseconds of inactivity, ie ATTRACT_START_DELAY=60000 to auto start after 1 minute</p>
+<p>2.       Send the ATTRACT_MODE=1 message via any method you like, ie via DOFLinxMsg.exe</p>
+<p>Attract Mode will stop when either:</p>
+<p>1. A Game is started, a menu navigation message is received, you are in debug mode and use the right-click menu.</p>
+<p>2. The ATTRACT_MODE=0 message is sent to DOFLinx</p>
 
 
 
