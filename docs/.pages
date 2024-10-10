@@ -1,8 +1,8 @@
 nav:
-  - README.md
-  - getting-started
-  - parameters
-  - systems
-  - Misc
-  - 07_Help.md
+  - "🏠 DOFLinx": README.md
+  - "🚀 Getting Started": getting-started
+  - "⚙️ Parameters": parameters
+  - "🕹️ Systems": systems
+  - "🌟 Misc": Misc
+  - "🆘 Help": 07_Help.md
   - ...
