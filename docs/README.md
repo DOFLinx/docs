@@ -25,6 +25,7 @@ One example, integrated with MAME:
 - Use direct integration from Pinball FX built with Zen to get table
     events
   - Map those events to cabinet actions for
+    - Use back glasses that illuminate based on table events (not simply animated), just like a real pinball machine
     - Solenoids / contactors for flippers, slings, bumpers and
             drop targets
     - 5 x RGB Flashers
@@ -91,6 +92,7 @@ One example, integrated with MAME:
         blast" effect on addressable LEDs, or a fire sound in SSF
 - Monitor Pinball FX3 and derive events to run table actions
   - Map those events to cabinet actions for
+    - Use back glasses that illuminate based on table events (not simply animated), just like a real pinball machine
     - Solenoids / contactors for flippers, slings, bumpers and
             drop targets
     - 5 x RGB Flashers
@@ -114,6 +116,7 @@ One example, integrated with MAME:
         and surround sound cabinets
 - Monitor Pinball FX2 and derive events to run table actions
   - Map those events to cabinet actions for
+    - Use back glasses that illuminate based on table events (not simply animated), just like a real pinball machine
     - Solenoids / contactors for flippers, slings, bumpers and
             drop targets
     - 5 x RGB Flashers
