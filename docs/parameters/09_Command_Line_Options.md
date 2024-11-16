@@ -44,7 +44,7 @@ Name for the GAME_COLOUR parameter palette selections. Read about the
 GAME_COLOUR parameter below.
 
 ## PATH_DOF=
-If for some reason you need to force the path to where the appropriate DIrectOutput.dll resides.  In normal operation this should not be required.
+If for some reason you need to force the path to where the appropriate DirectOutput.dll resides.  In normal operation this should not be required.
 
 ## PATH_INI=
 
