@@ -54,7 +54,7 @@ the registry, it will recreate next time.
 ![](../img/media/image24.jpg)
 
 There is one "special", and hence reserved, ID code that can be used,
-that is "NIGHT", so "SETTING_NIGHT= ". This special setting allows the
+that is "NIGHT", so "SETTING=NIGHT ". This special setting allows the
 internal DOFLinx flag for NIGHT_MODE to be toggled.
 
 An example of the configuration that would produce the settings pop up
