@@ -1155,6 +1155,17 @@ This parameter is required if you plan to use B2S back glass files with
 Pinball FX2 or Pinball FX3. A common place to find this file would be
 C:\VP\Tables\ if you have a nice neat VP setup.
 
+## `PATH_DOF2DMD=`
+
+The path to where DOF2DMD has been installed. Ie
+PATH_DOF2DMD=C:\DMD\
+
+If you don't have DOF2DMD then don't add this parameter to your INI
+file.
+
+If the path is set and dof2dmd is not running, then DOFLinx will
+attempt to run dof2dmd in the background for you.
+
 ## `PATH_FX2=`
 
 The path to locate FX2 files in. This value can be set via a real-time
