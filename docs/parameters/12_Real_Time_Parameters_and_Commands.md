@@ -103,6 +103,10 @@ Shutdown DOFLinx immediately. This is much nicer than killing the
 process from the operating system. It allows DOFLinx to neatly close
 devices, pipes and return other resources to the operating system.
 
+### START_DOF2DMD
+
+Starts up DOF2DMD.  You may want this if you didn't start it when DOFLinx started, often because you've got a mixture of pinball and Mame.
+
 ### STOP_DOF2DMD
 
 Sends the shutdown command to DOF2DMD. This is far preferable to trying
