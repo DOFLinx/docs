@@ -77,7 +77,7 @@ command when exiting Pinball FX2 back to the menu if you want to ensure
 that all instances are closed. I use it for those occasions when
 PinballX doesn't manage to close things on exit.
 
-## OUTPUT_NOW_TIMER=DOOO,MMMM,DOOO,MMMM, etc  
+### OUTPUT_NOW_TIMER=DOOO,MMMM,DOOO,MMMM, etc  
 
 DOOO is the device / port combination, and MMMM is how long that
 output will be left on in milliseconds. So, "DOFLinxMsg
