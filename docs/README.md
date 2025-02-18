@@ -4,6 +4,7 @@
   - LEDWiz
   - Pinscape
   - Dude's Cab
+  - Pinscape Pico
   - PinOne
   - PacDrive
   - PacLED64
