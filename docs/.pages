@@ -1,5 +1,6 @@
 nav:
-  - "🏠 DOFLinx": overview
+  - "🏠 DOFLinx": README.md
+  - "🏠 Overview": overview
   - "🚀 Getting Started": getting-started
   - "⚙️ Parameters": parameters
   - "🕹️ Systems": systems
