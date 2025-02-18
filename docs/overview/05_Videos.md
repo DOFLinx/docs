@@ -20,5 +20,7 @@ DOFLinx with the DOFLinx version of MAME has been setup to drive many Pixelcade 
 
 Below you can see DOFLinx driving the Pixelcade 4 line mini LCD with real-time credits and real time statistics while playing Galaga.
 
-<iframe width="250" height="140" src="https://youtube.com/shorts/y1O4GBnjgpY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="250" height="140" src="https://youtube.com/watch?v=y1O4GBnjgpY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
+https://youtube.com/shorts/y1O4GBnjgpY?feature=share
+https://youtube.com/shorts/y1O4GBnjgpY
