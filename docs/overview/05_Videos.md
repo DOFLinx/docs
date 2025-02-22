@@ -43,3 +43,7 @@ A quick demonstration of how to configure the DOFLinx MAME score screen.
 A demonstration of DOF2DMD being powered by DOFLinx.
 
 <iframe width="250" height="140" src="https://www.youtube.com/embed/r6bZTkQ5J4o?si=m3TgJDxPwh2w56Q4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+A slightly older, but still usefull guide on how to set things up.
+
+<iframe width="250" height="140" src="https://www.youtube.com/embed/-BwxsyvU-Y8?si=RDS6F2uZXD_QKZJV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
