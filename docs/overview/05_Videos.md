@@ -26,7 +26,9 @@ Here is a video from TerryRed showing basic MAME integration on a a pinball cabi
 
 DOFLinx with the DOFLinx version of MAME has been setup to drive many Pixelcade devices.
 
-A good demonstration of the basic functionality with Pixelcade
+A good demonstration of the functionality with Pixelcade
+
+<iframe width="250" height="140" src="https://www.youtube.com/embed/iLHVrl8GUxo?si=sQrQS7XmBT9m7Bw9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 <iframe width="250" height="140" src="https://www.youtube.com/embed/GKN_KcG1S1c?si=dm1z31XfGjLxqBLb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
