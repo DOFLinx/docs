@@ -22,6 +22,10 @@ DOFLinx on a shooter arcade cabinet with a Sinden lightgun powering some cabinet
 
 <iframe width="250" height="140" src="https://www.youtube.com/embed/Jk2ZHCVQJu0?si=9WDBU4T58sejE0-n" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
+A full arcade cabinet with DOFLinx making that cabinet expereince just that bit better.
+
+<iframe width="250" height="140" src="https://www.youtube.com/embed/NbxGNfE-sFY?si=JnoYRNP_6hCSVfIk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 Here is a video from TerryRed showing basic MAME integration on a a pinball cabinet.
 
 <iframe width="250" height="140" src="https://www.youtube.com/embed/d7bfWqKec6Q?si=3cDK4CW1Fu3QXooR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
