@@ -57,13 +57,18 @@ To begin, locate the sound configuration software for your device. For demonstra
 7. Make sure Front left and right is checked for Full-range speakers
 8. Click Next then click Finish
 
-***Make sure your sound card is set to the default sound device**
-
 ## Configuring DOFLinx
 **DOFLinx** is the main system that is used to trigger sounds in your **SSF** system. You will need to make sure you have the latest version of DOFLinx installed. You can download the latest version here: https://github.com/DOFLinx/DOFLinx/releases. Use this guide to install DOFLinx: https://doflinx.github.io/docs/getting-started/04_Installation.html
 
+### Configure using the config tool
+1. Run ***DOFLinxConfig.exe***
+2. Click the ***Configure*** button
+3. Go to the ***SSF*** tab
+4. Using the dropdowns, tick the boxes
+
+### Configure Manually
 1. Locate where you installed **DOFLinx**
-   - Typically this is installed in C:\DOFLinx
+   - Typically this is installed in ***C:\DOFLinx***
    - Make sure that before you unzipped the package that you have it unblocked. If it is not unblocked, either delete your install and replace it with the unblocked zipped files or you can manually unblock all of the files.
 2. Open the **DOFLinx.ini** file in your editor of choice
 3. Add the following lines to your INI file
@@ -78,10 +83,7 @@ To begin, locate the sound configuration software for your device. For demonstra
    - Setting your sound device to -1 will make **DOFLinx** use your default sound device. If you want to manually set the device number, you will need to enable debug mode in your INI by adding the line **DEBUG=1**. When you start **DOFLinx** it will output your sound devices and it will show the devide number for each of them. You can replace **SSF_DEVICE=-1** with whatever your device number is.
 
 ## Enabling SSF for Pinball FX
-1. Locate the **DOFLinxTrigger.dll** file in your C:\DOFLinx folder
-2. Copy the file to **C:\Program Files (x86)\steam\steamapps\common\pinball fx**
-3. 
-
+***Details can be found [here](https://doflinx.github.io/docs/getting-started/06_PinballFX.html)
 
 # Testing
 1. Open your **DOFLinx.ini** file and add the following line:
@@ -95,27 +97,21 @@ To begin, locate the sound configuration software for your device. For demonstra
 
 
 # Troubleshooting
-
-
+1. Make sure everything is ***Unblocked***
+   1. The best way to do this is to unblock the zip file you downloaded before extracting
+   2. You can also go through and unblock each file manually by right-clicking -> properties, then unblock at the bottom
+2. Make sure ***DOFLinx.exe*** is running
+   1. Open task manager
+   2. Look for ***DOFLinx.exe***
+   3. If it is not there, start the application by executing ***C:\DOFLinx\DOFLinx.exe***
+3. Run ***DOFLinx.exe*** in debug mode
+   1. Open ***C:\DOFLinx\DOFLinx.ini***
+   2. Set ***DEBUG=1***
+   3. Check the output to ensure it finds your sound device
+   4. Look for other errors
+   5. If you are still having issues, google or ask around
+      1. You will be asked to dump your debug output from ***DOFLinx.log***
+4. If you are using Pinball FX, make sure in the cabinet settings menu that the ***DOFLinx*** tab is set to ***Enabled***
 
 # More Information
-A lot of additional information can be found at http://mjrnet.org/pinscape/BuildGuideV2/BuildGuide.php?sid=audio
-
-
-# Surround Sound Feedback (SSF)
-
-1. What is SSF
-2. Pre-reqs
-3. Hardware Components
-    1. Soundcard
-    2. Exciters
-    3. Bass Shakers
-4. Software Configuration
-    1. Sound Device settings
-    2. FX folder and how to update
-    3. INI
-5. Testing
-6. Upgrading
-7. Troubleshooting
-    1. Common mistakes
-    1. Log investigations
+A lot of additional information about the hardware side of things can be found at http://mjrnet.org/pinscape/BuildGuideV2/BuildGuide.php?sid=audio
