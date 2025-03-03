@@ -83,7 +83,7 @@ To begin, locate the sound configuration software for your device. For demonstra
    - Setting your sound device to -1 will make **DOFLinx** use your default sound device. If you want to manually set the device number, you will need to enable debug mode in your INI by adding the line **DEBUG=1**. When you start **DOFLinx** it will output your sound devices and it will show the devide number for each of them. You can replace **SSF_DEVICE=-1** with whatever your device number is.
 
 ## Enabling SSF for Pinball FX
-***Details can be found [here](https://doflinx.github.io/docs/getting-started/06_PinballFX.html)
+***Details can be found [Enabling Pinball FX](https://doflinx.github.io/docs/getting-started/06_PinballFX.html)**
 
 # Testing
 1. Open your **DOFLinx.ini** file and add the following line:
@@ -93,7 +93,7 @@ To begin, locate the sound configuration software for your device. For demonstra
 2. Start **C:\DOFLinx\DOFLinx.exe**
 3. Open the application you want to test with. For example, open Steam and launch Pinball FX
 4. Load a table
-5. Start the game and hit the left flipper button and you should hear your left exciter and bass shaker make the flipper sound that is set in C:\DOFLinx\sounds
+5. Start the game and hit the left flipper button and you should hear your left exciter and bass shaker make the flipper sound that is set in **C:\DOFLinx\sounds**
 
 
 # Troubleshooting
@@ -114,4 +114,4 @@ To begin, locate the sound configuration software for your device. For demonstra
 4. If you are using Pinball FX, make sure in the cabinet settings menu that the ***DOFLinx*** tab is set to ***Enabled***
 
 # More Information
-A lot of additional information about the hardware side of things can be found at http://mjrnet.org/pinscape/BuildGuideV2/BuildGuide.php?sid=audio
+A lot of additional information about the hardware side of things can be found at [http://mjrnet.org/pinscape/BuildGuideV2/BuildGuide.php?sid=audio](http://mjrnet.org/pinscape/BuildGuideV2/BuildGuide.php?sid=audio)
