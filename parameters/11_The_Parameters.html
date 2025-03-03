@@ -18,7 +18,7 @@
       
       
       <link rel="icon" href="../assets/favicon.ico">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.5">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.7">
     
     
       
@@ -938,6 +938,33 @@
   <a href="#directoutputglobaldrvpathffffini" class="md-nav__link">
     <span class="md-ellipsis">
       DIRECTOUTPUTGLOBAL=DRV:\PATH\FFFF.INI
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dof2dmd_game_start_highscore01" class="md-nav__link">
+    <span class="md-ellipsis">
+      DOF2DMD_GAME_START_HIGHSCORE=[0|1]
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dof2dmd_menu_highscore01" class="md-nav__link">
+    <span class="md-ellipsis">
+      DOF2DMD_MENU_HIGHSCORE=[0|1]
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dof2dmdshow_no_score01" class="md-nav__link">
+    <span class="md-ellipsis">
+      DOF2DMDSHOW_NO_SCORE=[0|1]
     </span>
   </a>
   
@@ -2440,6 +2467,33 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#dof2dmd_game_start_highscore01" class="md-nav__link">
+    <span class="md-ellipsis">
+      DOF2DMD_GAME_START_HIGHSCORE=[0|1]
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dof2dmd_menu_highscore01" class="md-nav__link">
+    <span class="md-ellipsis">
+      DOF2DMD_MENU_HIGHSCORE=[0|1]
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dof2dmdshow_no_score01" class="md-nav__link">
+    <span class="md-ellipsis">
+      DOF2DMDSHOW_NO_SCORE=[0|1]
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#ff_dofccccdddccccddd" class="md-nav__link">
     <span class="md-ellipsis">
       FF_DOF=CCCC,DDD[,CCCC,DDD]
@@ -3651,6 +3705,15 @@ quotes.</p>
 and do not include this parameter. I ran for years without one. This
 file got created on my cabinet when I added a Teensy addressable LED
 controller.</p>
+<h2 id="dof2dmd_game_start_highscore01"><code>DOF2DMD_GAME_START_HIGHSCORE=[0|1]</code><a class="headerlink" href="#dof2dmd_game_start_highscore01" title="Permanent link">&para;</a></h2>
+<p>Default is 0, not required in INI.</p>
+<p>Set this to 1 (enabled) to have MAME high scores scroll up on the DMD when you start a MAME game.</p>
+<h2 id="dof2dmd_menu_highscore01"><code>DOF2DMD_MENU_HIGHSCORE=[0|1]</code><a class="headerlink" href="#dof2dmd_menu_highscore01" title="Permanent link">&para;</a></h2>
+<p>Default is 0, not required in INI.</p>
+<p>Set this to 1 (anabled) to have MAME high scores scroll up on the DMD as you navigate your front end.  This on is a personal prefernece, as reading the scores is not possible if you are flipping through games quickly.  So if you only want the marquee, leave this one disabled.  Always worth a play around to see what  you like.</p>
+<h2 id="dof2dmdshow_no_score01"><code>DOF2DMDSHOW_NO_SCORE=[0|1]</code><a class="headerlink" href="#dof2dmdshow_no_score01" title="Permanent link">&para;</a></h2>
+<p>Default is 0, not required in INI file.</p>
+<p>Setting this to 1 will stop the MAME score displaying on the DMD via DOF2DMD and only display animations and high scores if enabled.  THis is very useful when you have both an active DMD and the DOFLinx score screen showing as you probably don't want scores on both.  It makes enjoying the animations easier.</p>
 <h2 id="ff_dofccccdddccccddd"><code>FF_DOF=CCCC,DDD[,CCCC,DDD]</code><a class="headerlink" href="#ff_dofccccdddccccddd" title="Permanent link">&para;</a></h2>
 <p>An optional parameter, most likely used in a supplementary INI file</p>
 <p>One or a series of DOF commands to trigger events setup in ROMs vis the
@@ -4665,7 +4728,7 @@ the current colour palette.</p>
     <script id="__config" type="application/json">{"base": "..", "features": ["content.code.annotate", "navigation.sections", "navigation.expand", "navigation.top", "content.action.edit"], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.f1b6f286.min.js"></script>
+      <script src="../assets/javascripts/bundle.c8b220af.min.js"></script>
       
     
   <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
