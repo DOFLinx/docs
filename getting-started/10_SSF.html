@@ -11,10 +11,10 @@
       
       
       
-        <link rel="prev" href="14_Upgrading.html">
+        <link rel="prev" href="09_PinUpPopper.html">
       
       
-        <link rel="next" href="../parameters/09_Command_Line_Options.html">
+        <link rel="next" href="13_Starting_it_up.html">
       
       
       <link rel="icon" href="../assets/favicon.ico">
@@ -22,7 +22,7 @@
     
     
       
-        <title>32 or 64 Bit - DOFLinx</title>
+        <title>Enabling SSF - DOFLinx</title>
       
     
     
@@ -85,7 +85,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#32-or-64-bit" class="md-skip">
+        <a href="#enabling-ssf" class="md-skip">
           Skip to content
         </a>
       
@@ -120,7 +120,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              32 or 64 Bit
+              Enabling SSF
             
           </span>
         </div>
@@ -520,10 +520,19 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="10_SSF.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="10_SSF.html" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -533,6 +542,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -586,19 +596,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="15_32_or_64_Bit.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="15_32_or_64_Bit.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -608,7 +609,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -1112,7 +1112,7 @@
 
 
   
-    <a href="https://github.com/DOFLinx/docs/edit/main/docs/getting-started/15_32_or_64_Bit.md" title="Edit this page" class="md-content__button md-icon">
+    <a href="https://github.com/DOFLinx/docs/edit/main/docs/getting-started/10_SSF.md" title="Edit this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
     </a>
@@ -1120,11 +1120,131 @@
   
 
 
-<h1 id="32-or-64-bit">32 or 64 Bit<a class="headerlink" href="#32-or-64-bit" title="Permanent link">&para;</a></h1>
-<p>The default installation of DOFLinx above is 64 bit.  You must change this to 32 bit only if you have a 32 bit operating system.  If you are unsure run DOFLinxConfig and check in the bottom right-hand corner (see image above), it will tell you.</p>
-<p>Others may choose to change to a 32 bit installation, that too is fine.  DOFLinx 32 bit and 64 bit have identical operation, 64 bit just has access to more memory and is arguable marginally faster.</p>
-<p>For those still running some 32 bit pinball tools, please note that your DOFLinx installation does not need to match those.  Provided DOFLinx has access to the correct bit sized DirectOutput.dll then it can operate as 64 bit while you run other pinball utilities, even those using DOF, as 32 bit.</p>
-<p>To change to 32 bit just copy the contents of \DOFLinx\32 bit into \DOFLinx.  To go back to 64 bit do the reverse and copy the contents of \DOFLinx\64 bit to \DOFLinx.  If you are unsure if you have it right then run DOFLinxConfig to check.  A mixture of 32 and 64 bit will cause some issues.</p>
+<h1 id="enabling-ssf">Enabling SSF<a class="headerlink" href="#enabling-ssf" title="Permanent link">&para;</a></h1>
+<h1 id="what-is-ssf">What is SSF?<a class="headerlink" href="#what-is-ssf" title="Permanent link">&para;</a></h1>
+<p><strong>SSF</strong> (Surround Sound Feedback) is an audio system that utilizes multiple speakers strategically arranged to create a virtual sound environment. A common use case for <strong>SSF</strong> is in virtual pinball tables.</p>
+<p>Consider the sounds in a real pinball machine: the background music, sound effects, and the physical sounds produced by flippers, the pinball, and various mechanical components. While these sounds can be played through a single speaker, they all originate from the same source, reducing the realism of the experience.</p>
+<p><strong>SSF</strong> addresses this by incorporating additional speakers positioned in specific locations within the table to simulate the authentic auditory experience of a real pinball machine.</p>
+<h1 id="how-does-ssf-work">How Does SSF Work?<a class="headerlink" href="#how-does-ssf-work" title="Permanent link">&para;</a></h1>
+<p><strong>SSF</strong> is typically implemented using one or two sets of speakers. These may include standard speakers or tactile transducers such as exciters and bass shakers (discussed further in the Hardware Components section below).</p>
+<p>When setting up a virtual pinball table, the speakers are typically placed under each corner of the playfield. The entire speaker system is connected to a 7.1 sound card and configured using the card’s surround sound settings.</p>
+<h1 id="hardware-components">Hardware Components<a class="headerlink" href="#hardware-components" title="Permanent link">&para;</a></h1>
+<p>To enable <strong>SSF</strong> (Surround Sound Feedback) effectively, the following hardware components are required:</p>
+<ul>
+<li>A 5.1 or a 7.1 soundcard.<ul>
+<li>The sound card is the central component of the system, combining multiple sets of speakers to create a virtual soundscape within a physical space.</li>
+<li>A 7.1 sound card is preferred for more advanced configurations, providing additional channels for enhanced surround sound effects.</li>
+</ul>
+</li>
+<li>Audio Amps<ul>
+<li>Connect each set of exciters and your bass shaker amps.</li>
+</ul>
+</li>
+<li>A Set of Standard Speakers and a Subwoofer<ul>
+<li>This set of speakers is responsible for outputting.the music and sound effects of the system.</li>
+<li>The subwoofer handles the low-frequency sounds, enriching the overall audio experience by providing deep bass tones.</li>
+</ul>
+</li>
+<li>One or Two Sets of Exciters and an Optional Bass Shaker<ul>
+<li></li>
+<li>Exciters are tactile transducers that emit sound through the material they are attached to, allowing the user to feel the sound physically. For example, when pressing the flipper button, you feel the vibration through the hand operating it.</li>
+<li>The bass shaker functions similarly to a subwoofer but focuses on low-frequency tactile feedback, enhancing the physical sensation of in-game actions.</li>
+<li>Exciters are strategically placed to represent specific components, creating an immersive audio-physical experience.</li>
+</ul>
+</li>
+</ul>
+<h2 id="speaker-placement-example-virtual-pinball-table">Speaker Placement Example: Virtual Pinball Table<a class="headerlink" href="#speaker-placement-example-virtual-pinball-table" title="Permanent link">&para;</a></h2>
+<p>In the case of a virtual pinball table, speaker placement is crucial for accurately replicating the sound environment of a real machine:
+- Main Speakers: Typically placed in the backbox, these speakers handle music and sound effects.
+- Exciters: Positioned on the sidewalls near the corners of the playfield. These simulate the physical sounds of flippers, bumpers, and other mechanical components.
+- Bass Shakers: Installed under the front and back of the playfield, these provide tactile feedback for low-frequency sounds, such as ball impacts and flipper movements.</p>
+<h2 id="sound-localization-in-action">Sound Localization in Action<a class="headerlink" href="#sound-localization-in-action" title="Permanent link">&para;</a></h2>
+<p>With speakers placed in specific locations, <strong>SSF</strong> allows for precise sound localization, making the virtual experience feel realistic. For example:
+- Pressing the left flipper triggers sound from the bottom-left exciter, providing both auditory and tactile feedback.
+    •   If the bumpers are located at the back-right of the table, the back-right exciter will emit the corresponding sound effect, matching the in-game action to the physical response.</p>
+<h1 id="software-configuration">Software Configuration<a class="headerlink" href="#software-configuration" title="Permanent link">&para;</a></h1>
+<p>There are two main systems that are used to configure <strong>SSF</strong>: Your sound card configuration and <strong>DOFLinx</strong>. The sound card configures the layout of your speakers and DOFLinx triggers the exciters according to what is happening in the software you are wanting to be represented by your physical setup.</p>
+<h2 id="configuring-your-soundcard">Configuring your soundcard<a class="headerlink" href="#configuring-your-soundcard" title="Permanent link">&para;</a></h2>
+<p>To begin, locate the sound configuration software for your device. For demonstration purposes, this guide will reference the default sound settings available in Windows.</p>
+<ol>
+<li>Press Windows+R, type mmsys.cpl, press Enter</li>
+<li>Select the Playback tab</li>
+<li>Select your speakers from the list</li>
+<li>Click Configure</li>
+<li>Select 7.1 surround (even if you're not actually using surround speakers). Click Next.</li>
+<li>Un-check Subwoofer and Center. Check-mark Side Pair and Rear Pair if you're using playfield effects speakers, un-check them if not. Click Next.</li>
+<li>Make sure Front left and right is checked for Full-range speakers</li>
+<li>Click Next then click Finish</li>
+</ol>
+<h2 id="configuring-doflinx">Configuring DOFLinx<a class="headerlink" href="#configuring-doflinx" title="Permanent link">&para;</a></h2>
+<p><strong>DOFLinx</strong> is the main system that is used to trigger sounds in your <strong>SSF</strong> system. You will need to make sure you have the latest version of DOFLinx installed. You can download the latest version here: https://github.com/DOFLinx/DOFLinx/releases. Use this guide to install DOFLinx: https://doflinx.github.io/docs/getting-started/04_Installation.html</p>
+<h3 id="configure-using-the-config-tool">Configure using the config tool<a class="headerlink" href="#configure-using-the-config-tool" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Run <strong><em>DOFLinxConfig.exe</em></strong></li>
+<li>Click the <strong><em>Configure</em></strong> button</li>
+<li>Go to the <strong><em>SSF</em></strong> tab</li>
+<li>Using the dropdowns, tick the boxes</li>
+</ol>
+<h3 id="configure-manually">Configure Manually<a class="headerlink" href="#configure-manually" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Locate where you installed <strong>DOFLinx</strong><ul>
+<li>Typically this is installed in <strong><em>C:\DOFLinx</em></strong></li>
+<li>Make sure that before you unzipped the package that you have it unblocked. If it is not unblocked, either delete your install and replace it with the unblocked zipped files or you can manually unblock all of the files.</li>
+</ul>
+</li>
+<li>Open the <strong>DOFLinx.ini</strong> file in your editor of choice</li>
+<li>
+<p>Add the following lines to your INI file
+   <strong>FX_PATH=C:\DOFLinx\FX</strong></p>
+<p><strong>SSF_ENABLED=1</strong></p>
+<p><strong>SSF_SOUND_PATH=C:\DOFLINX\sounds</strong></p>
+<p><strong>SSF_DEVICE=-1</strong></p>
+<ul>
+<li>Setting your sound device to -1 will make <strong>DOFLinx</strong> use your default sound device. If you want to manually set the device number, you will need to enable debug mode in your INI by adding the line <strong>DEBUG=1</strong>. When you start <strong>DOFLinx</strong> it will output your sound devices and it will show the devide number for each of them. You can replace <strong>SSF_DEVICE=-1</strong> with whatever your device number is.</li>
+</ul>
+</li>
+</ol>
+<h2 id="enabling-ssf-for-pinball-fx">Enabling SSF for Pinball FX<a class="headerlink" href="#enabling-ssf-for-pinball-fx" title="Permanent link">&para;</a></h2>
+<p>***Details can be found <a href="https://doflinx.github.io/docs/getting-started/06_PinballFX.html">here</a></p>
+<h1 id="testing">Testing<a class="headerlink" href="#testing" title="Permanent link">&para;</a></h1>
+<ol>
+<li>
+<p>Open your <strong>DOFLinx.ini</strong> file and add the following line:</p>
+<p><strong>DEBUG=1</strong></p>
+</li>
+<li>
+<p>Start <strong>C:\DOFLinx\DOFLinx.exe</strong></p>
+</li>
+<li>Open the application you want to test with. For example, open Steam and launch Pinball FX</li>
+<li>Load a table</li>
+<li>Start the game and hit the left flipper button and you should hear your left exciter and bass shaker make the flipper sound that is set in C:\DOFLinx\sounds</li>
+</ol>
+<h1 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">&para;</a></h1>
+<ol>
+<li>Make sure everything is <strong><em>Unblocked</em></strong><ol>
+<li>The best way to do this is to unblock the zip file you downloaded before extracting</li>
+<li>You can also go through and unblock each file manually by right-clicking -&gt; properties, then unblock at the bottom</li>
+</ol>
+</li>
+<li>Make sure <strong><em>DOFLinx.exe</em></strong> is running<ol>
+<li>Open task manager</li>
+<li>Look for <strong><em>DOFLinx.exe</em></strong></li>
+<li>If it is not there, start the application by executing <strong><em>C:\DOFLinx\DOFLinx.exe</em></strong></li>
+</ol>
+</li>
+<li>Run <strong><em>DOFLinx.exe</em></strong> in debug mode<ol>
+<li>Open <strong><em>C:\DOFLinx\DOFLinx.ini</em></strong></li>
+<li>Set <strong><em>DEBUG=1</em></strong></li>
+<li>Check the output to ensure it finds your sound device</li>
+<li>Look for other errors</li>
+<li>If you are still having issues, google or ask around
+    1. You will be asked to dump your debug output from <strong><em>DOFLinx.log</em></strong></li>
+</ol>
+</li>
+<li>If you are using Pinball FX, make sure in the cabinet settings menu that the <strong><em>DOFLinx</em></strong> tab is set to <strong><em>Enabled</em></strong></li>
+</ol>
+<h1 id="more-information">More Information<a class="headerlink" href="#more-information" title="Permanent link">&para;</a></h1>
+<p>A lot of additional information about the hardware side of things can be found at http://mjrnet.org/pinscape/BuildGuideV2/BuildGuide.php?sid=audio</p>
 
 
 
