@@ -380,6 +380,24 @@ and do not include this parameter. I ran for years without one. This
 file got created on my cabinet when I added a Teensy addressable LED
 controller.
 
+## `DOF2DMD_GAME_START_HIGHSCORE=[0|1]`
+
+Default is 0, not required in INI.
+
+Set this to 1 (enabled) to have MAME high scores scroll up on the DMD when you start a MAME game.
+
+## `DOF2DMD_MENU_HIGHSCORE=[0|1]`
+
+Default is 0, not required in INI.
+
+Set this to 1 (anabled) to have MAME high scores scroll up on the DMD as you navigate your front end.  This on is a personal prefernece, as reading the scores is not possible if you are flipping through games quickly.  So if you only want the marquee, leave this one disabled.  Always worth a play around to see what  you like.
+
+## `DOF2DMDSHOW_NO_SCORE=[0|1]`
+
+Default is 0, not required in INI file.
+
+Setting this to 1 will stop the MAME score displaying on the DMD via DOF2DMD and only display animations and high scores if enabled.  THis is very useful when you have both an active DMD and the DOFLinx score screen showing as you probably don't want scores on both.  It makes enjoying the animations easier.
+
 ## `FF_DOF=CCCC,DDD[,CCCC,DDD]`
 
 An optional parameter, most likely used in a supplementary INI file
