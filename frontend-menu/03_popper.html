@@ -11,10 +11,8 @@
       
       
       
-        <link rel="prev" href="09_Command_Line_Options.html">
+        <link rel="prev" href="../07_Help.html">
       
-      
-        <link rel="next" href="11_The_Parameters.html">
       
       
       <link rel="icon" href="../assets/favicon.ico">
@@ -22,7 +20,7 @@
     
     
       
-        <title>The Parameter Files - DOFLinx</title>
+        <title>Pinup Popper - DOFLinx</title>
       
     
     
@@ -85,7 +83,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#the-parameter-files" class="md-skip">
+        <a href="#pinup-popper" class="md-skip">
           Skip to content
         </a>
       
@@ -120,7 +118,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              The Parameter Files
+              Pinup Popper
             
           </span>
         </div>
@@ -615,8 +613,6 @@
       
   
   
-    
-  
   
   
     
@@ -628,11 +624,13 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
         
           
           <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
@@ -647,7 +645,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             ⚙️ Parameters
@@ -661,7 +659,7 @@
   
   
     <li class="md-nav__item">
-      <a href="09_Command_Line_Options.html" class="md-nav__link">
+      <a href="../parameters/09_Command_Line_Options.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -680,19 +678,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="10_The_Parameter_Files.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../parameters/10_The_Parameter_Files.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -702,7 +691,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -715,7 +703,7 @@
   
   
     <li class="md-nav__item">
-      <a href="11_The_Parameters.html" class="md-nav__link">
+      <a href="../parameters/11_The_Parameters.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -737,7 +725,7 @@
   
   
     <li class="md-nav__item">
-      <a href="12_Real_Time_Parameters_and_Commands.html" class="md-nav__link">
+      <a href="../parameters/12_Real_Time_Parameters_and_Commands.html" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1082,10 +1070,19 @@
       
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../frontend-menu/03_popper.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="03_popper.html" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -1095,6 +1092,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -1133,7 +1131,7 @@
 
 
   
-    <a href="https://github.com/DOFLinx/docs/edit/main/docs/parameters/10_The_Parameter_Files.md" title="Edit this page" class="md-content__button md-icon">
+    <a href="https://github.com/DOFLinx/docs/edit/main/docs/frontend-menu/03_popper.md" title="Edit this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
     </a>
@@ -1141,26 +1139,110 @@
   
 
 
-<h1 id="the-parameter-files">The Parameter Files<a class="headerlink" href="#the-parameter-files" title="Permanent link">&para;</a></h1>
-<p>By default, all parameters are in the <code>DOFLinx.INI</code> file. Many parameters
-have a default, so may not be required. Check each parameter in the
-section below.</p>
-<p>When using DOFLinx in a Launch Before setup you may want different keys
-to do different things for a different emulator or even at the table
-level. To do this, place the parameters you don't want to change in
-DOFLinx.INI and the ones you want to change in XYZ.INI where XYZ is any
-valid file name.</p>
-<p>Some parameters can be overridden by redefining them in your SUP_INI
-file, others cannot. Honestly, I haven't tested them all. The design is
-for them to appear once only. If you want to try overriding, feel free
-to give it a go, I have done so for KEY_TO_RGB and it works like a
-treat.</p>
-<p>Note: If you're running DOFLinx as Set and Forget, and edit your
-DOFLinx.INI file, you will need to restart the DOFLinx process. This can
-be done by simply rebooting, or kill it off in Task Manager and restart
-it by double clicking on it. Remember, unless you are in debug mode you
-will not see a window pop up in front of you, so avoid trying to start
-it twice!</p>
+<h1 id="pinup-popper">Pinup Popper<a class="headerlink" href="#pinup-popper" title="Permanent link">&para;</a></h1>
+<p>If you are using Pinup Popper for your arcade menu along with DOFLinx on your arcade machine, then you can have Popper send details of the current game select so that DOFLinx can update things like a Pixelcade or DMD supported by FlexDMD via DOF2DMD for marquees and high scores.</p>
+<p>In addition you can setup to perform any of the DOFLinx actions (solenoids, SSF, Flashers, addressable LEDs, etc) for Next, Prior, Next Page, Prior Page navigation.</p>
+<p><a class="glightbox" href="../img/media/PinUp_01.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/media/PinUp_01.jpg" /></a></p>
+<p>Here is the game name and high scores being displayed on the built in DOFLinx score screen.  If you have a Pixelcade device or DMD using FlexDMD it will display the marquee and optionally high scores dependant on the parameters you setup in your DOFLinx.ini  If you have a DMD screen using FlexDMD then you will need the DOF2DMD utility available here <a href="https://github.com/DMDTools/DOF2DMD/releases">https://github.com/DMDTools/DOF2DMD/releases</a></p>
+<p>To do this you will need to edit two of your Pinup Popper files.  I have included copies of my files in the “\DOFLinx\PinUp Popper” folder within the installation zip.  They are PUPMenuScriptSysOptions.ini and PuPMenuScript.pup .  Ensure you make a backup of both files before starting to edit just in case the edits don’t go according to plan.</p>
+<p>The change to  PUPMenuScriptSysOptions.ini is to add the highlighted line in approximately the area shown below:</p>
+<blockquote>
+<p>useDOF = false ;               // set to true if using DOF output with Popper. false = disabled</p>
+<p>useDMD = false ;               // set to true if using hardware dmddevice.DLL, for real DMDs. false = disabled</p>
+<p>useWEB = false ;               // set to true if using WebServer for Remote control of Popper. false = disabled</p>
+<p><strong>useDOFLinx = true;            // Set to true if using DOFLinx to show marquees for MAME</strong></p>
+<p>NoBracketText = 0 ;      // set to 1 to NOT display any text within brackets for the Game's "Screen Name"</p>
+</blockquote>
+<p>The second file requiring editing is PuPMenuScript.pup . You will need to add three small sections that are highlighted.  I recommend using cut and paste from this document as case and spacing is important.  I’ve left sections one either side of the highlighted piece you require below to help with determining where to add the code.</p>
+<p>First addition</p>
+<div class="highlight"><pre><span></span><code>/////////////////////////////////// END WEB Remote STUFFS ////////////////////////////////////////////////
+//////////////////////////////////// DOFLinx STUFF ///////////////////////////////////////
+
+function ProcessDOFLinx(gtype, rom){
+if (useDOFLinx) {
+try {
+      msg = &#39;MENU_ROM=&#39;;
+      msg = msg.concat(gtype, &#39;,&#39;, rom);
+      var DOFLinxObject = new ActiveXObject(&quot;Scripting.FileSystemObject&quot;);
+      DOFLinx_Pipe = DOFLinxObject.CreateTextFile(&quot;\\\\.\\pipe\\DOFLinx&quot;, false);
+      DOFLinx_Pipe.WriteLine( msg );
+      DOFLinxPipe.Close();
+      DOFLinxObject.Finish();          
+      } catch(e) {}                 
+    }
+  }
+
+function NavigationDOFLinx(direction){
+  if (useDOFLinx) {
+    try {
+      if (direction==1 || direction==2 || direction==5 || direction==6) {
+        msg = &#39;MENU_NAVIGATION=&#39;;
+        if (direction==2) {msg = msg.concat(&#39;NEXT&#39;);}
+        else if (direction==1) {msg = msg.concat(&#39;PRIOR&#39;);}
+        else if (direction==5) {msg = msg.concat(&#39;NEXTPAGE&#39;);}
+        else if (direction==6) {msg = msg.concat(&#39;PRIORPAGE&#39;);} 
+        var DOFLinxObject = new ActiveXObject(&quot;Scripting.FileSystemObject&quot;);
+        DOFLinx_Pipe = DOFLinxObject.CreateTextFile(&quot;\\\\.\\pipe\\DOFLinx&quot;, false);
+        DOFLinx_Pipe.WriteLine( msg );
+        DOFLinxPipe.Close();
+        DOFLinxObject.Finish();          
+      }
+    } catch(e) {}                 
+  }
+//////////////////////////////////// DOFLinx END ////////////////////////////////////////////////**
+
+function StartUp() {   //startup menusystem
+  Setuplabels(); 
+  DOFStart();                          
+  DMDStart();
+  WEBStart();
+}
+</code></pre></div>
+<p>Second addition</p>
+<div class="highlight"><pre><span></span><code>if (useDMD &amp;&amp; DMDStatus) { ProcessDMD(js);}
+if (useWEB &amp;&amp; WEBStatus) {PuPWebServer.MenuUpdate(pMsg);}
+if (useDOFLinx) {
+  ProcessDOFLinx(jsDetails.GameType.toString(),jsDetails.ROM.toString());
+  }   
+}
+
+function GameLaunch(pMsg) {      
+try {
+</code></pre></div>
+<p>Third addition</p>
+<div class="highlight"><pre><span></span><code>function MenuEvent(fIndex){
+//sample dof
+  if (fIndex==2) {PuPlayer.PuPSound(&#39;fx_flipperup.wav&#39;,100,1,-100,100,&#39;&#39;);}
+  else if (fIndex==1) {PuPlayer.PuPSound(&#39;fx_flipperup.wav&#39;,-100,1,-100,100,&#39;&#39;);}
+  else if (fIndex==5) {PuPlayer.PuPSound(&#39;fx_bumper.wav&#39;,100,1,0,100,&#39;&#39;);}
+  else if (fIndex==6) {PuPlayer.PuPSound(&#39;fx_bumper.wav&#39;,-100,1,0,100,&#39;&#39;);}   
+  ClearText(); /// Clear all Text for a clean display on each Menu event
+  if (useDOF &amp;&amp; DOFStatus) {
+    try {
+      eNum = 799 + fIndex;
+      eMsg=&quot;E&quot; + eNum.toString();
+      DOFObject.UpdateNamedTableElement(eMsg,1);
+      DOFObject.UpdateNamedTableElement(eMsg,0);
+      } catch(e) {}
+    }
+  if (useWEB &amp;&amp; WEBStatus) {PuPWebServer.MenuEvent(fIndex,&#39;&#39;);}   
+  if (useDOFLinx) {
+    NavigationDOFLinx(fIndex);
+  }   
+}
+</code></pre></div>
+<p>To make this work you also need the correct data setup for each game.  Specifically, you need the ROM set to the MAME ROM name and the Game Type set to “MAME”.  Let me explain my setup with screen shots and a few comments below.</p>
+<p>Just in case you need them, the first two screens shots is my emulator setup in Popper.</p>
+<p><a class="glightbox" href="../img/media/PinUp_02.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/media/PinUp_02.png" /></a></p>
+<p><a class="glightbox" href="../img/media/PinUp_03.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/media/PinUp_03.png" /></a></p>
+<p>Of course you will need to have a Game Type of “MAME” setup as per below.  Note, you may have other Game Types as well.</p>
+<p><a class="glightbox" href="../img/media/PinUp_04.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/media/PinUp_04.png" /></a></p>
+<p>There are two ways to setup your games.  The first is to go through Game Manager and edit each game to have the Game Type and ROM as per below.</p>
+<p><a class="glightbox" href="../img/media/PinUp_05.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/media/PinUp_05.png" /></a></p>
+<p>The second way is to run an SQL command to do a bulk update as per the screen shots below.  A couple of things about this, while I’ve already said take backups before changing stuff, definitely use the Backup Database function within Popper before editing the database …. It’s your only path back if it gets screwed up.  Secondly, the update statement I’ve used and is shown below assumes that all games in the database are MAME, ie a dedicated MAME menu, if you other game types, ie Pinball FX, etc, then you will need to add some sort of conditional part to the update statement.</p>
+<p><a class="glightbox" href="../img/media/PinUp_06.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/media/PinUp_06.png" /></a></p>
+<p><a class="glightbox" href="../img/media/PinUp_07.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/media/PinUp_07.png" /></a></p>
+<p>Also ensure you have a Menu.INI file in the same folder as DOFLinx.EXE .   There is a default file supplied in the installation zip.  This file contains the actions to execute for the various navigations.</p>
 
 
 
