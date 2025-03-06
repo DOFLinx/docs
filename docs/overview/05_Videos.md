@@ -44,6 +44,12 @@ Below you can see DOFLinx driving the Pixelcade 4 line mini LCD with real-time c
 
 <iframe width="250" height="140" src="https://www.youtube.com/embed/y1O4GBnjgpY?si=sF8MXzGvUdpyDB6Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
+## LaunchBox
+
+A demonstration LaunchBox with the DOFConnect plugin sending messages to DOFLinx for DMD messages and marquees via DOF2DMD as well as running other toys.
+
+<iframe width="250" height="140" src="https://www.youtube.com/embed/XHvJAq_99jM?si=G9QSB7K-zY7LDo5Z" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 ## Other Interesting Stuff
 
 A quick demonstration of how to configure the DOFLinx MAME score screen.
