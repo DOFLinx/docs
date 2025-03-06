@@ -9,7 +9,12 @@ Installation is simple:
 
 Your installation should look like this
 
+![](../img/media/LaunchBox - Installed Plugin.png)
 
-For an emulator named "MAME" in LauchBox like this
+For an emulator named "MAME" in LaunchBox like this
+
+![](../img/media/LaunchBox - Set Emulator Name.png)
 
 youu should a MAME artwork folder for your marquess to go on your DMD like this
+
+![](../img/media/LaunchBox - Alignment of Name to DOF2DMD Artwork.png)
