@@ -1,8 +1,8 @@
 nav:
   - "🏠 DOFLinx": README.md
-  - "Overview": overview
+  - "🎬 Overview": overview
   - "🚀 Getting Started": getting-started
-  - "Front End Menus": frontend-menu
+  - "🧭 Front End Menus": frontend-menu
   - "⚙️ Parameters": parameters
   - "🕹️ Systems": systems
   - "🌟 Misc": Misc
