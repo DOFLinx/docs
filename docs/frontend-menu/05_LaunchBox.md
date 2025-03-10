@@ -18,3 +18,8 @@ For an emulator named "MAME" in LaunchBox like this
 youu should a MAME artwork folder for your marquess to go on your DMD like this
 
 ![](../img/media/LaunchBox-Alignment_of_Name_to_DOF2DMD_Artwork.jpg)
+
+!!! Note
+    You can use either the Platform or Emulator as the Source Category being sent to DOFLinx.
+    By default this is the Emulator.
+    To change to this to be the Platform, edit the DOFConnect.json file in with your DOFConnect.dll and set the "SourceCategory" to be "Platform"
