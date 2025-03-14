@@ -933,7 +933,7 @@ BUT_LF = Flipper Left
 BUT_RF = Flipper Right
 BUT_ML = Magna Save Left
 BUT_MR = Magna Save Right
-BUT_B1 -- BUT_B8 = Arcade buttons
+BUT_B1 -- BUT_B16 = Arcade buttons
 BUT_CH = Cheat
 BUT_MN = Menu
 ```
