@@ -5,6 +5,7 @@ nav:
   - "🧭 Front End Menus": frontend-menu
   - "⚙️ Parameters": parameters
   - "🕹️ Systems": systems
+  - "🐧 Linux": linux
   - "🌟 Misc": Misc
   - "🆘 Help": 07_Help.md
   - ...
