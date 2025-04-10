@@ -4,6 +4,7 @@ DOFLinx has been around since 2016.  Until 2025 it has been Windows based and gr
 DOFLinx functions and setup can be found through the main guide.  All configuration parameters are the same, but of course some don’t make sense for Linux, ie Future Pinball related items.  Here I will explain the material points.
 
 What it _**does**_
+
 -	Monitor Mame for outputs, scores and other actions
 -	Drive Pixelcade devices
 -	Run output devices for toys such as RGB and mono button LEDs, solenoids, flashers, etc.  Output devices supported are
@@ -15,6 +16,7 @@ What it _**does**_
 -	Work with front ends via the MENU_ROM and other commands
 
 What it _**doesn’t do**_
+
 -	Addressable LEDs
 -	Use the Direct Output Framework
 -	Monitor Pinball FX2 / FX3 / FX or Future Pinball
