@@ -20,6 +20,9 @@ What it _**doesn’t do**_
 -	Addressable LEDs
 -	Use the Direct Output Framework
 -	Monitor Pinball FX2 / FX3 / FX or Future Pinball
--	Take input from Xbox or Joystick controllers
 -	Provide a built-in score screen
 -	No GUI front end or GUI configuration
+
+What is +**different**_
+
+- XBox controllers are treated as joysticks
