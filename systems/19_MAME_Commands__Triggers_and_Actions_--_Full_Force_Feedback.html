@@ -18,7 +18,7 @@
       
       
       <link rel="icon" href="../assets/favicon.ico">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.11">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.12">
     
     
       
@@ -26,7 +26,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.4af4bdda.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.2afb09e1.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
@@ -1425,14 +1425,20 @@
 
 
 <h1 id="mame-commands-triggers-and-actions-full-force-feedback">MAME Commands, Triggers and Actions -- Full Force Feedback<a class="headerlink" href="#mame-commands-triggers-and-actions-full-force-feedback" title="Permanent link">&para;</a></h1>
-<p>You will need to use a version of MAME with the functionality added to
-talk to DOFLinx. Install a version of MAME that matches the MAME64.exe
-included with DOFLinx then replace MAME64.exe. In addition, you will
-need to make sure the following is setup in your MAME.INI.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># OSD OUTPUT OPTIONS  </span>
+<p>You will need to use a semi-recent version of MAME, ie &gt; 0.263.
+Now there are two items to configure.</p>
+<ol>
+<li>Make sure the following is setup in your MAME.INI.</li>
+</ol>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># OSD OUTPUT OPTIONS  </span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="c1">#  </span>
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="na">output network</span>
 </code></pre></div>
+or add "-output network" (no quotes) to your Mame start command line, ie "mame -output network galaga"</p>
+<ol>
+<li>Place the doflinx plugin in your Mame plugins directory.  Simply copy the doflinx folder and its contents from the "DOFLinx Mame Integration" folder in the DOFLinx.zip installation to your mame\plugins folder.  This should make mame\plugins\doflinx\  with two files init.lua and plugin.json .</li>
+</ol>
+<p>The above is enought to get you going, for a bit more information read on.</p>
 <p>MAME files contain commands, triggers and actions that are run when MAME
 games start and stop. In the same way as FX3 there are four XX.MAME
 files;</p>
