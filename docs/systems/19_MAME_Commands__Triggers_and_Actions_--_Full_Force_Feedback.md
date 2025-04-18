@@ -1,15 +1,20 @@
 # MAME Commands, Triggers and Actions -- Full Force Feedback
 
-You will need to use a version of MAME with the functionality added to
-talk to DOFLinx. Install a version of MAME that matches the MAME64.exe
-included with DOFLinx then replace MAME64.exe. In addition, you will
-need to make sure the following is setup in your MAME.INI.
+You will need to use a semi-recent version of MAME, ie > 0.263.
+Now there are two items to configure.
+
+1. Make sure the following is setup in your MAME.INI.
 
 ```ini
 # OSD OUTPUT OPTIONS  
 #  
 output network
 ```
+or add "-output network" (no quotes) to your Mame start command line, ie "mame -output network galaga"
+
+2. Place the doflinx plugin in your Mame plugins directory.  Simply copy the doflinx folder and its contents from the "DOFLinx Mame Integration" folder in the DOFLinx.zip installation to your mame\plugins folder.  This should make mame\plugins\doflinx\  with two files init.lua and plugin.json .
+
+The above is enought to get you going, for a bit more information read on.
 
 MAME files contain commands, triggers and actions that are run when MAME
 games start and stop. In the same way as FX3 there are four XX.MAME
