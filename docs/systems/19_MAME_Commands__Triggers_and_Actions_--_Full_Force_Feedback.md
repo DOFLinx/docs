@@ -1,6 +1,6 @@
 # MAME Commands, Triggers and Actions -- Full Force Feedback
 
-You will need to use a semi-recent version of MAME, ie > 0.263.
+You will need to use a semi-recent version of MAME, ie >= 0.267.
 Now there are two items to configure.
 
 1. Make sure the following is setup in your MAME.INI.
