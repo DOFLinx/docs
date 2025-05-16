@@ -18,7 +18,7 @@
       
       
       <link rel="icon" href="../assets/favicon.ico">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.12">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
     
     
       
@@ -26,7 +26,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.2afb09e1.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.342714a4.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
@@ -1461,6 +1461,15 @@
   <a href="#mame_link_wait_time" class="md-nav__link">
     <span class="md-ellipsis">
       MAME_LINK_WAIT_TIME=
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mame_plugin_loops" class="md-nav__link">
+    <span class="md-ellipsis">
+      MAME_PLUGIN_LOOPS=
     </span>
   </a>
   
@@ -3181,6 +3190,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#mame_plugin_loops" class="md-nav__link">
+    <span class="md-ellipsis">
+      MAME_PLUGIN_LOOPS=
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#mame_process" class="md-nav__link">
     <span class="md-ellipsis">
       MAME_PROCESS=
@@ -4579,6 +4597,10 @@ high scores. DOFLinx use in order;</p>
 <p>This sets the maximum number of milliseconds to wait for MAME to allow a
 network connection after the process starts. A couple of seconds should
 really be enough.</p>
+<h2 id="mame_plugin_loops"><code>MAME_PLUGIN_LOOPS=</code><a class="headerlink" href="#mame_plugin_loops" title="Permanent link">&para;</a></h2>
+<p>Windows default is 2, Linux default is 4</p>
+<p>In the DOFLinx Mame LUA plugin the main processing loop is set to the Mame LUA 'periodic' function.  This parameter sets how many loops of the periocid function go by before DOFLinx processing takes place.  So a value of 2 means that DOFLinx plugin processing happens every second loop, a value of 5 means processing happens every 5th loop.  The value allows you to tune for slower machines running Mame, for example for a Pi4 running Batocera a value of 2 gives a balance between Mame performace and prompt score updates.  The lower the value the 'snappier' the score updates and hence animations.  The higher the value the more processing time for Mame to avoid game stuttering.</p>
+<p>On a Pi 5 with Debian and every Windows machine I am running a value of 1 works well.  You shouldn't need to tune this variable but can.  The Pixelcade installation of DOFLinx for Pi 4 Batocera sets a value of 2 given the Pi 4's limited processing power for Mame.</p>
 <h2 id="mame_process"><code>MAME_PROCESS=</code><a class="headerlink" href="#mame_process" title="Permanent link">&para;</a></h2>
 <p>No default, can be left out of INI.</p>
 <p>This is the process name of the MAME emulator you are using. It must
@@ -5075,10 +5097,10 @@ the current colour palette.</p>
     
     
       
-      <script id="__config" type="application/json">{"base": "..", "features": ["content.code.annotate", "navigation.sections", "navigation.expand", "navigation.top", "content.action.edit"], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "..", "features": ["content.code.annotate", "navigation.sections", "navigation.expand", "navigation.top", "content.action.edit"], "search": "../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.c8b220af.min.js"></script>
+      <script src="../assets/javascripts/bundle.13a4f30d.min.js"></script>
       
     
   <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
