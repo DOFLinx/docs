@@ -1043,6 +1043,14 @@ This sets the maximum number of milliseconds to wait for MAME to allow a
 network connection after the process starts. A couple of seconds should
 really be enough.
 
+## `MAME_PLUGIN_LOOPS=`
+
+Windows default is 2, Linux default is 4
+
+In the DOFLinx Mame LUA plugin the main processing loop is set to the Mame LUA 'periodic' function.  This parameter sets how many loops of the periocid function go by before DOFLinx processing takes place.  So a value of 2 means that DOFLinx plugin processing happens every second loop, a value of 5 means processing happens every 5th loop.  The value allows you to tune for slower machines running Mame, for example for a Pi4 running Batocera a value of 2 gives a balance between Mame performace and prompt score updates.  The lower the value the 'snappier' the score updates and hence animations.  The higher the value the more processing time for Mame to avoid game stuttering.
+
+On a Pi 5 with Debian and every Windows machine I am running a value of 1 works well.  You shouldn't need to tune this variable but can.  The Pixelcade installation of DOFLinx for Pi 4 Batocera sets a value of 2 given the Pi 4's limited processing power for Mame.
+
 ## `MAME_PROCESS=`
 
 No default, can be left out of INI.
