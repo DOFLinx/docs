@@ -1,4 +1,4 @@
-# Guide for Installation of Mame with Marquees and Animations on Windows
+# Mame with Marquees and Animations on Windows
 
 ## Introduction
 This guide will take you throught the steps required to setup like this video shows [https://youtu.be/hd0vPiH92E8](https://youtu.be/hd0vPiH92E8)
