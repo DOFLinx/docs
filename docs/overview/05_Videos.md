@@ -8,6 +8,8 @@ Here is a simply two screen PC with Pinball FX and MAME using DOFLinx to get som
 
 <iframe width="250" height="140" src="https://www.youtube.com/embed/hd0vPiH92E8?si=bmu7ATPaucU5akez" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
+The tutorial is [here](https://doflinx.github.io/docs/tutorials/03_Mame_Marquees_Windows.html)
+
 ## Pinball FX
 
 Pinball FX integrated with DOFLinx to have cabinet toys and active back glasses linked to game play.
