@@ -1360,6 +1360,8 @@ The default will enable LCD and LED meaning that if you have a score display on 
 
 Adding any or all of the other options will force a score display to those devicess.  Doing this allows you to customise precisely where scores are displayed.
 
+If you want to see the score on the Dot Matrix connected to your Pixelcade LCD screen and on the Seven Segement display connected to your LED panel then you would set PIXELCADE_SCORE_DISPLAYS=LCD_MATRIX,LED_7SEG
+
 ## `PROCESSES=PPPP,PPPP,PPPP`
 
 Default Pinball FX2, can be left out of INI file.
