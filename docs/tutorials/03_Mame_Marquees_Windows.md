@@ -42,6 +42,7 @@ i) Download the game ROMs you require to C:\MAME\ROMS\ from your favourite ROM d
 !!! Note
 
     If you already have Mame installed with differnt keys, don't worry, you can keep those and make adjustments later to accomodate.
+    
     Do not however start making configuration changes to Mame if you just installed it, that will make following this guide just that bit harder,
     come back and make those changes one at time later so you can easily tell if anything breaks once you have a working setup.
 
@@ -104,7 +105,9 @@ h) Close the command prompt window to stop DOF2DMD for now
 
 !!! Note
     You will need to source your DMD logos and animations to go in C:\DOF2DMD\artwork\mame and C:\DOF2DMD\artwork\mameoutput
+    
     I strongly suggest buying the artwork pack from Pixelcade as it will just make this work, alternatively you will need to collect a set of marquee artwork and make animation gifs.
+    
     [https://creativeartsandtechnology.com/product/pixelcade-led-art-pack-non-pixelcade/](https://creativeartsandtechnology.com/product/pixelcade-led-art-pack-non-pixelcade/)
 
 ## Step 5 - Configure DOFLinx for Hi2Txt and DOF2DMD
