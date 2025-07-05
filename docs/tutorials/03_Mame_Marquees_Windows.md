@@ -139,7 +139,8 @@ e) Set the DOF2DMD folder to C:\DOF2DMD
 
 ## Step 4 - Pinup Popper
 !!! Note
-    You can use another front-end if you prefer, but Pinup Popper integrates via DOFLinx to display marquees on the DMD while you navigate
+    You can use another front-end if you prefer, but Pinup Popper integrates via DOFLinx to display marquees on the DMD while you navigate.
+    
     Launchbox / Bigbox has integration with DOFLinx as well
 
 a) Download and install PinUp Popper from here [https://www.nailbuster.com/wikipinup/doku.php?id=mame_setup](https://www.nailbuster.com/wikipinup/doku.php?id=mame_setup) following the thorough instructions
