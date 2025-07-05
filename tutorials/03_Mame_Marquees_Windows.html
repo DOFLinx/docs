@@ -1781,14 +1781,23 @@
 <p>g) Create a Mame config file (Mame -createconfig)</p>
 <p>h) Edit Mame.ini, search for "output" to find the line "output     auto".  Now change that to "output    network"</p>
 <p>i) Download the game ROMs you require to C:\MAME\ROMS\ from your favourite ROM download site.  Ideally at least download Galaga as we'll use that as an example here.</p>
-<p>** CHECK POINT **
-- From the C:\MAME command prompt run (without the quotes) "Mame -window galaga"
-- The expected result is that the game Galaga will start in a window on screen.
-- Check that you can pause and unpause the game using Shift-F8.
-- Check that you can start a game, 5 for coin in, 1 for 1 player, left right arrows to move and Ctrl to fire.
-- Check that F3 performs a soft reset on the game.
-- If all of this is working then <ESC> to exit Mame and continue on.</p>
-<p>!!! Note, if you already have Mame installed with differnt keys, don't worry, you can keep those and make adjustments later to accomodate.  DO not however start making configuration changes to Mame if you just installed it, that will make following this guide just that bit harder, come back and make those changes one at time later so you can easily tell if anything breaks once you have a working setup.</p>
+<div class="admonition check point">
+<p class="admonition-title">Check</p>
+<ul>
+<li>From the C:\MAME command prompt run (without the quotes) "Mame -window galaga"</li>
+<li>The expected result is that the game Galaga will start in a window on screen.</li>
+<li>Check that you can pause and unpause the game using Shift-F8.</li>
+<li>Check that you can start a game, 5 for coin in, 1 for 1 player, left right arrows to move and Ctrl to fire.</li>
+<li>Check that F3 performs a soft reset on the game.</li>
+<li>If all of this is working then <ESC> to exit Mame and continue on.</li>
+</ul>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you already have Mame installed with differnt keys, don't worry, you can keep those and make adjustments later to accomodate.
+Do not however start making configuration changes to Mame if you just installed it, that will make following this guide just that bit harder,
+come back and make those changes one at time later so you can easily tell if anything breaks once you have a working setup.</p>
+</div>
 <h2 id="step-2-doflinx">Step 2 - DOFLinx<a class="headerlink" href="#step-2-doflinx" title="Permanent link">&para;</a></h2>
 <p>a) Create a folder C:\DOFLinx</p>
 <p>b) Download the latest DOFLinx release from here <a href="https://github.com/DOFLinx/DOFLinx/releases">https://github.com/DOFLinx/DOFLinx/releases</a></p>
@@ -1799,14 +1808,18 @@
 <a class="glightbox" href="../img/media/image3.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../img/media/image3.png" /></a></p>
 <p>f) Copy the "C:\DOFLinx\DOFLinx Mame Integration\doflinx\" folder to C:\MAME\plugins\</p>
 <p>g) Restart Windows</p>
-<p>** CHECK POINT **
-- Start a command prompt
-- Go to C:\DOFLinx  (cd /d C:\DOFLinx)
-- Type the command "DOFLinxMsg DEBUG=1" and press <ENTER>
-- The expected result is that now see the DOFLinx window on screen
-- Go to C:\MAME (cd /d C:\MAME)
-- Run (without the quotes) "Mame -window galaga"
-- The expected result is that the game Galaga will start in a window in screen and that you will see activity in the DOFLinx window.  The activity should show MAME being recognised and startup for Galaga.</p>
+<div class="admonition check point">
+<p class="admonition-title">Check</p>
+<ul>
+<li>Start a command prompt</li>
+<li>Go to C:\DOFLinx  (cd /d C:\DOFLinx)</li>
+<li>Type the command "DOFLinxMsg DEBUG=1" and press <ENTER></li>
+<li>The expected result is that now see the DOFLinx window on screen</li>
+<li>Go to C:\MAME (cd /d C:\MAME)</li>
+<li>Run (without the quotes) "Mame -window galaga"</li>
+<li>The expected result is that the game Galaga will start in a window in screen and that you will see activity in the DOFLinx window.  The activity should show MAME being recognised and startup for Galaga.</li>
+</ul>
+</div>
 <h2 id="step-3-hi2txt">Step 3 - Hi2Txt<a class="headerlink" href="#step-3-hi2txt" title="Permanent link">&para;</a></h2>
 <p>a) Create a folder C:\Hi2Txt</p>
 <p>b) Download the latest c# Hi2Txt from here <a href="https://greatstoneex.github.io/hi2txt-doc/">https://greatstoneex.github.io/hi2txt-doc/</a></p>
@@ -1817,41 +1830,59 @@
 <p>b) Download the latest DOF2DMD release from here <a href="https://github.com/DMDTools/DOF2DMD/releases">https://github.com/DMDTools/DOF2DMD/releases</a></p>
 <p>c) From Windows Explorer right-click on the DOF2DMD.zip file, select Properies and un-block</p>
 <p>d) Double click on DOF2DMD.zip and expand it into C:\DOF2DMD</p>
-<p>** CHECK POINT **
-- Double click on dof2dmd.exe
-- Expected result is that a command prompt window opens then a DOF2DMD DMD window opens on top of that showing "DOF2DMD" logo</p>
+<div class="admonition check point">
+<p class="admonition-title">Check</p>
+<ul>
+<li>Double click on dof2dmd.exe</li>
+<li>Expected result is that a command prompt window opens then a DOF2DMD DMD window opens on top of that showing "DOF2DMD" logo</li>
+</ul>
+</div>
 <p>e) Click and drag the DMD to the desired position</p>
 <p>f) Click and drag on the bottom right corner to resize</p>
 <p>g) Right-click on the DMD and select "Save position for "DOF2DMD" (or "save position globally" if you want your DMD in this position for everything)</p>
 <p>h) Close the command prompt window to stop DOF2DMD for now</p>
-<p>!! Note, You will need to source your DMD logos and animations to go in C:\DOF2DMD\artwork\mame and C:\DOF2DMD\artwork\mameoutput
-!! Note, I strongly suggest buying the artwork pack from Pixelcade as it will just make this work, alternatively you will need to collect a set of marquee artwork and make animation gifs.
-!! <a href="https://creativeartsandtechnology.com/product/pixelcade-led-art-pack-non-pixelcade/">https://creativeartsandtechnology.com/product/pixelcade-led-art-pack-non-pixelcade/</a></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You will need to source your DMD logos and animations to go in C:\DOF2DMD\artwork\mame and C:\DOF2DMD\artwork\mameoutput
+I strongly suggest buying the artwork pack from Pixelcade as it will just make this work, alternatively you will need to collect a set of marquee artwork and make animation gifs.
+<a href="https://creativeartsandtechnology.com/product/pixelcade-led-art-pack-non-pixelcade/">https://creativeartsandtechnology.com/product/pixelcade-led-art-pack-non-pixelcade/</a></p>
+</div>
 <h2 id="step-5-configure-doflinx-for-hi2txt-and-dof2dmd">Step 5 - Configure DOFLinx for Hi2Txt and DOF2DMD<a class="headerlink" href="#step-5-configure-doflinx-for-hi2txt-and-dof2dmd" title="Permanent link">&para;</a></h2>
 <p>a) From C:\DOFLinx double click on DOFLinxConfig</p>
 <p>b) Select "Configure"</p>
 <p>c) Go to the "Banners / DMD" tab</p>
 <p>d) Set the Hi2Txt folder to C:\Hi2Txt</p>
 <p>e) Set the DOF2DMD folder to C:\DOF2DMD</p>
-<p>** CHECK POINT **
-- Start a command prompt
-- Go to C:\DOFLinx  (cd /d C:\DOFLinx)
-- Type the command "DOFLinxMsg QUIT" and press <ENTER>
-- Type the command "DOFLinx PATH_INI=C:\DOFLinx\config\"
-- The expected result is that you should see the DMD with the DOFLinx logo</p>
-<p>** SYSTEM TEST **
-- From the C:\MAME command prompt run (without the quotes) "Mame -window galaga"
-- The expected result is that Galaga starts and the Galaga logo appears on the DMD
-- Add a coin or two (press key #5)
-- The expected result is you see the coin animation on the DMD as well as player 1 / player 2 selection
-- Select Player 1 (press #1)
-- The expected result is that you see the Player 1 animation and the game starts
-- Play the game
-- The expected result is that you see live scores on the DMD and game animations when you shoot alien craft
-- Press <ESC> to quit Mame</p>
+<div class="admonition check point">
+<p class="admonition-title">Check</p>
+<ul>
+<li>Start a command prompt</li>
+<li>Go to C:\DOFLinx  (cd /d C:\DOFLinx)</li>
+<li>Type the command "DOFLinxMsg QUIT" and press <ENTER></li>
+<li>Type the command "DOFLinx PATH_INI=C:\DOFLinx\config\"</li>
+<li>The expected result is that you should see the DMD with the DOFLinx logo</li>
+</ul>
+</div>
+<div class="admonition system test">
+<p class="admonition-title">System</p>
+<ul>
+<li>From the C:\MAME command prompt run (without the quotes) "Mame -window galaga"</li>
+<li>The expected result is that Galaga starts and the Galaga logo appears on the DMD</li>
+<li>Add a coin or two (press key #5)</li>
+<li>The expected result is you see the coin animation on the DMD as well as player 1 / player 2 selection</li>
+<li>Select Player 1 (press #1)</li>
+<li>The expected result is that you see the Player 1 animation and the game starts</li>
+<li>Play the game</li>
+<li>The expected result is that you see live scores on the DMD and game animations when you shoot alien craft</li>
+<li>Press <ESC> to quit Mame</li>
+</ul>
+</div>
 <h2 id="step-4-pinup-popper">Step 4 - Pinup Popper<a class="headerlink" href="#step-4-pinup-popper" title="Permanent link">&para;</a></h2>
-<p>!! Note, you can use another front-end if you prefer, but Pinup Popper integrates via DOFLinx to display marquees on the DMD while you navigate
-!! Note, Launchbox / Bigbox</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You can use another front-end if you prefer, but Pinup Popper integrates via DOFLinx to display marquees on the DMD while you navigate
+Launchbox / Bigbox has integration with DOFLinx as well</p>
+</div>
 <p>a) Download and install PinUp Popper from here <a href="https://www.nailbuster.com/wikipinup/doku.php?id=mame_setup">https://www.nailbuster.com/wikipinup/doku.php?id=mame_setup</a> following the thorough instructions</p>
 <p>b) Once you have Pinup Popper running then add the DOFLinx specific links as detailed here <a href="https://doflinx.github.io/docs/frontend-menu/03_popper.html">https://doflinx.github.io/docs/frontend-menu/03_popper.html</a></p>
 
