@@ -1352,6 +1352,14 @@ an LCD and LED then the marquee will already be on the LCD, so it makes
 sense to keep the LED for animations only and not duplicate the marquee.
 But then, here we go, its your choice!
 
+## `PIXELCADE_SCORE_DISPLAYS=DEFAULT,LCD,LCD_MATRIX,LCD_7SEG,LED,LED_7SEG,LED_LEDSTRIP,LED_MATRIX`
+
+Default is DEFAULT and this can be left out of your INI.
+
+The default will enable LCD and LED meaning that if you have a score display on either or both of these Pixelcade devices then the score will be displayed using the default Pixelcade order of device precedence. So using DEFAULT or LCD,LED is the same as leaving this parameter out alltogether or having a blank parameter, ie PIXELCADE_SCORE_DISPLAYS=
+
+Adding any or all of the other options will force a score display to those devicess.  Doing this allows you to customise precisely where scores are displayed.
+
 ## `PROCESSES=PPPP,PPPP,PPPP`
 
 Default Pinball FX2, can be left out of INI file.
