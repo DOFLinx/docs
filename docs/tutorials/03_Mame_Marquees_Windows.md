@@ -30,7 +30,7 @@ h) Edit Mame.ini, search for "output" to find the line "output     auto".  Now c
 
 i) Download the game ROMs you require to C:\MAME\ROMS\ from your favourite ROM download site.  Ideally at least download Galaga as we'll use that as an example here.
 
-!!! CHECK POINT
+!!! CHECKPOINT
 
     - From the C:\MAME command prompt run (without the quotes) "Mame -window galaga"
     - The expected result is that the game Galaga will start in a window on screen.
@@ -63,7 +63,7 @@ f) Copy the "C:\DOFLinx\DOFLinx Mame Integration\doflinx\" folder to C:\MAME\plu
 
 g) Restart Windows
 
-!!! CHECK POINT
+!!! CHECKPOINT
     - Start a command prompt
     - Go to C:\DOFLinx  (cd /d C:\DOFLinx)
     - Type the command "DOFLinxMsg DEBUG=1" and press <ENTER>
@@ -90,7 +90,7 @@ c) From Windows Explorer right-click on the DOF2DMD.zip file, select Properies a
 
 d) Double click on DOF2DMD.zip and expand it into C:\DOF2DMD
 
-!!! CHECK POINT
+!!! CHECKPOINT
     - Double click on dof2dmd.exe
     - Expected result is that a command prompt window opens then a DOF2DMD DMD window opens on top of that showing "DOF2DMD" logo
 
@@ -118,14 +118,14 @@ d) Set the Hi2Txt folder to C:\Hi2Txt
 
 e) Set the DOF2DMD folder to C:\DOF2DMD
 
-!!! CHECK POINT
+!!! CHECKPOINT
     - Start a command prompt
     - Go to C:\DOFLinx  (cd /d C:\DOFLinx)
     - Type the command "DOFLinxMsg QUIT" and press <ENTER>
     - Type the command "DOFLinx PATH_INI=C:\DOFLinx\config\"
     - The expected result is that you should see the DMD with the DOFLinx logo
 
-!!! SYSTEM TEST
+!!! TEST
     - From the C:\MAME command prompt run (without the quotes) "Mame -window galaga"
     - The expected result is that Galaga starts and the Galaga logo appears on the DMD
     - Add a coin or two (press key #5)
