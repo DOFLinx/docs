@@ -30,7 +30,7 @@ c.       have the PATH\_LINX\_B2S= parameter point to the place you have /
 
 7.       Activate cabinet mode if it is not already
 
-8.       Turn off the built in back glass as you will use the DOFLinx active back glasses
+8.       Turn off the built in back glass as you will use the DOFLinx active back glasses
 
 9.       Go to the DOFLinx tab, enable it
 
