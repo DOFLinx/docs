@@ -3,7 +3,7 @@
 
 1.       Copy DOFLinxTrigger.dll from where you unzipped the DOFLinx download to the same folder as PinBallM-Win64-Shipping.exe
 
-![](../img/media/Pinball_M_DLL_Location.png)
+![](../img/media/PinballM_DLL_Location.png)
 
 2.       Make sure that you’ve got the LINX files from the \\LINX folder in the DOFLinx download zip in a folder where you want them, ie C:\\DOFLinx\\LINX\\
 
@@ -16,7 +16,7 @@ b.       have the PATH\_LINX= parameter point to the place you put the LIN
 
 c.       have the PATH\_LINX\_B2S= parameter point to the place you have / will place your set of Pinball FX active back glasses  
   
-![](../img/media/PinballM_DOFLinxINI.png)
+![](../img/media/PinballM_DOFLInxINI.png)
   
 
 4.       Get the complete set of active back glasses from [https://github.com/DOFLinx/B2S-Back-Glasses/releases](https://github.com/DOFLinx/B2S-Back-Glasses/releases) and place them in the folder you just setup in 3c above.  
