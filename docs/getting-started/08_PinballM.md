@@ -36,4 +36,3 @@ c.       have the PATH\_LINX\_B2S= parameter point to the place you have /
 
 9.       Start it all up and have fun.
 
-    Running as administrator is an older concept with a lot of pinball software that is not needed any longer.
