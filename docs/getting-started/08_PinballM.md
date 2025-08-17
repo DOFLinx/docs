@@ -30,9 +30,11 @@ c.       have the PATH\_LINX\_B2S= parameter point to the place you have /
 
 7.       Activate cabinet mode if it is not already
 
-8.       Go to the DOFLinx tab, enable it
+8.       Turn off the built in back glass as you will use the DOFLinx active back glasses
+
+9.       Go to the DOFLinx tab, enable it
 
 ![](../img/media/Pinball_M_DOFLinx_Enabled.png)
 
-9.       Start it all up and have fun.
+10.       Start it all up and have fun.
 
