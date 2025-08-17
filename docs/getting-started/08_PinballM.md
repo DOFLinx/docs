@@ -32,12 +32,8 @@ c.       have the PATH\_LINX\_B2S= parameter point to the place you have /
 
 8.       Go to the DOFLinx tab, enable it
 
-![](../img/media/PinballM_DOFLinx_Enabled.png)
+![](../img/media/Pinball_M_DOFLinx_Enabled.png)
 
 9.       Start it all up and have fun.
 
-!!! Note
-
-    A couple of people have reported that PinballFX will not “talk” to DOFLinx if DOFLinx is set to 
-    “run as administrator”.  Check this if you have a problem.  
     Running as administrator is an older concept with a lot of pinball software that is not needed any longer.
