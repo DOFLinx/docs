@@ -9,7 +9,7 @@
 
 3.       Edit your DOFLinx.INI to
 
-a.       Make Pinball M activate DOFLinx by adding in the LINX_PROCESSES= line PinballM-Win64-Shipping . Take note that the LINX_PROCESSES= lines MUST appear later in DOFLinx.INI than the PROCESSES= line  
+a.       Make Pinball M activate DOFLinx by adding in the PROCESSES_LINX= line PinballM-Win64-Shipping . Take note that the PROCESSES_LINX= lines MUST appear later in DOFLinx.INI than the PROCESSES= line  
 Note; PinballM-Win64-Shipping is the process to monitor for, but you still run PinballM.exe to start PinballM.
  
 b.       have the PATH\_LINX= parameter point to the place you put the LINX files in step #2 above
