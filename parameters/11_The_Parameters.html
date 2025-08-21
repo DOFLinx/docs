@@ -1866,6 +1866,24 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#path_linx" class="md-nav__link">
+    <span class="md-ellipsis">
+      PATH_LINX=
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#path_linx_b2s" class="md-nav__link">
+    <span class="md-ellipsis">
+      PATH_LINX_B2S=
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#path_mame" class="md-nav__link">
     <span class="md-ellipsis">
       PATH_MAME=
@@ -1968,6 +1986,15 @@
   <a href="#process_del" class="md-nav__link">
     <span class="md-ellipsis">
       PROCESS_DEL=
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#processes_linx" class="md-nav__link">
+    <span class="md-ellipsis">
+      PROCESSES_LINX=
     </span>
   </a>
   
@@ -3621,6 +3648,24 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#path_linx" class="md-nav__link">
+    <span class="md-ellipsis">
+      PATH_LINX=
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#path_linx_b2s" class="md-nav__link">
+    <span class="md-ellipsis">
+      PATH_LINX_B2S=
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#path_mame" class="md-nav__link">
     <span class="md-ellipsis">
       PATH_MAME=
@@ -3723,6 +3768,15 @@
   <a href="#process_del" class="md-nav__link">
     <span class="md-ellipsis">
       PROCESS_DEL=
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#processes_linx" class="md-nav__link">
+    <span class="md-ellipsis">
+      PROCESSES_LINX=
     </span>
   </a>
   
@@ -4953,6 +5007,10 @@ C:\DirectOutput and you have a DOFLinx_INI folder below that the value
 can be DOFLinx_INI  </p>
 <p>Not setting a value or setting it to nothing means the INI files are to
 be located in the same folder as DOFLinx.exe</p>
+<h2 id="path_linx"><code>PATH_LINX=</code><a class="headerlink" href="#path_linx" title="Permanent link">&para;</a></h2>
+<p>As above, the path for LINX files used for the more generic emulator link. Currently used for Pinball M and Infected Mushroom Pinball</p>
+<h2 id="path_linx_b2s"><code>PATH_LINX_B2S=</code><a class="headerlink" href="#path_linx_b2s" title="Permanent link">&para;</a></h2>
+<p>As above, path for LINX based B2S files.  Place your Pinball M active back glasses here.</p>
 <h2 id="path_mame"><code>PATH_MAME=</code><a class="headerlink" href="#path_mame" title="Permanent link">&para;</a></h2>
 <p>The path to locate MAME files in. This value can be set via a real-time
 command or in an INI file.</p>
@@ -5036,6 +5094,9 @@ DOFLinx is running.</p>
 <p>No default, can be left out of INI file.</p>
 <p>A comma separated list of process names to remove from the PROCESS= set
 while DOFLinx is running.</p>
+<h2 id="processes_linx"><code>PROCESSES_LINX=</code><a class="headerlink" href="#processes_linx" title="Permanent link">&para;</a></h2>
+<p>A comma separated list of processes to activte the LINX based emulators such as Pinball M and Infected Mushroom Pinball.  These process names do not need to be duplicated in the PROCESSES= line.
+If you are editing your DOFLinx.INI file manually make sure this line is in your INI after the PROCESSES= line.</p>
 <h2 id="plunger_axisa"><code>PLUNGER_AXIS=A</code><a class="headerlink" href="#plunger_axisa" title="Permanent link">&para;</a></h2>
 <p>No default, can be left out of INI file.</p>
 <p>"A" is the axis to read the plunger position from. At present the only
