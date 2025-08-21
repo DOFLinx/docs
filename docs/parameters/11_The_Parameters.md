@@ -1259,6 +1259,14 @@ can be DOFLinx_INI
 Not setting a value or setting it to nothing means the INI files are to
 be located in the same folder as DOFLinx.exe
 
+## `PATH_LINX=`
+
+As above, the path for LINX files used for the more generic emulator link. Currently used for Pinball M and Infected Mushroom Pinball
+
+## `PATH_LINX_B2S=`
+
+As above, path for LINX based B2S files.  Place your Pinball M active back glasses here.
+
 ## `PATH_MAME=`
 
 The path to locate MAME files in. This value can be set via a real-time
@@ -1387,6 +1395,11 @@ No default, can be left out of INI file.
 
 A comma separated list of process names to remove from the PROCESS= set
 while DOFLinx is running.
+
+## `PROCESSES_LINX=`
+
+A comma separated list of processes to activte the LINX based emulators such as Pinball M and Infected Mushroom Pinball.  These process names do not need to be duplicated in the PROCESSES= line.
+If you are editing your DOFLinx.INI file manually make sure this line is in your INI after the PROCESSES= line.
 
 ## `PLUNGER_AXIS=A`
 
