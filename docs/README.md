@@ -25,7 +25,7 @@ There is a Linux version of DOFLinx that can be used for Mame arcade games and s
 - Use keyboard, Xbox controller and joystick buttons for input
 - For Pinball FX and Pinball FX3 generate nudge in game by physically
     nudging your table using a Pinscape accelerometer
-- Use direct integration from Pinball FX built with Zen to get table
+- Use direct integration from Pinball FX and Pinball M built with Zen to get table
     events
   - Map those events to cabinet actions for
     - Use back glasses that illuminate based on table events (not simply animated), just like a real pinball machine
@@ -52,6 +52,30 @@ There is a Linux version of DOFLinx that can be used for Mame arcade games and s
             combination per table
     - Illuminate mono buttons
   - Comes with a default set of FX mapping files that you can edit
+        to add or change what table events create cabinet actions
+- Use direct integration with Infected Mushroom Pinball to get table events triggering actions
+  - Map those events to cabinet actions for
+    - Solenoids / contactors for flippers, slings, bumpers and
+            drop targets
+    - 5 x RGB Flashers
+    - RGB cabinet lighting
+    - Addressable LED effects
+    - Fan / Blower
+    - Shaker
+    - Gear motor
+    - 3 x Chimes
+    - Bell
+    - Strobe
+    - Beacon
+    - Knocker
+    - Play surround sound force feedback sounds for stereo, 5.1 or
+            7.1 sound systems
+    - Output to Pixelcade LED and LCD displays
+    - Set a table specific colour palette
+    - Set RGB buttons such as flipper and magna save to any colour
+            combination per table
+    - Illuminate mono buttons
+  - Comes with a default set of IMP mapping files that you can edit
         to add or change what table events create cabinet actions
 - Combined with the DOFLinx specific MAME version monitor key emulator
     events and real time scores to derive events that drive actions
