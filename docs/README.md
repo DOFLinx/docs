@@ -4,6 +4,11 @@ DOFLinx is pinabll and arcade "middleware".  It runs on your cabinet monitoring 
 
 There is a Linux version of DOFLinx that can be used for Mame arcade games and some limited output boards.
 
+# What Does It Cost?
+
+DOFLinx is free.  If you have been charged for it, them demand your money back.  DOFLinx "HQ" is in Adelaide Australia, and as a pinball and arcade enthusiast I provide this free of charge.
+I do have costs to keep things running, and if you think DOFLinx is worth it, then please donate via this link every few years[https://www.paypal.com/donate?hosted_button_id=YEPCTUYFX5KDE](https://www.paypal.com/donate?hosted_button_id=YEPCTUYFX5KDE) (Its a bit like annual support :-) ).  This allows me to stay current with software and hardware to build and test.  A big thanks to those hardware and software manufactureres who provide their product at no cost so I can make DOFLinx work with it.
+
 # What Can DOFLinx Do?
 
 - Drive toys on the following output boards in any combination
