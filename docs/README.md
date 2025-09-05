@@ -7,7 +7,7 @@ There is a Linux version of DOFLinx that can be used for Mame arcade games and s
 # What Does It Cost?
 
 DOFLinx is free.  If you have been charged for it, them demand your money back.  DOFLinx "HQ" is in Adelaide Australia, and as a pinball and arcade enthusiast I provide this free of charge.
-I do have costs to keep things running, and if you think DOFLinx is worth it, then please donate via this link every few years[https://www.paypal.com/donate?hosted_button_id=YEPCTUYFX5KDE](https://www.paypal.com/donate?hosted_button_id=YEPCTUYFX5KDE) (Its a bit like annual support :-) ).  This allows me to stay current with software and hardware to build and test.  A big thanks to those hardware and software manufactureres who provide their product at no cost so I can make DOFLinx work with it.
+I do have costs to keep things running, and if you think DOFLinx is worth it, then please donate via this link every few years [https://www.paypal.com/donate?hosted_button_id=YEPCTUYFX5KDE](https://www.paypal.com/donate?hosted_button_id=YEPCTUYFX5KDE) ( It's a bit like annual support 😊 ).  This allows me to stay current with software and hardware to build and test.  A big thanks to those hardware and software manufactureres who provide their product at no cost so I can make DOFLinx work with it.
 
 # What Can DOFLinx Do?
 
