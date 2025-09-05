@@ -201,3 +201,5 @@ There is a Linux version of DOFLinx that can be used for Mame arcade games and s
   - Run a INI file with updated parameters
   - Turn on a RGB device for a specified time with a specified
         colour
+
+<meta name="google-site-verification" content="pZEq4BDBtIzT02hL6EaRwYYeR-ejQ2SBjzCrC2VtpFE" />
