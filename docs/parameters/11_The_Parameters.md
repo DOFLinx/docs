@@ -923,10 +923,7 @@ BUT_EX = Exit button
 BUT_CN = Coin button
 BUT_LB = Launch Ball button
 BUT_FR = Fire Button
-BUT_P1 = Player 1
-BUT_P2 = Player 2
-BUT_P3 = Player 3
-BUT_P4 = Player 4
+BUT_P1 -- BUT_P4 = Player 1 to 4
 BUT_PS = Pause
 BUT_RE = Reset
 BUT_LF = Flipper Left
@@ -936,6 +933,9 @@ BUT_MR = Magna Save Right
 BUT_B1 -- BUT_B16 = Arcade buttons
 BUT_CH = Cheat
 BUT_MN = Menu
+BUT_J1 -- BUT_J2 = Joysticks
+BUT_TB1 -- BUT_TB2 = Trackballs
+BUT_L1 -- BUT_L8 = LEDs 1 to 8
 ```
 
 ## `LINK_xx=DOOO,CCCC,[,DOOO,CCCC]` the old way of doing it, retained for compatibility from V7.10`
