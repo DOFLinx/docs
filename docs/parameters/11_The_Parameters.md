@@ -16,7 +16,7 @@ So `DOOO` as
 - 1120 is device 1, output port 120.
 
 Prior to V7.23 the format was `DOO` as opposed to the current `DOOO`. This
-change was made to accommodate output ports >=100. Both `DOO` and `DOOO` formats are currently supported.
+change was made to accommodate output ports >=100. Both `DOO` and `DOOO` formats are currently supported, but use `DOOO` as its the long term direction.
 
 !!! note
 
@@ -786,6 +786,18 @@ either the left rumble motor to a speed of 50000 (about 75%) for 1
 second when the Page Up key is pressed, and turn on the right rumble
 motor to a speed of 30000 (about 50%) for 1.5 seconds when the 3^rd^
 button on joystick #1 is pressed.
+
+## `LED_COLOUR_ORDER`
+
+Default is all buttons, ie BUT_xx, are RGB order of LEDs.
+
+If any of your RGB LED buttons are in a differnt order to RGB, ie ports 49 to 96 on an Ulimate I/O board, then you will need this parameter.
+
+Simply specify the buttons that ARE NOT in RGB order and their order.
+
+For example if you had 4 buttons being LINK_BUT_B1, LINK_BUT_B2, LINK_BUT_B3 and LINK_BUT_B4 with buttons 3 and 4 in the >port 48 range on an Ultimate I/O board, then you would add this line to your INI file.
+
+LED_COLOUR_ORDER=BUT_B3,BGR,BUT_B4,BGR
 
 ## `L_FLIPPER_KEY=KK`
 
