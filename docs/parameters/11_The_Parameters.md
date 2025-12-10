@@ -1028,6 +1028,14 @@ File1 to FileX are the WAV files to load for this sound. You at a
 minimum one file. When there is more than one sound file loaded, they
 will play sequentially each time this sound is called.
 
+## `MAME_FOLDER=`
+
+This is the path to where your Mame executable (MAME.EXE) is located, ie C:\MAME\
+
+It is required for the checking of Mame setup and the loading of Mame game names.  If you see, "Now Playing Unknown" instead of something like "Now Playing Pacman" then an issue here is likely the problem.
+
+A typical setup would be MAME_FOLDER=C:\MAME\
+
 ## `MAME_FOCUS=`
 
 Not required, defaults to 1
