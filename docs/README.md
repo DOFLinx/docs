@@ -1,6 +1,5 @@
+![](img/media/DOFLinx.png)
 # What is DOFLinx?
-
-![](../img/media/DOFLinx.png)
 
 DOFLinx is pinabll and arcade "middleware".  It runs on your cabinet monitoring events from the game emulator and then traslates those into cabinet actons.  For example in Pinball FX game table events like bumpers hits, slingshots, drop targets, loop passovers, etc are fed to DOFLinx, these are then turned into actions that drive your unique set of toys (solenoids, flashers, RGB buttons, shaker, addressable LEDs etc).  Another exmaple is arcade games in Mame, DOFLinx gets events from the game along with real time scores, and then triggers toy actions, LED / LCD screen animations and large screen live score output.
 
