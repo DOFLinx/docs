@@ -18,7 +18,7 @@
       
       
       <link rel="icon" href="../assets/favicon.ico">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
     
     
       
@@ -26,7 +26,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.618322db.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -1303,6 +1303,28 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#hold_activation01" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HOLD_ACTIVATION=0/1
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#infomessgae" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        INFO=Messgae
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#light_buttons_now" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2168,6 +2190,28 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#hold_activation01" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HOLD_ACTIVATION=0/1
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#infomessgae" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        INFO=Messgae
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#light_buttons_now" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2388,6 +2432,11 @@ effort. Of course I do encourage people to continue to add DOF to VP and
 FP tables, that's proper DOF. It is quite handy for custom tables, just
 to give them a little more 'feeling'.<br>
 This is designed for use when DOFLinx is running in Set and Forget mode.</p>
+<h3 id="hold_activation01">HOLD_ACTIVATION=0/1<a class="headerlink" href="#hold_activation01" title="Permanent link">¶</a></h3>
+<p>Places DOFLinx on hold from activating when a configured emulator is seen running.  This was added specifically so that HOLD_ACTIVATION=1 could be sent in real-time to stop DOFLinx activating for Future Pinball when other DOF mechanisms were being used.
+Place HOLD_ACTIVATION=1 in the "run before script" and HOLD_ACTIVATION=0 in the "run after script" of your front end for FP tables without DOFLinx code.  Some people have recommended stopping and restarting DOFLinx at these points, but this is much cleaner and will avoid the creation of secondary issues.</p>
+<h3 id="infomessgae">INFO=Messgae<a class="headerlink" href="#infomessgae" title="Permanent link">¶</a></h3>
+<p>Places the "Message" into the DOFLinx LOG file.  Used to enable marking of the LOG file during testing and by third part applications.</p>
 <h3 id="light_buttons_now">LIGHT_BUTTONS_NOW<a class="headerlink" href="#light_buttons_now" title="Permanent link">¶</a></h3>
 <p>Used to immediately turn on all of the buttons that have been defined by
 BUTTONS_LIT= . This is handy when you define some RGB buttons that you
@@ -2535,10 +2584,10 @@ flexibility in how you send commands to DOFLinx.</p>
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["content.code.annotate", "navigation.sections", "navigation.expand", "navigation.top", "content.action.edit"], "search": "../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["content.code.annotate", "navigation.sections", "navigation.expand", "navigation.top", "content.action.edit"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
       
     
   
