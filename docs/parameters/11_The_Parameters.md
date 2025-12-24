@@ -200,7 +200,7 @@ turns back on when you release the button.
 
 ## `BUTTONS_LIT=NNNNN[,NNNNN]`
 
-## `BUTTON_LIT_ADDED=NNNNN[,NNNNN]`
+## `BUTTONS_LIT_ADDED=NNNNN[,NNNNN]`
 
 An optional list of buttons to light when DOFLinx activates due to a
 PROCESS being detected. NNNNN is in the form of BUT_P1 for player 1,
@@ -215,6 +215,10 @@ the same buttons over and over as games start / stop.
 If set in the `DOFLinx.INI` file buttons must be defined before they can
 be used. So you must set LINK_P1= and LINK_CN= before using the above
 sample command.
+
+## `BUTTONS_LIT_DELETED=NNNNN[,NNNNN]`
+
+An optional list of buttons to remove from the current list help by DOFLinx that will be lit on game start.  Usually used in conjunction with BUTTONS_LIT_ADDED with emulators like MAME to adjust the list of buttons used for a specific game.  For example Galaga only uses B1 and B2 where as Street Fighter uses B1 - B6.
 
 ## `CLOSE_DEVICES_BETWEN_ACTIVE=[0|1]`
 
@@ -380,6 +384,12 @@ and do not include this parameter. I ran for years without one. This
 file got created on my cabinet when I added a Teensy addressable LED
 controller.
 
+## `DOF2DMD_SHOW_NO_SCORE=[0|1]`
+
+Default is 0 so score is show, not required in INI.
+
+Set this to 1 to stop scores being shown on a DOF2DMD device.  Often used when you just want animations on the DMD and will have the game score on the DOFLinx built in score screen.
+
 ## `DOF2DMD_GAME_START_HIGHSCORE=[0|1]`
 
 Default is 0, not required in INI.
@@ -392,11 +402,15 @@ Default is 0, not required in INI.
 
 Set this to 1 (anabled) to have MAME high scores scroll up on the DMD as you navigate your front end.  This on is a personal prefernece, as reading the scores is not possible if you are flipping through games quickly.  So if you only want the marquee, leave this one disabled.  Always worth a play around to see what  you like.
 
-## `DOF2DMDSHOW_NO_SCORE=[0|1]`
+## `FF_DMD=A,DDDDD`
 
-Default is 0, not required in INI file.
+Mainly used in *.MAME and *.FX files for initiating an action (A) via DOF2DMD with detail (D) onto your DMD.
 
-Setting this to 1 will stop the MAME score displaying on the DMD via DOF2DMD and only display animations and high scores if enabled.  THis is very useful when you have both an active DMD and the DOFLinx score screen showing as you probably don't want scores on both.  It makes enjoying the animations easier.
+Valid actions:
+
+S = Score
+T = Text
+U = URL
 
 ## `FF_DOF=CCCC,DDD[,CCCC,DDD]`
 
@@ -459,6 +473,11 @@ RRR is the ROM name setup within the DOF Config tool.
 
 This is used to set the ROM for KEY_TO_ROM= commands. If the ROM name
 was "doflinx" this command would look like FF_ROM=doflinx
+
+## `FF_SSF=SSSSS`
+
+An optional parameter, most likely in *.FX or *.MAME files for playing a preloaded surround sound by name.
+ie FF_SSF=LFLipper
 
 ## `FIXED_OUTPUTS= DOOO[,DOOO,DOOO]`
 
@@ -1380,15 +1399,17 @@ an LCD and LED then the marquee will already be on the LCD, so it makes
 sense to keep the LED for animations only and not duplicate the marquee.
 But then, here we go, its your choice!
 
-## `PIXELCADE_SCORE_DISPLAYS=DEFAULT,LCD,LCD_MATRIX,LCD_7SEG,LED,LED_7SEG,LED_LEDSTRIP,LED_MATRIX`
+## `PIXELCADE_SCORE_DISPLAY_P1 and PIXELCADE_SCORE_DISPLAYS_P2=DEFAULT,LCD,LCD_MATRIX,LCD_7SEG,LED,LED_7SEG,LED_LEDSTRIP,LED_MATRIX`
 
 Default is DEFAULT and this can be left out of your INI.
 
-The default will enable LCD and LED meaning that if you have a score display on either or both of these Pixelcade devices then the score will be displayed using the default Pixelcade order of device precedence. So using DEFAULT or LCD,LED is the same as leaving this parameter out alltogether or having a blank parameter, ie PIXELCADE_SCORE_DISPLAYS=
+The default will enable LCD and LED meaning that if you have a score display on either or both of these Pixelcade devices then the score will be displayed using the default Pixelcade order of device precedence. So using DEFAULT or LCD,LED is the same as leaving this parameter out alltogether or having a blank parameter, ie PIXELCADE_SCORE_DISPLAYS_P1=
 
 Adding any or all of the other options will force a score display to those devicess.  Doing this allows you to customise precisely where scores are displayed.
 
-If you want to see the score on the Dot Matrix connected to your Pixelcade LCD screen and on the Seven Segement display connected to your LED panel then you would set PIXELCADE_SCORE_DISPLAYS=LCD_MATRIX,LED_7SEG
+If you want to see the score on the Dot Matrix connected to your Pixelcade LCD screen and on the Seven Segement display connected to your LED panel then you would set PIXELCADE_SCORE_DISPLAYS_P1=LCD_MATRIX,LED_7SEG
+
+if you have a matrix display on your Pixelcade LED (LED_MATRIX) and a matrix display on your Pixelcade LCD (LCD_MATRIX) then you can show P1 and P2 scores simultaneiously by having PIXELCADE_SCORE_DISPLAYS_P1=LED_MATRIX and PIXELCADE_SCORE_DISPLAYS_P2=LCD_MATRIX - great for Twin Cobra !
 
 ## `PROCESSES=PPPP,PPPP,PPPP`
 
