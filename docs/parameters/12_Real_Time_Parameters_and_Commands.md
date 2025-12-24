@@ -52,6 +52,15 @@ FP tables, that's proper DOF. It is quite handy for custom tables, just
 to give them a little more 'feeling'.  
 This is designed for use when DOFLinx is running in Set and Forget mode.
 
+### HOLD_ACTIVATION=0/1
+
+Places DOFLinx on hold from activating when a configured emulator is seen running.  This was added specifically so that HOLD_ACTIVATION=1 could be sent in real-time to stop DOFLinx activating for Future Pinball when other DOF mechanisms were being used.
+Place HOLD_ACTIVATION=1 in the "run before script" and HOLD_ACTIVATION=0 in the "run after script" of your front end for FP tables without DOFLinx code.  Some people have recommended stopping and restarting DOFLinx at these points, but this is much cleaner and will avoid the creation of secondary issues.
+
+### INFO=Messgae
+
+Places the "Message" into the DOFLinx LOG file.  Used to enable marking of the LOG file during testing and by third part applications.
+
 ### LIGHT_BUTTONS_NOW
 
 Used to immediately turn on all of the buttons that have been defined by
