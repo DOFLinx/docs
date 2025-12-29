@@ -1933,9 +1933,7 @@ DOFLinx needs this monitoring for proper operation and triggering. </p>
 <p>A good solution to granting access is to use udev rules.  Using udev rules will ensure that security is set as you want and need it at every system boot and plugging of USB devices.  The security required on various flavours of Linux varies, so giving a single answer on how to do this is difficult.</p>
 <p>My current /etc/udev/rules.d/69-doflinx.rules file looks like this.</p>
 <div class="highlight"><pre><span></span><code>KERNEL=="event[0-9]*", MODE="0777"
-
 KERNEL=="hidraw*", MODE="0777"
-
 KERNEL=="js[0-9]*", MODE="0777"
 </code></pre></div>
 <p>I take the point of view that my Linux arcade machine is not used as a multiuser server, nor is it high security, as such, I keep it really simple.</p>
