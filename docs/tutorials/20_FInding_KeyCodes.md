@@ -25,6 +25,8 @@ If you know the keystroke assigned to each of your buttons simply lookup the key
 
 For Windows, simply run DOFLinxConfig, select "Configure" then the "Inputs" tab.  You can then simply select the button to configure and you will be prompted to press your button at that point.  The key code will be placed in the respective keystroke box.
 
+![](../img/media/WindowsSetupofLINKButtons.png)
+
 For Linux there is no graphical configuration tool so another method is required.  To discover your key codes in Linux undertake the following;
 
 1. Connect to your gaming computer with a tool like putty and open two consoles.  We'll refer to these as console A and console B.
