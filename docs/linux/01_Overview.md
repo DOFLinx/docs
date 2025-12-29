@@ -10,6 +10,10 @@ What it _**does**_
 -	Run output devices for toys such as RGB and mono button LEDs, solenoids, flashers, etc.  Output devices supported are
     -	Pinscape Pico
     -	Pinscape
+    -	LEDWiz
+    -	Dude's Cabinet
+    -	PacLED64
+    -	Ultimate I/O
 -	Attract mode for LED buttons and marquees
 -	Get Mame high scores via Hi2txt
 -	Key to commands
