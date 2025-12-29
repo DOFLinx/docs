@@ -38,6 +38,8 @@ For Linux there is no graphical configuration tool so another method is required
 5. On console A we will set DOFLinx to report the key codes of all keys pressed using "DOFLinxMsg TEST_INPUT=1"
 6. Now press each button in turn and record the keycode shown on console B
 7. Once all key codes have been discovered shutdown DOFLinx from console A using "DOFLinxMsg QUIT"
+8. Now edit the LINK_BUT_xx= lines in your DOFLinx.ini using your favourite editor, ie nano.
+9. While we can manually restart DOFLinx, its probably easier to restart your gaming machine and let everything start as normal.
 
 Console A Sample
 
@@ -47,5 +49,10 @@ Console B Sample
 
 ![](../img/media/LinuxFindKeyCodes_1.png)
 
-9. Now edit the LINK_BUT_xx= lines in your DOFLinx.ini using your favourite editor, ie nano.
-10. While we can manually restart DOFLinx, its probably easier to restart your gaming machine and let everything start as normal.
+From the above test, in order the codes would be:
+J0100
+J0103
+6
+2
+3
+J0101
