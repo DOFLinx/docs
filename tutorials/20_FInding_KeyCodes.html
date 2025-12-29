@@ -1955,7 +1955,7 @@ DOFLinx monitors these codes to determine certain input controls that act as tri
 <p class="admonition-title">Note</p>
 <p>When using Mame with Pixelcade or DOF2DMD effects, having the key codes for the Player 1/2, and Coin buttons is essential for the stopping of the on screen effects like "Player 1", "Insert Coin".</p>
 </div>
-<p>Key codes are different between Linux and Windows.  A list of Windows virtual key codes can be <a href="https://learn.microsoft.com/en-gb/windows/win32/inputdev/virtual-key-codes">found here.</a>  A list of Linux key codes can be <a href="https://doflinx.github.io/docs/linux/15_LinuxKeyCodes.html">found here.</a></p>
+<p>Keyboard key codes are different between Linux and Windows.  A list of Windows virtual key codes can be <a href="https://learn.microsoft.com/en-gb/windows/win32/inputdev/virtual-key-codes">found here.</a>  A list of Linux key codes can be <a href="https://doflinx.github.io/docs/linux/15_LinuxKeyCodes.html">found here.</a></p>
 <p>Your key codes are the last element on the parameter lines LINK_BUT_xx= in your DOFLinx configuration file, DOFLinx.INI .   They will look something like this;</p>
 <div class="highlight"><pre><span></span><code>LINK_BUT_CN=1001,Orange,6
 LINK_BUT_EX=1004,Amber,1
@@ -1966,6 +1966,7 @@ LINK_BUT_B1=1016,Green,29
 LINK_BUT_B2=1019,Red,56
 </code></pre></div>
 <p>The definition of the LINK_BUT_xx= parameter can be found in the <a href="https://doflinx.github.io/docs/parameters/11_The_Parameters.html#link_but_xxdooocccckkdooocccckk">guide here.</a></p>
+<p>For DOFLinx the key code can be a keyboard code, as seen in the linked tables above, or it can be a joystick or Xbox (In Linux this will show as a joystick) code.  The format of codes can be <a href="https://doflinx.github.io/docs/parameters/11_The_Parameters.html#key-numbers">found here.</a></p>
 <p>If you know the keystroke assigned to each of your buttons simply lookup the key coode and edit the code onto the respective line in your DOFLinx.INI file.  If you don't know the keystroke for each button then they will need to be discovered.</p>
 <p>For Windows, simply run DOFLinxConfig, select "Configure" then the "Inputs" tab.  You can then simply select the button to configure and you will be prompted to press your button at that point.  The key code will be placed in the respective keystroke box.</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../img/media/WindowsSetupofLINKButtons.png" data-desc-position="bottom"><img alt="" src="../img/media/WindowsSetupofLINKButtons.png"></a></p>
@@ -1978,6 +1979,12 @@ LINK_BUT_B2=1019,Red,56
 <li>On console A we will set DOFLinx to report the key codes of all keys pressed using "DOFLinxMsg TEST_INPUT=1"</li>
 <li>Now press each button in turn and record the keycode shown on console B</li>
 <li>Once all key codes have been discovered shutdown DOFLinx from console A using "DOFLinxMsg QUIT"</li>
+</ol>
+<p>Console A Sample</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../img/media/LinuxFindKeyCodes_2.png" data-desc-position="bottom"><img alt="" src="../img/media/LinuxFindKeyCodes_2.png"></a></p>
+<p>Console B Sample</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../img/media/LinuxFindKeyCodes_1.png" data-desc-position="bottom"><img alt="" src="../img/media/LinuxFindKeyCodes_1.png"></a></p>
+<ol>
 <li>Now edit the LINK_BUT_xx= lines in your DOFLinx.ini using your favourite editor, ie nano.</li>
 <li>While we can manually restart DOFLinx, its probably easier to restart your gaming machine and let everything start as normal.</li>
 </ol>
