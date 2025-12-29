@@ -50,9 +50,10 @@ Console B Sample
 ![](../img/media/LinuxFindKeyCodes_1.png)
 
 From the above test, in order the codes would be:
-J0100
-J0103
-6
-2
-3
-J0101
+
+    J0100
+    J0103
+    6
+    2
+    3
+    J0101
