@@ -4,6 +4,7 @@ Key codes are the codes generated when you press a key on a keyboard, game contr
 DOFLinx monitors these codes to determine certain input controls that act as triggers in some emulators, for example certain buttons like Player 1/2, Coin, Fire and bomb buttons in Mame / FBNeo.
 
 !!! note
+
     When using Mame with Pixelcade or DOF2DMD effects having the key codes for the Player 1/2, and Coin buttons is essential to stop the on screen effects.
 
 Key codes are different between Linux and Windows.  A list of Windows virtual key codes can be [found here.](https://learn.microsoft.com/en-gb/windows/win32/inputdev/virtual-key-codes)  A list of Linux key codes can be [found here.](https://doflinx.github.io/docs/linux/15_LinuxKeyCodes.html)
