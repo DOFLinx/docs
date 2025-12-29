@@ -8,11 +8,17 @@ Key codes are different between Linux and Windows.  A list of Windows virtual ke
 Your key codes are the last element on the parameter lines LINK_BUT_xx= in your DOFLinx configuration file, DOFLinx.INI .   They will look something like this;
 
 LINK_BUT_CN=1001,Orange,6
+
 LINK_BUT_EX=1004,Amber,1
+
 LINK_BUT_RE=1007,Orange_Red,61
+
 LINK_BUT_P1=1010,Cyan,2
+
 LINK_BUT_P2=1013,Orchid,3
+
 LINK_BUT_B1=1016,Green,29
+
 LINK_BUT_B2=1019,Red,56
 
 The definition of the LINK_BUT_xx= parameter can be found in the [guide here.](https://doflinx.github.io/docs/parameters/11_The_Parameters.html#link_but_xxdooocccckkdooocccckk)
