@@ -16,6 +16,10 @@ Pinball FX integrated with DOFLinx to have cabinet toys and active back glasses 
 
 <iframe width="250" height="140" src="https://www.youtube.com/embed/AwxZnZvhunM?si=E34T8wyHP6M0i8uR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
+DOFLinx on a wall mounted arcade cabinet integrating with Pinball FX to run RB buttons, solenoids, and Pixelcade Pulse addressable LEDs.  For those with a Pixelcade LED and Pulse fitted to their arcade cabinet this works with Pinball FX and Pinball M.
+
+<iframe width="250" height="140" src="https://www.youtube.com/embed/FoXXkjI6t-M?si=yUIlJLCmoAiGvC4A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 ## MAME
 
 DOFLinx integrates with a custimed version of MAME to send live scores, credits, level, shots, hits and more.  What can be sent is game dependant with most popular games having at least score.  With the score comes the ability to trigger standard cabinet toys such as addressable LEDs, flashers, solenoids, knocker (don't forget Qbert actually uses that!), illuminate buttons, joystick, etc.
@@ -51,6 +55,12 @@ Below you can see DOFLinx driving the Pixelcade 4 line mini LCD with real-time c
 A demonstration LaunchBox with the DOFConnect plugin sending messages to DOFLinx for DMD messages and marquees via DOF2DMD as well as running other toys.
 
 <iframe width="250" height="140" src="https://www.youtube.com/embed/XHvJAq_99jM?si=G9QSB7K-zY7LDo5Z" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+## RCade
+
+A demonstration of RCade running on a ViperGRS board using FBNeo for classic arcade games that then deliver their in game effects and real time scores through DOFLinx onto Pixelcade devices.
+
+<iframe width="250" height="140" src="https://www.youtube.com/embed/j9oKaAEVV2I?si=PM6J-THJdzP9MQtw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ## Other Interesting Stuff
 
