@@ -718,7 +718,7 @@ Then define the "shoot" action, such as;
 
 ```ini
 [COMMAND]
-shoot|ON|FF_DOR E216,-1
+shoot|ON|FF_DOF E216,-1
 ```
 
 ## `KEY_TO_OUTPUT=KK,DOOO[,KK,DOOO,KK,DOOO]`
