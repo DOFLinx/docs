@@ -1359,6 +1359,12 @@ PINCONTROL2_BROADCAST=192.168.178.50
 , if you need anything else you will have been given that parameter
 value with your board.
 
+## `PIXELCADE_EXPLOSIONS_DISPLAYS=
+
+The default is LED if a LED display exists and LCD if there is a LCD and no LED display
+
+If you wanted to force the use of the LCD display when you have a LED and LCD then use PIXELCADE_EXPLOSIONS_DISPLAYS=LCD.  If you have both LED and LCD and want both displays to be used then PIXELCADE_EXPLOSIONS_DISPLAYS=LED,LCD
+
 ## `PIXELCADE_GAME_START_HIGHSCORE=1/0`
 
 Default 0, can be left out of the INI
