@@ -18,7 +18,7 @@
       
       
       <link rel="icon" href="../assets/favicon.ico">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.3">
     
     
       
@@ -2386,6 +2386,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#pixelcade_explosions_displays" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        `PIXELCADE_EXPLOSIONS_DISPLAYS=
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#pixelcade_game_start_highscore10" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -4599,6 +4610,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#pixelcade_explosions_displays" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        `PIXELCADE_EXPLOSIONS_DISPLAYS=
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#pixelcade_game_start_highscore10" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -6037,6 +6059,9 @@ PINCONTROL_UNIVERSE. The normal setting required will be
 PINCONTROL2_BROADCAST=192.168.178.50</p>
 <p>, if you need anything else you will have been given that parameter
 value with your board.</p>
+<h2 id="pixelcade_explosions_displays">`PIXELCADE_EXPLOSIONS_DISPLAYS=<a class="headerlink" href="#pixelcade_explosions_displays" title="Permanent link">¶</a></h2>
+<p>The default is LED if a LED display exists and LCD if there is a LCD and no LED display</p>
+<p>If you wanted to force the use of the LCD display when you have a LED and LCD then use PIXELCADE_EXPLOSIONS_DISPLAYS=LCD.  If you have both LED and LCD and want both displays to be used then PIXELCADE_EXPLOSIONS_DISPLAYS=LED,LCD</p>
 <h2 id="pixelcade_game_start_highscore10"><code>PIXELCADE_GAME_START_HIGHSCORE=1/0</code><a class="headerlink" href="#pixelcade_game_start_highscore10" title="Permanent link">¶</a></h2>
 <p>Default 0, can be left out of the INI</p>
 <p>Set this to 1 DOFLinx will display MAME high scores when a game starts.</p>
