@@ -1371,7 +1371,7 @@ Default 0, can be left out of the INI
 
 Set this to 1 DOFLinx will display MAME high scores when a game starts.
 
-## PIXELCADE_LCD_USENETWORK_ADDRESS=[1/0]
+## `PIXELCADE_LCD_USENETWORK_ADDRESS=1/0`
 
 Default is 1 (true)
 
