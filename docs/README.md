@@ -26,6 +26,7 @@ I do have costs to keep things running, and if you think DOFLinx is worth it, th
   - Sainsmart
   - Teensy -- Addressable LEDs
   - Wesmos -- Addressable LEDs
+  - MX-Donny via Dude's Cab -- Addressable LEDs
 - In Basic or Fallback mode trigger solenoids for flipper force
     feedback for any pinball game emulator based on the flipper keys
 - Use keyboard, Xbox controller and joystick buttons for input
@@ -53,6 +54,7 @@ I do have costs to keep things running, and if you think DOFLinx is worth it, th
     - Play surround sound force feedback sounds for stereo, 5.1 or
             7.1 sound systems
     - Output to Pixelcade LED and LCD displays
+    - Drive Pixelcade Pulse addressbale LEDs
     - Set a table specific colour palette
     - Set RGB buttons such as flipper and magna save to any colour
             combination per table
@@ -106,6 +108,7 @@ I do have costs to keep things running, and if you think DOFLinx is worth it, th
     - In built live score screen
     - In built high score screen
     - Drive Pixelcade LED, LCD, dot matrix and meta data displays
+    - Drive Pixelcade Pulse addressbale LEDs
     - Present MAME marquee artwork on Pixelcade LED and LCD, plus
             any DMD using DMDExt
     - Show animations on Pixelcade LED and / or LCD screens based
