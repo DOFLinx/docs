@@ -1,4 +1,4 @@
-# DOFLinx Download
+# DOFLinx Downloads
 
 Please remember to donate occasionally [here](https://www.paypal.com/donate?hosted_button_id=YEPCTUYFX5KDE)
 
@@ -6,5 +6,5 @@ Please remember to donate occasionally [here](https://www.paypal.com/donate?host
 
 [DOFLinx Linux](https://github.com/DOFLinx/DOFLinx-for-Linux/releases)
 
-[Active Back Glasses](https://github.com/DOFLinx/B2S-Back-Glasses/releases)
+[Active Back Glasses for Pinball FX and Pinball M](https://github.com/DOFLinx/B2S-Back-Glasses/releases)
 
