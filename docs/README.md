@@ -30,7 +30,7 @@ I do have costs to keep things running, and if you think DOFLinx is worth it, th
 - In Basic or Fallback mode trigger solenoids for flipper force
     feedback for any pinball game emulator based on the flipper keys
 - Use keyboard, Xbox controller and joystick buttons for input
-- For Pinball FX and Pinball FX3 generate nudge in game by physically
+- For Pinball FX and Pinball FX Classic (FX3) generate nudge in game by physically
     nudging your table using a Pinscape accelerometer
 - Use direct integration from Pinball FX and Pinball M built with Zen to get table
     events
@@ -126,7 +126,7 @@ I do have costs to keep things running, and if you think DOFLinx is worth it, th
   - Cabinet buttons to used as a trigger for actions. Allows things
         like "fire" button the be set to run something like a "flash
         blast" effect on addressable LEDs, or a fire sound in SSF
-- Monitor Pinball FX3 and derive events to run table actions
+- Monitor Pinball FX Classic (FX3) and derive events to run table actions
   - Map those events to cabinet actions for
     - Use back glasses that illuminate based on table events (not simply animated), just like a real pinball machine
     - Solenoids / contactors for flippers, slings, bumpers and
@@ -148,7 +148,7 @@ I do have costs to keep things running, and if you think DOFLinx is worth it, th
     - Set RGB buttons such as flipper and magna save to any colour
             combination per table
     - Illuminate mono buttons
-  - Comes with two default sets of FX3 mapping files for physical
+  - Comes with two default sets of Pinball FX Classic (FX3) mapping files for physical
         and surround sound cabinets
 - Monitor Pinball FX2 and derive events to run table actions
   - Map those events to cabinet actions for
@@ -214,7 +214,7 @@ I do have costs to keep things running, and if you think DOFLinx is worth it, th
     from the front end menu system when a game / table is selected
 - Local on screen and log file for debug, or monitor the debugging
     from a different machine via a TCP link
-- Push focus back to MAME, Pinball FX, Pinball FX3 or Pinball FX2 to
+- Push focus back to MAME, Pinball FX, Pinball FX Classic (FX3) or Pinball FX2 to
     avoid the emulator not being in focus at start
 - Setup any number of colours using a name and RGB FFFFFF format
 - Link a button press to turning on an output device
