@@ -18,7 +18,7 @@
       
       
       <link rel="icon" href="../assets/favicon.ico">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -26,7 +26,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -5424,14 +5424,17 @@ down, but wanting the effect to stop on flipper up.</p>
 is the output device, "DDDD" is the detail.</p>
 <p>Valid actions:</p>
 <p>T = Text, D<code>DDD</code> = The text to display. Remember this is in the format
-used in a URL, to a space is %20</p>
+used in a URL, to add a space is %20, etc</p>
 <p>U = User command. A native Pixelcade V1 or V2 command as a URL without
 the host name and no leading / . ie the native command
 <a href="http://pixelcade.local:8080/console/stream/nes">http://pixelcade.local:8080/console/stream/nes</a> becomes
 FF_PC,U,E,console/stream/nes</p>
+<p>S = Score</p>
+<p>A = Statistics, only for device V, where DDDD is the stats format, SHR - Shots, Hits, Ratio</p>
 <p>Valid devices</p>
 <p>C = LCD</p>
 <p>E = LED</p>
+<p>V = Vestaboard</p>
 <h2 id="ff_pup_eventeeevveeev"><code>FF_PUP_EVENT=EEE,VV[,EEE,V]</code><a class="headerlink" href="#ff_pup_eventeeevveeev" title="Permanent link">¶</a></h2>
 <p>An optional parameter, most likely used in a supplementary INI file</p>
 <p>One or a series of PUP events to be triggered. EEE is the event name and
@@ -6455,7 +6458,7 @@ the current colour palette.</p>
       <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["content.code.annotate", "navigation.sections", "navigation.expand", "navigation.top", "content.action.edit"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
       
     
   
