@@ -445,18 +445,24 @@ is the output device, "DDDD" is the detail.
 Valid actions:
 
 T = Text, D`DDD` = The text to display. Remember this is in the format
-used in a URL, to a space is %20
+used in a URL, to add a space is %20, etc
 
 U = User command. A native Pixelcade V1 or V2 command as a URL without
 the host name and no leading / . ie the native command
 <http://pixelcade.local:8080/console/stream/nes> becomes
 FF_PC,U,E,console/stream/nes
 
+S = Score
+
+A = Statistics, only for device V, where DDDD is the stats format, SHR - Shots, Hits, Ratio
+
 Valid devices
 
 C = LCD
 
 E = LED
+
+V = Vestaboard
 
 ## `FF_PUP_EVENT=EEE,VV[,EEE,V]`
 
