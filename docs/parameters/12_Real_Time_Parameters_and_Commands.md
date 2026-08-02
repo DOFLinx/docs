@@ -30,6 +30,10 @@ The commands are:
 
 Turn attract mode on / off.
 
+### CLEAR_LOG
+
+Clears DOFLinx.log ready for a test run and sending of the log for assistance later.
+
 ### GAME_FLAG_FILE=PPPP\FFFF
 
 `PPPP` is the path and FFFF is the file.  
