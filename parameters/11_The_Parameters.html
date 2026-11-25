@@ -18,7 +18,7 @@
       
       
       <link rel="icon" href="../assets/favicon.ico">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.2">
     
     
       
@@ -26,10 +26,10 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.57a0d79d.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.fb2fffe2.min.css">
       
       
 
@@ -2171,6 +2171,17 @@
     <span class="md-ellipsis">
       
         NUDGE_CHECK_BASIC_KEYBOARD=
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nudge_pause" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        NUDGE_PAUSE=
       
     </span>
   </a>
@@ -4402,6 +4413,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#nudge_pause" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        NUDGE_PAUSE=
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#nudge_left_key" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -5397,7 +5419,7 @@ controller.</p>
 <p>Default is 0, not required in INI.</p>
 <p>Set this to 1 (anabled) to have MAME high scores scroll up on the DMD as you navigate your front end.  This on is a personal prefernece, as reading the scores is not possible if you are flipping through games quickly.  So if you only want the marquee, leave this one disabled.  Always worth a play around to see what  you like.</p>
 <h2 id="ff_dmdaddddd"><code>FF_DMD=A,DDDDD</code><a class="headerlink" href="#ff_dmdaddddd" title="Permanent link">¶</a></h2>
-<p>Mainly used in <em>.MAME and </em>.FX files for initiating an action (A) via DOF2DMD with detail (D) onto your DMD.</p>
+<p>Mainly used in *.MAME and *.FX files for initiating an action (A) via DOF2DMD with detail (D) onto your DMD.</p>
 <p>Valid actions:</p>
 <p>S = Score
 T = Text
@@ -5445,7 +5467,7 @@ V the value passed with that event identifier.</p>
 <p>This is used to set the ROM for KEY_TO_ROM= commands. If the ROM name
 was "doflinx" this command would look like FF_ROM=doflinx</p>
 <h2 id="ff_ssfsssss"><code>FF_SSF=SSSSS</code><a class="headerlink" href="#ff_ssfsssss" title="Permanent link">¶</a></h2>
-<p>An optional parameter, most likely in <em>.FX or </em>.MAME files for playing a preloaded surround sound by name.
+<p>An optional parameter, most likely in *.FX or *.MAME files for playing a preloaded surround sound by name.
 ie FF_SSF=LFLipper</p>
 <h2 id="fixed_outputs-dooodooodooo"><code>FIXED_OUTPUTS= DOOO[,DOOO,DOOO]</code><a class="headerlink" href="#fixed_outputs-dooodooodooo" title="Permanent link">¶</a></h2>
 <p>Replaces the old BUTTONS_ON=DOO[,DOO,DOO]</p>
@@ -5989,6 +6011,12 @@ checking when DOFLinx is operating in its most basic mode checking
 keyboard keys for a process that triggers it in the PROCESSES=
 parameter. This allows other emulators to use the joystick nudge
 checking.</p>
+<h2 id="nudge_pause"><code>NUDGE_PAUSE=</code><a class="headerlink" href="#nudge_pause" title="Permanent link">¶</a></h2>
+<p>Not required, this parameter can be added to suspend analogue nudge detection that triggers digital nudge in Pinball FX / Midnight and Classic.  It is handy to stop your toys, such as a shaker motor, from falsely triggering the nudge.</p>
+<p>Set this to one or more toys and the number of milliseconds to suspend nudge after that toy "fires".  For example;
+NUDGE_PAUSE=DV_SH,300,DV_GR,100,DV_LF,180,DV_RF,180,DV_LS,100,DV_RS,100,DV_PLGR,500
+Will suspend nudge detection for 300mS after the run time of your shaker, so if your shaker is run by the table for 1.5 seconds, then from the time your shaker starts there is no analogue nudge triggering for 1.8 seconds.
+A new device was added being DV_PLGR (plunger) to allow for suspension of nudge due to the "bounce" when "pinging" your plunger.  Setting up your toys like this allows for more sensitive nudge settings and more fun.</p>
 <h2 id="nudge_left_key"><code>NUDGE_LEFT_KEY=</code><a class="headerlink" href="#nudge_left_key" title="Permanent link">¶</a></h2>
 <h2 id="nudge_forward_key"><code>NUDGE_FORWARD_KEY=</code><a class="headerlink" href="#nudge_forward_key" title="Permanent link">¶</a></h2>
 <h2 id="nudge_right_key"><code>NUDGE_RIGHT_KEY=</code><a class="headerlink" href="#nudge_right_key" title="Permanent link">¶</a></h2>
@@ -6455,10 +6483,10 @@ the current colour palette.</p>
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["content.code.annotate", "navigation.sections", "navigation.expand", "navigation.top", "content.action.edit"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["content.code.annotate", "navigation.sections", "navigation.expand", "navigation.top", "content.action.edit"], "search": "../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      <script src="../assets/javascripts/bundle.a5f9d56c.min.js"></script>
       
     
   
