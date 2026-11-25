@@ -1164,6 +1164,15 @@ keyboard keys for a process that triggers it in the PROCESSES=
 parameter. This allows other emulators to use the joystick nudge
 checking.
 
+## `NUDGE_PAUSE=`
+
+Not required, this parameter can be added to suspend analogue nudge detection that triggers digital nudge in Pinball FX / Midnight and Classic.  It is handy to stop your toys, such as a shaker motor, from falsely triggering the nudge.
+
+Set this to one or more toys and the number of milliseconds to suspend nudge after that toy "fires".  For example;
+NUDGE_PAUSE=DV_SH,300,DV_GR,100,DV_LF,180,DV_RF,180,DV_LS,100,DV_RS,100,DV_PLGR,500
+Will suspend nudge detection for 300mS after the run time of your shaker, so if your shaker is run by the table for 1.5 seconds, then from the time your shaker starts there is no analogue nudge triggering for 1.8 seconds.
+A new device was added being DV_PLGR (plunger) to allow for suspension of nudge due to the "bounce" when "pinging" your plunger.  Setting up your toys like this allows for more sensitive nudge settings and more fun.
+
 ## `NUDGE_LEFT_KEY=`
 
 ## `NUDGE_FORWARD_KEY=`
